@@ -67,28 +67,40 @@
 
     <div class="container">
     <ol class="list-group mr-8">
-			    	<li class="list-group-item"><h5>DJANGO IS MVC ARCHITECTURE</h5>
-
-												<span class="tab">M - Models: [Database] <br>
+			    	<li class="list-group-item list-group-item-secondary">Django is <b>MVC</b> Architecture</li>
+												<li class="list-group-item"><span class="tab">M - Models: [Database] <br>
 												<span class="tab">V - Views: [Webpages] <br>
 												<span class="tab">C - Controller: [Routers (URLS)]</li>
 			    	<br>
-			    	<li class="list-group-item"><h5>MODELS.PY</h5>
-												class(models.Model):<br>
+			    	<li class="list-group-item list-group-item-secondary"><h5>MODELS.PY</h5></li>
+												<li class="list-group-item">class deliverables(models.Model):<br>
 												<span class="tab">delivs = models.CharField(max_length=200) <br>
 												<span class="tab">completeddelivs = models.BooleanField(default=False) <br>
-
+                                                        <br>
 												<span class="tab">def __str__(self): <br>
 													<span class="tab">return self.delivs</li> 
 			    	<br>
-			    	<li class="list-group-item"><h5>VIEWS.PY</h5>
-													def deliverables(request):<br>
+			    	<li class="list-group-item list-group-item-secondary"><h5>VIEWS.PY</h5></li>
+													<li class="list-group-item">from .models import deliverables <br>
+                                                        <br>
+                                                        def deliverables(request):<br>
 														<span class="tab">all_delivs = Deliverables.objects.all <br>
 														<span class="tab">return render(request, 'deliverables.html', {'all_delivs': all_delivs})</li>
 			    	<br>
 
-			    		<li class="list-group-item"><h5>DELIVERABLES.HTML</h5>
-															<span class="tab">(%if all_delivs%) <br>
+                    <li class="list-group-item list-group-item-secondary"><h5>URLS.PY</h5></li>
+                                                <li class="list-group-item">from . import views <br>
+                                                    <br>
+                                                    urlpatterns = [  <br>
+                                                        <span class="tab">  path('deliverables/', views.deliverables, name='deliverables'), <br>
+                                                        ]</li>
+
+
+
+                    <br>
+
+			    		<li class="list-group-item list-group-item-secondary"><h5>DELIVERABLES.HTML</h5></li>
+								<li class="list-group-item"><span class="tab">(%if all_delivs%) <br>
 
 															<span class="tab">(ul) <br>
 																<span class="tab">(%for things in all_delivs%) <br>
