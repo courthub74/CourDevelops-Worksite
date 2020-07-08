@@ -28,7 +28,15 @@ def setupdjango(request):
 
 #MVC BASICS
 def mvcbasics(request):
-	return render(request, "mvcbasics.html", {}) 
+	return render(request, "mvcbasics.html", {})
+
+#CLONE PROJECT
+def clone_django_proj(request):
+	return render(request, "djangoclone.html", {})
+
+#DJANGO DATABASE
+def django_database_models(request):
+	return render(request, "django_database.html", {})
 
 ######################################################
 

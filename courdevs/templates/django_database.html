@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<!DOCTYPE html>
+ <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+         
+        </head>
+
+  <body>
+
+  	
+
+    <div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <style type="text/css">
+                .tab {
+                    margin-left: 40px;
+                }
+                .tab80 {
+                    margin-left: 80px;
+                }
+                .tab120 {
+                    margin-left: 120px;
+                }
+            </style>
+
+
+            <div class="media-body ml-8" >
+                <h3 class="mt-0"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.vizteams.com%2Fwp-content%2Fuploads%2F2014%2F04%2Fdjango.png&f=1&nofb=1" height="50"  class="mr-3 ml-3" alt="Django">Database (Models)</h3> 
+            </div>
+            <div class="line"></div>
+
+            <div class="container-fluid">
+            <div class="media">
+
+            <div class="container">
+
+
+            <br>
+
+
+                <ol class="list-group mr-8">
+                    <li class="list-group-item list-group-item-secondary">Create it in <b>models.py</b></li>
+                    <li class="list-group-item">
+                        
+                        you create a CLASS like below:
+                        <br>
+                        <small>you can call it whatever you need.  In this case, it's the 'Items' class</small><br>
+                        <br>
+                        <span class="tab"><b>class Items(models.Model): <br>
+                        <span class="tab80">item1 = models.CharField(max_length=#) <br>
+                        <span class="tab80">item2 = models.BooleanField(default=False) <br>
+                        <span class="tab80">item3 = models.EmailField() <br>
+                        <span class="tab80">item4 = models.IntegerField() <br>
+                        
+                        <br>
+                        
+                        <span class="tab80">def __str__(self): <br>
+                            <span class="tab120">return self.item1</b>    <-- always do the first item on the class list</li>
+
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">NEXT go to <b>admin.py</b></li>
+                    <li class="list-group-item">
+                        
+                        <b>from .models import Items</b><small> <-- or from ALL models import Items class</small>
+                        <br><hr>
+                        now register your model
+                        <br>
+                        <span class="tab"><b>admin.site.register(Items)</b><br></li>
+
+                            <br>
+
+                    <li class="list-group-item list-group-item-secondary">THEN go to <b>cmdline</b> and type:</b></li>
+                    <li class="list-group-item">
+                        <br>
+                        <ul>
+                        <li>python manage.py makemigrations</li><br>
+                        then....
+                        <br><br>
+                        <li>python manage.py migrate</li>
+                        </ul> <br>
+                        <hr>
+                        NOW you can go into admin and add data to newly created table</li>
+{% endblock %}

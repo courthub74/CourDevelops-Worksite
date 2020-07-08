@@ -13,6 +13,10 @@ urlpatterns = [
 	path('setupdjango/', views.setupdjango, name="setupdjango"),
 	#MVC Notes
 	path('mvcbasics/', views.mvcbasics, name="mvcbasics"),
+	#Clone Django Project
+	path('djangoclone/', views.clone_django_proj, name="djangoclone"),
+	#Django Database Models
+	path('django_database/', views.django_database_models, name="django_database"),
 
 	#Projects Checklist
 	path('projects/', views.projects, name="projects"),
