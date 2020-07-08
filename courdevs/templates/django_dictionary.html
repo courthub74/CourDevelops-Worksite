@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<!DOCTYPE html>
+ <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+         
+        </head>
+
+  <body>
+
+  	
+
+    <div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+                    <style type="text/css">
+                        .tab {
+                            margin-left: 40px;
+                        }
+                        .tab80 {
+                            margin-left: 80px;
+                        }
+                        .tab120 {
+                            margin-left: 120px;
+                        }
+                    </style>
+
+            <div class="media-body ml-8" >
+			    <h3 class="mt-0"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.vizteams.com%2Fwp-content%2Fuploads%2F2014%2F04%2Fdjango.png&f=1&nofb=1" height="50"  class="mr-3" alt="Django">Context Dictionary  <br></h3> 
+        
+			</div>
+			<div class="line"></div>
+
+            <br>
+
+            <span class="tab120"><small>Transport Info from models.py</small>
+      
+
+           <div class="container-fluid">
+            <div class="media">
+
+			<div class="container">
+
+                 <br>
+			<br>
+
+
+			    <ol class="list-group mr-8">
+			    	<li class="list-group-item list-group-item-secondary">in <b>views.py</b></li>
+                    <li class="list-group-item">Set up the 'Home' page <br>
+                        <br>
+			    	<span class="tab">def home(request):<br>
+                    <span class="tab80">my_name = "Court"<br>
+                    <span class="tab80">return render(request, 'home.html', {'name': <b>my_name</b>})</li>
+
+	                <br>
+
+			    	<li class="list-group-item list-group-item-secondary">in <b>home.html</b></li>
+                    
+                    <li class="list-group-item"><span class="tab">Transport the variable <b>'my_name'</b> by calling the 'name' dictionary from above <br>
+                        <br>
+                        <span class="tab">(% extends 'home.html' %)<br>
+                        <span class="tab80">(% block content %)<br>
+                        <span class="tab80">My name is: <b>(( name ))</b><br>
+                        <span class="tab">(% endblock %) <hr>
+                            <span class="tab80">The output on home.html will read:<br>
+                                                <span class="tab80">My name is: <b>Court</b></span></li>
+
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">Change the output by just changing the value</li>
+                    <li class="list-group-item"> <span class="tab">in the dictionary you can change anything by just changing the value <br><hr>
+                                                <span class="tab">def home(request):<br>
+                                                <span class="tab80">my_name = "Court"<br>
+                                                <span class="tab80">number = 4 + 9 <br>
+                                                <span class="tab80">return render(request, 'home.html', {'name': <b>number</b>})<br>
+                                                    <span class="tab120"><small>We've changed the value from my_name to number</small>
+
+                    <hr>
+                    <span class="tab">The output from:<br><br>
+                        <span class="tab">(% extends 'home.html' %)<br>
+                        <span class="tab80">(% block content %)<br>
+                        <span class="tab80">My name is: <b>(( name ))</b><br>
+                        <span class="tab">(% endblock %)                        
+
+                        <hr>
+                     <span class="tab80">will now read what's in the number variable:<br>
+                    <span class="tab80">4 + 9 which equals <b>13</b>
+                        <br><br>
+                        <span class="tab120">So the home.html screen will say: <br>
+                            <span class="tab120">My name is: <b>13</b></li>
+
+
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">You can also have more than one dictionary</li>
+                    <li class="list-group-item"> <span class="tab">BELOW we have firstname and lastname<br><hr>
+                                                <span class="tab">def home(request):<br>
+                                                <span class="tab80">firstname = "Court"<br>
+                                                <span class="tab80">lastname = "Jacobs"<br>
+                                                <span class="tab80">return render(request, 'home.html', {<b>'firstname': firstname, 'lastname': lastname</b>})<br></li>
+
+
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">in <b>home.html</b> (more than one dictionary)</li>
+                    <li class="list-group-item">You can have:<br>
+                        <br>
+                        <span class="tab">(% extends 'home.html' %)<br>
+                        <span class="tab80">(% block content %)<br>
+                        <span class="tab80">My first name is: <b>(( firstname ))</b><br>
+                        <span class="tab80">My last name is: <b>(( lastname ))</b> <br>
+                        <span class="tab">(% endblock %) <br><hr>
+                        <span class="tab80">The output on home.html will read:<br>
+                                                <span class="tab120">My first name is: <b>Court</b> <br>
+                                                <span class="tab120">My last name is: <b>Jacobs</b></li>
+                    
+
+
+
+
+{% endblock %}

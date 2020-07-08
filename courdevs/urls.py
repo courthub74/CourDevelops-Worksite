@@ -17,6 +17,8 @@ urlpatterns = [
 	path('djangoclone/', views.clone_django_proj, name="djangoclone"),
 	#Django Database Models
 	path('django_database/', views.django_database_models, name="django_database"),
+	#Django Context Dictionary
+	path('context_dictionary/', views.django_context_dictionary, name="context_dictionary"),
 
 	#Projects Checklist
 	path('projects/', views.projects, name="projects"),

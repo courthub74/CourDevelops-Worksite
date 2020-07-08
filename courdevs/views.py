@@ -38,6 +38,10 @@ def clone_django_proj(request):
 def django_database_models(request):
 	return render(request, "django_database.html", {})
 
+#DJANGO CONTEXT DICTIONARY
+def django_context_dictionary(request):
+	return render(request, "django_dictionary.html", {})
+
 ######################################################
 
 #GIT
