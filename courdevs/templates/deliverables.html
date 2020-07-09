@@ -56,6 +56,7 @@
                         .green {
                             background-color: #90EE90;
                             color: black;
+                            border: 1px solid black;
                         }
                     </style>
 
@@ -64,7 +65,7 @@
                     <div class="center-block">  
                         <form class="form-inline my-2 my-lg-0" method="POST">
                             {% csrf_token %}
-                            <input class="form-control mr-5 center" size="90" placeholder="Enter Deliverable" name="deliverables">
+                            <input class="form-control mr-5 center" size="90" placeholder="Enter Deliverable" name="delivs">
                             <button type="submit" class="btn green">Add to Deliverables</button>
                         </form>
                     </div>            
@@ -83,18 +84,52 @@
     }
 </style>
 
+<!--MESSAGES-->
+<div class="container">
+
+        {% if messages %}
+              {% for message in messages %}
+
+                  <div class="alert alert-dismissable" id="green" role="alert">
+                    <button class="close" data-dismiss="alert">
+                         <sup><small>close</small></sup>
+                    </button>
+                       {{ message }}
+                  </div>
+
+              {% endfor %}
+        {% endif %}
+
 
 <!--DELIVERABLES TABLE-->
+    {% if all_delivs %}
     <div class="container">
             <br>
                 <table class="table table-bordered">
                     <th class="table" id="green" colspan="4">Deliverables To Complete</th>
+                    {% for stuff in all_delivs %}
+                        {% if stuff.delivscomplete %}
+
                         <tr>
-                            <td>Deliverables</td>
-                            <td>Cross-Off</td>
-                            <td>Delete</td>
-                            
+                            <td class="striker">{{ stuff.delivs }}</td>
+                            <td><center><a href="{% url 'delivs_uncross' stuff.id %}">Uncross</a></center></td>
+                            <td><center><a href="{% url 'delivs_delete' stuff.id %}">Delete</a></center></td>
                         </tr>
+
+                        {% else %}
+
+                        <tr>
+                            <td>{{ stuff.delivs }}</td>
+                            <td><center><a href="{% url 'delivs_cross_off' stuff.id %}">Cross Off</a></center></td>
+                            <td><center><a href="{% url 'delivs_delete' stuff.id %}">Delete</a></center></td>
+                        </tr>
+
+                        {% endif %}
+                    {% endfor %}
                 </table>
+    {% endif %}
+    </div>
+    </div>
+</div>
 
 {% endblock %}

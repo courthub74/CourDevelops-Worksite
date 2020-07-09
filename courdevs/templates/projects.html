@@ -90,6 +90,10 @@
                 			margin-right: auto;
                 			margin-left: auto;
                 		}
+                        .ivory {
+                            background-color: white;
+                            color: black;
+                        }
                 	</style>
 
                 	<h3>Projects Checklist</h3>
@@ -98,7 +102,7 @@
 						<form class="form-inline my-2 my-lg-0" method="POST">
 							{% csrf_token %}
                     		<input class="form-control mr-5 center" size="90" placeholder="Enter Project" name="projects">
-                    		<button type="submit" class="btn btn-dark">Add to Projects</button>
+                    		<button type="submit" class="btn black">Add to Projects</button>
                     	</form>
                     </div>
                     	
@@ -112,9 +116,14 @@
 		text-decoration: line-through;
 	}
 	.black {
-		background-color: black;
-		color: white;
+		background-color: white;
+		color: black;
+        border: 1px solid black;
 	}
+    .white {
+        background-color: white;
+        color: black;
+    }
 	.ivory {
 		background-color: #FFFFF0;
 		color: white;
@@ -129,7 +138,7 @@
 		{% if messages %}
 			  {% for message in messages %}
 
-			      <div class="alert alert-dark alert-dismissable" role="alert">
+			      <div class="alert white alert-dismissable" role="alert">
 			        <button class="close" data-dismiss="alert">
 			             <sup><small>close</small></sup>
 			        </button>
@@ -145,7 +154,7 @@
 		<div class="container">
 			<br>
       			<table class="table table-bordered">
-        			<th class="table" colspan="4">Projects To Complete</th>
+        			<th class="table black" colspan="4">Projects To Complete</th>
         			{% for stuff in all_projects %}
         				{% if stuff.projectscomplete %}
 

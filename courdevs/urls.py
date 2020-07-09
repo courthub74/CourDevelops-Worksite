@@ -30,6 +30,9 @@ urlpatterns = [
 
 	#Deliverables Checklist
 	path('deliverables/', views.deliverables, name="deliverables"),
+	path('delivs_cross_off/<list_id>', views.delivs_cross_off, name="delivs_cross_off"),
+	path('delivs_uncross/<list_id>', views.delivs_uncross, name="delivs_uncross"),
+	path('delivs_delete/<list_id>', views.delivs_delete, name="delivs_delete"),
 
 	#GIT
 	#InitializeGit

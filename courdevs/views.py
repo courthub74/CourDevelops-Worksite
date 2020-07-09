@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Projects
-from .forms import ProjectsForm
+from .models import Projects, Deliverables
+from .forms import ProjectsForm, DeliverablesForm
 from django.contrib import messages
 
 # Create your views here.
@@ -108,7 +108,42 @@ def project_delete(request, list_id):
 
 #DELIVERABLESentry
 def deliverables(request):
-	return render(request, "deliverables.html", {})
+	if request.method == 'POST':
+		dform = DeliverablesForm(request.POST or None)
+
+		if dform.is_valid():
+			dform.save()
+			all_delivs = Deliverables.objects.all
+			messages.success(request, ("Deliverable Has Been Added To 'Deliverables' List"))
+			return render(request, "deliverables.html", {'all_delivs': all_delivs})
+
+	else:
+		all_delivs = Deliverables.objects.all
+		return render(request, "deliverables.html", {'all_delivs': all_delivs})
+
+
+
+#DELIVERABLEScrossoff
+def delivs_cross_off(request, list_id):
+	delivs = Deliverables.objects.get(pk=list_id)
+	delivs.delivscomplete = True
+	delivs.save()
+	return redirect ('deliverables')
+
+#DELIVERABLESuncross
+def delivs_uncross(request, list_id):
+	delivs = Deliverables.objects.get(pk=list_id)
+	delivs.delivscomplete = False
+	delivs.save()
+	return redirect ('deliverables')
+
+#DELIVERABLESdelete
+def delivs_delete(request, list_id):
+	delivs = Deliverables.objects.get(pk=list_id)
+	delivs.delete()
+	messages.success(request, ('Deliverable Has Been Deleted'))
+	return redirect ('deliverables')
+
 
 
 
