@@ -42,6 +42,10 @@ def django_database_models(request):
 def django_context_dictionary(request):
 	return render(request, "django_dictionary.html", {})
 
+#DEPLOY TO HEROKU
+def django_heroku(request):
+	return render(request, "django_heroku.html", {})
+
 ######################################################
 
 #GIT

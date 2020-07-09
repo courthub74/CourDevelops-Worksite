@@ -19,6 +19,8 @@ urlpatterns = [
 	path('django_database/', views.django_database_models, name="django_database"),
 	#Django Context Dictionary
 	path('context_dictionary/', views.django_context_dictionary, name="context_dictionary"),
+	#Django Heroku
+	path('django_heroku/', views.django_heroku, name="django_heroku"),
 
 	#Projects Checklist
 	path('projects/', views.projects, name="projects"),

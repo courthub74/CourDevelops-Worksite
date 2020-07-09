@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<!DOCTYPE html>
+ <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+         
+        </head>
+
+  <body>
+
+  	
+
+    <div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <style type="text/css">
+                        .tab {
+                            margin-left: 40px;
+                        }
+                        .tab80 {
+                            margin-left: 80px;
+                        }
+                        .tab120 {
+                            margin-left: 120px;
+                        }
+                    </style>
+
+
+            <div class="media-body ml-8" >
+			    <h3 class="mt-0"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.vizteams.com%2Fwp-content%2Fuploads%2F2014%2F04%2Fdjango.png&f=1&nofb=1" height="50"  class="mr-3" alt="Django">Build Deployment To
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.freebiesupply.com%2Flogos%2Fthumbs%2F1x%2Fheroku-logo.png&f=1&nofb=1" height="60"  class="mr-3" alt="Heroku"></h3> 
+			</div>
+			<div class="line"></div>
+
+
+            <div class="container-fluid">
+            <div class="media">
+
+            <div class="container">
+
+
+            <br>
+
+
+                <ol class="list-group mr-8">
+                    <li class="list-group-item list-group-item-secondary">Login to Heroku</li>
+                    <li class="list-group-item">in the (cmdline) type: <b>heroku login</b><br>
+                                                <span class="tab"><small>you will be brought to a login page just accept</small><br></li>
+
+                        <br>
+
+                    <li class="list-group-item list-group-item-secondary">Create the app</li>
+                    <li class="list-group-item">in the (cmdline) type: <b>heroku create</b><br>
+                                                <span class="tab"><small>you have the option to name your app here (heroku create appname)</small><br></li>
+
+                      <br>
+
+                    <li class="list-group-item list-group-item-secondary">Secret Key Settings</li>
+                    <li class="list-group-item">in <b>settings.py:</b><br><br>
+                                                copy the <b>SECRET_KEY = '0984309240943skfiekfDILS###'</b> <--just an example<br><br> 
+                                                <span class="tab">go to your Heroku project and click settings <br><br>
+                                                <span class="tab">click Reveal Config Vars <br><br>
+                                                <span class="tab">paste the key(i.e. '0984309240943skfiekfDILS###') where it says 'VALUE' <br><br>
+                                                <span class="tab">paste 'SECRET_KEY' where it says 'KEY'</li>
+
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">Installations</li>
+                    <li class="list-group-item">Go back to terminal and install:<br><br>
+                                                <span class="tab">pip install gunicorn<br><br> 
+                                                <span class="tab">pip install django-heroku<br><br>
+                                                <span class="tab">pip install python-decouple<br><br>
+                                                <span class="tab80"><small>NOTE: Do a <b>pip freeze</b> to check if its all there</small></li>
+
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">Imports</li>
+                    <li class="list-group-item">in <b>settings.py</b> underneath <b>import os</b> type these:<br><br>
+                                                <span class="tab">import django_heroku<br><br>
+                                                <span class="tab">from decouple import config<br><br>
+                                                <span class="tab">import dj_database_url<br><br></li>
+                                                
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">Local Settings</li>
+                    <li class="list-group-item">at bottom of <b>settings.py</b> under everything type:<br><br>
+                                                <span class="tab">django_heroku.settings(locals())<br><br></li>  
+
+
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">For Secret Key in Settings</li>
+                    <li class="list-group-item">in <b>settings.py:</b><br><br>
+                                                type in: <b>SECRET_KEY = config('SECRET_KEY')</b><br><br> 
+                                                <span class="tab">in (cmdline) touch .env  [this creates an .env file]<br><br>
+                                                <span class="tab">cut and paste the original <b>SECRET_KEY</b> into the <b>.env</b> file save and close<br><br>
+                                                <span class="tab">in (cmdline) touch .gitignore [this creates a .gitignore file]<br><br>
+                                                <span class="tab80">type <b>.env</b> in there save and close</li>
+                        
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">Middleware</li>
+                    <li class="list-group-item">go to <b>settings.py</b> under <b>MIDDLEWARE</b>:<br><br>
+                                                <span class="tab">underneath <b>'django.middleware.security.SecurityMiddleware'</b>, type:<br><br>
+                                                    <span class="tab80"><b>'whitenoise.middleware.WhiteNoiseMiddleware'</b></li> 
+
+                    <br>
+
+                     <li class="list-group-item list-group-item-secondary">Static Files</li>
+                    <li class="list-group-item">in <b>settings.py</b> under <b>STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static') ]</b> type:<br><br>
+                                                <span class="tab"><b>STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'</b></li>
+
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">Procfile</li>
+                    <li class="list-group-item">in (cmdline)touch Procfile [this creates a Procfile] <--Case Sensitive<br><br>
+                                                <span class="tab">in <b>Procfile</b>, type:<br><br>
+                                                    <span class="tab80"><b>web: gunicorn (name of directory with wsgi file in it).wsgi</b><br>
+                                                        <br>
+                                                    <span class="tab">save and close Procfile</li> 
+
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">requirements.txt</li>
+                    <li class="list-group-item">in (cmdline) type <b>pip freeze > requirements.txt</b> [this creates the requirements.txt file]</li>
+                                                
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">Static Directory for 'Collectstatic'</li>
+                    <li class="list-group-item">If you haven't already for CSS, JS and Images purposes, make sure you add a directory called <b>static</b> in the main project folder<br><br> 
+                                                
+                                                If nothing is in it just place a 
+                                                blank file in the <b>static</b> folder and call it <b>__init__.py</b><br><br>                                             <span class="tab">This is for the purpose of the <b>'CollectStatic'</b> when deploying<br></li>
+
+
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">Push To Heroku</li>
+                    <li class="list-group-item">in (cmdline) type:<br><br>
+                                                <span class="tab80"><b>git push heroku master</b><br><br>
+                                                <span class="tab">before you do this, make sure you commit to git</li>
+
+
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">Heroku Migrates</li>
+                    <li class="list-group-item">in (cmdline) type:<br><br> 
+                                                <span class="tab">heroku run python manage.py makemigrations<br><br>
+                                                <span class="tab">heroku run python manage.py migrate<br><br>
+                                                <span class="tab">heroku run python manage.py createsuperuser<br>
+                                                <span class="tab80"><small>set up name | email | password</small><br><br>
+                                                <span class="tab">heroku run python manage.py collectstatic</li>
+                                                
+                                                     
+{% endblock %}
