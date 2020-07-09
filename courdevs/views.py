@@ -64,6 +64,8 @@ def pushtoheroku(request):
 
 ######################################################
 
+#PROJECTS TODO LIST
+
 #PROJECTSentry
 def projects(request):
 	if request.method == 'POST':
@@ -101,6 +103,13 @@ def project_delete(request, list_id):
 	return redirect ('projects')
 
 ######################################################
+
+#DELIVERABLES TODO LIST
+
+#DELIVERABLESentry
+def deliverables(request):
+	return render(request, "deliverables.html", {})
+
 
 
 

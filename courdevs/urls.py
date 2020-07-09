@@ -28,6 +28,8 @@ urlpatterns = [
 	path('project_uncross/<list_id>', views.project_uncross, name="project_uncross"),
 	path('project_delete/<list_id>', views.project_delete, name="project_delete"),
 
+	#Deliverables Checklist
+	path('deliverables/', views.deliverables, name="deliverables"),
 
 	#GIT
 	#InitializeGit
