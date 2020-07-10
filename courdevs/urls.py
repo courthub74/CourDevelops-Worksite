@@ -25,6 +25,8 @@ urlpatterns = [
 	#FLASK
 	#Flask Basic Structure
 	path('flaskbasic/', views.flaskbasic, name='flaskbasic'),
+	#Flask Heroku
+	path('flask_heroku/', views.flask_heroku, name="flask_heroku"),
 
 	#Projects Checklist
 	path('projects/', views.projects, name="projects"),

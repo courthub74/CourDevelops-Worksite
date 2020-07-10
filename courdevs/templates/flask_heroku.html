@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<!DOCTYPE html>
+ <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+         
+        </head>
+
+  <body>
+
+  	
+
+    <div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+                <style type="text/css">
+                        .tab {
+                            margin-left: 40px;
+                        }
+                        .tab80 {
+                            margin-left: 80px;
+                        }
+                        .tab120 {
+                            margin-left: 120px;
+                        }
+                    </style>
+
+
+
+            <div class="media-body ml-8" >
+                <h3 class="mt-0"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F3%2F3c%2FFlask_logo.svg%2F1920px-Flask_logo.svg.png&f=1&nofb=1" height="50"  class="mr-3" alt="Flask">to <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.freebiesupply.com%2Flogos%2Fthumbs%2F1x%2Fheroku-logo.png&f=1&nofb=1" height="60" class="mr-3" alt="Heroku"></h3> 
+            </div>
+            <div class="line"></div>
+
+
+
+             <div class="container-fluid">
+            <div class="media">
+
+            <div class="container">
+
+
+            <br>
+
+
+                <ol class="list-group mr-8">
+                    <li class="list-group-item list-group-item-secondary">Flask app to Heroku</li>
+                    <li class="list-group-item">in directory of your app code, install gunicorn with <b>pip install gunicorn</b><br>
+                                                    <span class="tab"><small>Make sure you're using pip from your virtual environment</small><br>
+                                                    <hr>
+                                                    Create a <b>requirement.txt</b> file in the main app directory where the main Python app file is located <br>
+                                                    <br>
+                                                    <span class="tab">You can create that file by running <b>pip freeze > requirements.txt</b> in (cmdline)<br>
+                                                    <span class="tab80"><small>Make sure you're using pip from your virtual environment</small><br>
+                                                        <br>
+                                                    <span class="tab">The <b>requirement.txt</b> file should now contain a list of Python packages <br>
+                                                    <hr>
+                                                    Create a file named <b>Procfile</b> in the main app directory <br>
+                                                    <span class="tab"><small>The file should not contain any extension</small><br>
+                                                    <hr>
+                                                    Then type in this line inside: <b>web: gunicorn script1:app</b> <br>
+                                                    <span class="tab"><small>where <b>script1</b> should be replaced with the name of your Python script <br>
+                                                        <span class="tab">and "app" with the name of the variable holding your Flask app</small><br>
+                                                    <hr>
+                                                    Create a runtime.txt file in the main app directory and type "python-3.5.1" (or your version if later) inside <br>
+                                                    <hr>
+                                                    in (cmdline) cd back into directory of your app code <br>
+                                                    <hr>
+                                                    in the (cmdline) type: <b>heroku login</b><br>
+                                                    <span class="tab"><small>you will be brought to a login page just accept</small><br>
+                                                    <hr>
+                                                    Create a new Heroku app with <b>heroku create myawesomeappname</b>
+                                                    <hr>
+                                                    Initialize a local git repository with <b>git init</b>
+                                                    <hr>
+                                                    Add your local application files to git with <b>git add .</b>
+                                                    <hr>
+                                                    Tell git your email address with <b>git config --global user.email "myemail@email.com"</b> <br>
+                                                    <span class="tab"><small>Make sure the email address is inside quotes</small>
+                                                    <hr>
+                                                    Tell git your username (just pick whatever username) with <b>config --global user.name "whateverusername"</b><br>
+                                                    <span class="tab"><small>The username should be in quotes</small>
+                                                    <hr>
+                                                    Commit the changes with <b>git commit -m "first commit"</b><br>
+                                                    <span class="tab"><small>Make sure "first commit" is inside quotes</small>
+                                                    <hr>
+                                                    Before pushing the changes to Heroku <br>
+                                                    <span class="tab"><small>tell heroku the name of the app you want to use with heroku <b>git:remote --app myawesomeappname</b></small>
+                                                    <hr>
+                                                    Push the changes to Heroku with <b>git push heroku master</b><br>
+                                                    <hr>
+                                                    That should do it. Go ahead and open your app with <b>heroku open"</b></li>
+
+
+
+
+
+{% endblock %}

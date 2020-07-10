@@ -53,6 +53,10 @@ def django_heroku(request):
 def flaskbasic(request):
 	return render(request, "flaskbasic.html", {})
 
+#Flask to Heroku
+def flask_heroku(request):
+	return render(request, "flask_heroku.html", {})
+
 
 ######################################################
 
