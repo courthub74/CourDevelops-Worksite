@@ -22,6 +22,10 @@ urlpatterns = [
 	#Django Heroku
 	path('django_heroku/', views.django_heroku, name="django_heroku"),
 
+	#FLASK
+	#Flask Basic Structure
+	path('flaskbasic/', views.flaskbasic, name='flaskbasic'),
+
 	#Projects Checklist
 	path('projects/', views.projects, name="projects"),
 	path('project_cross_off/<list_id>', views.project_cross_off, name="project_cross_off"),

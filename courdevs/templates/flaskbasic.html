@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<!DOCTYPE html>
+ <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+         
+        </head>
+
+  <body>
+
+  	
+
+    <div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <div class="media-body ml-8" >
+                <h3 class="mt-0"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F3%2F3c%2FFlask_logo.svg%2F1920px-Flask_logo.svg.png&f=1&nofb=1" height="50"  class="mr-3" alt="Flask">Basic Structure</h3> 
+            </div>
+            <div class="line"></div>
+
+
+            <style type="text/css">
+                        .tab {
+                            margin-left: 40px;
+                        }
+                        .tab80 {
+                            margin-left: 80px;
+                        }
+                        .tab120 {
+                            margin-left: 120px;
+                        }
+                        .blue {
+                            color: #1E90FF;
+                        }
+                        .black {
+                            color: black;
+                        }
+                        .red {
+                            color: #C71585;
+                        }
+                        .green {
+                            color: #3CB371;
+                        }
+                    </style>
+
+
+             <div class="container-fluid">
+            <div class="media">
+
+            <div class="container">
+
+
+            <br>
+
+
+                <ol class="list-group mr-8">
+                    <li class="list-group-item list-group-item-secondary">Initial Setup and Installation</li>
+                    <li class="list-group-item">mkdir (project)
+                    <br><hr>
+                    in (project) install flask  (pip install flask)
+                    <br><hr>
+                    open text editor and attach the folder (project)
+                    <br><hr>
+                    create a new file within (project) called (new file) --[save as]
+                    <br><hr>
+                    then enter below in (new file):
+                    <br><br>
+                    <span class="tab"><b>from flask import Flask <br>  
+                        <br><br>
+                    <span class="tab">app = Flask(__main__) <br>
+
+
+                    <br><br><br>
+
+
+                    <span class="tab">if __name__ == "__main__": <br>
+                        <span class="tab80">app.run(debug=True)</b>
+
+
+                    <br><hr>
+                    That sets up the Basic Structure
+                    <br><hr>
+
+
+                    NEXT you add pages like so:
+                    <br><br>
+
+
+                    <span class="tab"><b>from flask import Flask <br> 
+                    <br>
+                    <span class="tab">app = Flask(__main__) <br>
+                    <br>
+
+                    <span class="tab blue">@app.route('/')</span> <br>
+                    <span class="tab blue">def home(): <br>
+                        <span class="tab80 blue">return render_template("home.html")</span><br>
+                            <span class="tab120 blue"><small>THIS sets up the 'Home' page</small></span>
+
+                    <br><br>
+                    <span class="tab red">@app.route('/about')</span><br>
+                    <span class="tab red">def about(): </span><br>
+                        <span class="tab80 red">return render_template("about.html")</span><br>
+                        <span class="tab120 red"><small>THIS sets up the 'About' page</small></span>
+
+                     <br><br>
+                    <span class="tab green">@app.route('/pricing')</span><br>
+                    <span class="tab green">def pricing(): </span><br>
+                        <span class="tab80 green">return render_template("pricing.html")</span><br>
+                        <span class="tab120 green"><small>THIS sets up the 'Pricing' page</small></span>
+                            <br><br><br>
+
+                  
+                    <span class="tab black">if __name__ == "__main__":</span> <br>
+                        <span class="tab80 black">app.run(debug=True)</span></b>
+
+                    <br><hr>
+                    And so forth .... </li>
+
+
+
+{% endblock %}

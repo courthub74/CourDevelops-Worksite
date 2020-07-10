@@ -48,6 +48,14 @@ def django_heroku(request):
 
 ######################################################
 
+#FLASK
+#Flask Basic Structure
+def flaskbasic(request):
+	return render(request, "flaskbasic.html", {})
+
+
+######################################################
+
 #GIT
 
 #INITIALIZEGIT
