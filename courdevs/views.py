@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Projects, Deliverables
-from .forms import ProjectsForm, DeliverablesForm
+from .models import Projects, Deliverables, Practices
+from .forms import ProjectsForm, DeliverablesForm, PracticesForm
 from django.contrib import messages
 
 # Create your views here.
@@ -134,7 +134,6 @@ def deliverables(request):
 		return render(request, "deliverables.html", {'all_delivs': all_delivs})
 
 
-
 #DELIVERABLEScrossoff
 def delivs_cross_off(request, list_id):
 	delivs = Deliverables.objects.get(pk=list_id)
@@ -156,6 +155,46 @@ def delivs_delete(request, list_id):
 	messages.success(request, ('Deliverable Has Been Deleted'))
 	return redirect ('deliverables')
 
+########################################################
+
+#PRACTICES
+
+#PRACTICESentry
+def practices(request):
+	if request.method == 'POST':
+		pracform = PracticesForm(request.POST or None)
+
+		if pracform.is_valid():
+			pracform.save()
+			all_practices = Practices.objects.all
+			messages.success(request, ("Practice Has Been Added To 'Practices' List"))
+			return render(request, "practices.html", {'all_practices': all_practices})
+
+	else:
+		all_practices = Practices.objects.all
+		return render(request, "practices.html", {'all_practices': all_practices}) 
+	
+
+#PRACTICEScrossoff
+def practices_cross_off(request, list_id):
+	practices = Practices.objects.get(pk=list_id)
+	practices.practicescomplete = True
+	practices.save()
+	return redirect ('practices')
+
+#PRACTICESuncross
+def practices_uncross(request, list_id):
+	practices = Practices.objects.get(pk=list_id)
+	practices.practicescomplete = False
+	practices.save()
+	return redirect ('practices')
+
+#PRACTICEdelete
+def practices_delete(request, list_id):
+	practices = Practices.objects.get(pk=list_id)
+	practices.delete()
+	messages.success(request, ('Practice Has Been Deleted'))
+	return redirect ('practices')
 
 
 

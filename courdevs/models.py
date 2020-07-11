@@ -16,3 +16,11 @@ class Deliverables(models.Model):
 
 	def __str__(self):
 		return self.delivs
+
+
+class Practices(models.Model):
+	practices = models.CharField(max_length=200)
+	practicescomplete = models.BooleanField(default=False)
+
+	def __str__(self):
+		return self.practices

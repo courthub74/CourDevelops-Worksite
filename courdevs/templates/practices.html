@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div id="content">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark mr-5">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                    
+
+                    <!--Navbar Links-->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+
+                    <!--Entry Form-->
+
+                </div>
+            </nav>                        
+
+
+
+<!--Practices Checklist Starts-->
+
+			<nav class="navbar navbar-expand-sm navbar-light bg-light">
+                <div class="container-fluid">
+
+
+                	<style type="text/css">
+                        .middle {
+                            width: 100%;
+                            text-align: center;
+                        }
+                		.center {
+                			text-align: center;
+                		}
+                		.center-block {
+                			margin-right: auto;
+                			margin-left: auto;
+                		}
+                        .blue {
+                            background-color: #87CEFA;
+                            color: black;
+                            border: 1px solid black
+                        }
+                	</style>
+
+                	<h3>Practices Checklist</h3>
+                		
+                	<div class="center-block">	
+						<form class="form-inline my-2 my-lg-0" method="POST">
+							{% csrf_token %}
+                    		<input class="form-control mr-5 center" size="90" placeholder="Enter Practices" name="practices">
+                    		<button type="submit" class="btn blue">Add to Practices</button>
+                    	</form>
+                    </div>
+                    	
+                </div>
+            </nav>
+
+
+<!--STRIKER-->
+<style type="text/css">
+	.striker {
+		text-decoration: line-through;
+	}
+    #blue {
+        background-color: #87CEFA;
+        color: black;
+    }
+    .black {
+        color: black;
+    }
+</style>
+
+
+<!--MESSAGES-->
+<div class="container">
+
+		{% if messages %}
+			  {% for message in messages %}
+
+			      <div class="alert blue alert-dismissable" role="alert">
+			        <button class="close black" data-dismiss="alert">
+			             <sup class="black"><small>close</small></sup>
+			        </button>
+			           {{ message }}
+			      </div>
+
+			  {% endfor %}
+		{% endif %}
+
+
+<!--PRACTICES TABLE-->
+{% if all_practices %} <!--States it as all_practices-->
+<div class="container">
+    <br>
+    <table class="table table-bordered">
+        <th class="table" id="blue" colspan="4">Practices To Acknowledge</th>
+        {% for stuff in all_practices %}<!--States for everything in all_practices-->
+            {% if stuff.practicescomplete %}<!--IF the practices is complete, do below-->
+                <tr>
+                    <td class="striker">{{ stuff.practices }}</td>
+                    <td><center><a href="{% url 'practices_uncross' stuff.id %}">Uncross</a></center></td>
+                    <td><center><a href="{% url 'practices_delete' stuff.id %}">Delete</a></center></td>
+                </tr>
+
+                {% else %}<!--OR else do THIS-->
+
+                <tr>
+                    <td>{{ stuff.practices }}</td>
+                    <td><center><a href="{% url 'practices_cross_off' stuff.id %}">Cross Off</a></center></td>
+                    <td><center><a href="{% url 'practices_delete' stuff.id %}">Delete</a></center></td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+{% endif %}
+</div>
+
+
+
+{% endblock %}

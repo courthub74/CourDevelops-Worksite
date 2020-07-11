@@ -2,6 +2,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+	
+	#DEVELOPMENT STACK PAGE
 	path('', views.main, name='main'),
 
 	#PYTHON
@@ -24,7 +26,7 @@ urlpatterns = [
 
 	#FLASK
 	#Flask Basic Structure
-	path('flaskbasic/', views.flaskbasic, name='flaskbasic'),
+	path('flaskbasic/', views.flaskbasic, name="flaskbasic"),
 	#Flask Heroku
 	path('flask_heroku/', views.flask_heroku, name="flask_heroku"),
 
@@ -39,6 +41,12 @@ urlpatterns = [
 	path('delivs_cross_off/<list_id>', views.delivs_cross_off, name="delivs_cross_off"),
 	path('delivs_uncross/<list_id>', views.delivs_uncross, name="delivs_uncross"),
 	path('delivs_delete/<list_id>', views.delivs_delete, name="delivs_delete"),
+
+	#Practices Checklist
+	path('practices/', views.practices, name="practices"),
+	path('practices_cross_off/<list_id>', views.practices_cross_off, name="practices_cross_off"),
+	path('practices_uncross/<list_id>', views.practices_uncross, name="practices_uncross"),
+	path('practices_delete/<list_id>', views.practices_delete, name="practices_delete"),
 
 	#GIT
 	#InitializeGit
