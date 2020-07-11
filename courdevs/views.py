@@ -114,6 +114,22 @@ def project_delete(request, list_id):
 	messages.success(request, ('Project Has Been Deleted'))
 	return redirect ('projects')
 
+#PROJECTSedit
+def project_edit(request, list_id):
+	if request.method == 'POST':
+		pitem = Projects.objects.get(pk=list_id)
+
+		pform = ProjectsForm(request.POST or None, instance=pitem)
+
+		if pform.is_valid():
+			pform.save()
+			messages.success(request, ('Project Has Been Edited'))
+			return redirect ('projects')
+
+	else:
+		pitem = Projects.objects.get(pk=list_id)
+		return render(request, 'projedit.html', {'pitem': pitem})
+
 ######################################################
 
 #DELIVERABLES TODO LIST

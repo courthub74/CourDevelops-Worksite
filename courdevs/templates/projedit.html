@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
+
 
 <!DOCTYPE html>
  <html lang="en">
@@ -24,11 +26,12 @@
                         <i class="fas fa-align-left"></i>
                         <span>Toggle Sidebar</span>
                     </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto ml-5" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button>
 
-                   
+
+
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
@@ -50,29 +53,27 @@
                 </div>
             </nav>
 
-
-            <h2>Delete<img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fterokarvinen.com%2Fwp-content%2Fuploads%2F2012%2F08%2Fgit-logo-cc-by-300x300.png&f=1&nofb=1" height="70" class="ml-2 mr-1"> Repo</h2>
-
-            <div class="line"></div>
+	{% if pitem %}
 
 
-            <div class="container-fluid">
-            <div class="media">
-			<div class="container">
+		<br><br>
+
+		<div class="container">
+			<h3>EDIT PROJECT:</h3>
+			<form class="form-inline my-2 my-lg-0" method="POST">
+				{% csrf_token %}
+
+				<input class="form-control mr-sm-2" size="80" placeholder="{{ pitem.projects}}" value="{{ pitem.projects}}" name="projects">
+
+				<input type="hidden" value="{{ projects.projectscomplete}}" name="projectscomplete">
+
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit Edit</button>
+			</form>
+		</div>
 
 
-			<br>
 
-
-			    <ol class="list-group mr-8">
-
-			    	<li class="list-group-item list-group-item-secondary">Windows 8 and Above</li>
-			    	<li class="list-group-item">In the Directory <br>
-			    								Delete all files except for . git.<br>
-			    								In CLI <br>
-			    								git add . -A <br>
-			    								git commit -m "deleted entire project" <br>
-			    								git push</li>
+	{% endif %}
 
 
 {% endblock %}

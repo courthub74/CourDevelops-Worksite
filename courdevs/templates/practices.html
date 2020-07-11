@@ -27,7 +27,7 @@
                                 <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Practices</a>
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
@@ -104,7 +104,7 @@
 		{% if messages %}
 			  {% for message in messages %}
 
-			      <div class="alert blue alert-dismissable" role="alert">
+			      <div class="alert alert-dismissable" id="blue" role="alert">
 			        <button class="close black" data-dismiss="alert">
 			             <sup class="black"><small>close</small></sup>
 			        </button>
