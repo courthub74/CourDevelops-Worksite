@@ -238,12 +238,29 @@ def practices_uncross(request, list_id):
 	practices.save()
 	return redirect ('practices')
 
-#PRACTICEdelete
+#PRACTICESdelete
 def practices_delete(request, list_id):
 	practices = Practices.objects.get(pk=list_id)
 	practices.delete()
 	messages.success(request, ('Practice Has Been Deleted'))
 	return redirect ('practices')
+
+#PRACTICESedit
+def practices_edit(request, list_id):
+	if request.method == 'POST':
+		pracitem = Practices.objects.get(pk=list_id)
+
+		pracform = PracticesForm(request.POST or None)
+
+		if pracform.is_valid():
+			pracform.save()
+			messages.success(request, ('Practice Has Been Edited'))
+			return redirect ('practices')
+
+	else:
+		pracitem = Practices.objects.get(pk=list_id)
+		return render(request, 'practices_edit.html', {'pracitem': pracitem})
+
 
 
 

@@ -99,9 +99,10 @@
     }
 </style>
 
+<div class="container">
+
 
 <!--MESSAGES-->
-
 
 		{% if messages %}
 			  {% for message in messages %}
@@ -115,6 +116,8 @@
 
 			  {% endfor %}
 		{% endif %}
+
+</div>
 
 
 <!--PRACTICES TABLE-->
@@ -134,7 +137,7 @@
                 {% else %}<!--OR else do THIS-->
 
                 <tr>
-                    <td>{{ stuff.practices }}</td>
+                    <td><a href="{% url 'practices_edit' stuff.id %}"> {{ stuff.practices }}</a></td>
                     <td><center><a href="{% url 'practices_cross_off' stuff.id %}">Cross Off</a></center></td>
                     <td><center><a href="{% url 'practices_delete' stuff.id %}">Delete</a></center></td>
                 </tr>

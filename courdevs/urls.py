@@ -50,6 +50,7 @@ urlpatterns = [
 	path('practices_cross_off/<list_id>', views.practices_cross_off, name="practices_cross_off"),
 	path('practices_uncross/<list_id>', views.practices_uncross, name="practices_uncross"),
 	path('practices_delete/<list_id>', views.practices_delete, name="practices_delete"),
+	path('practices_edit/<list_id>', views.practices_edit, name="practices_edit"),
 
 	#GIT
 	#InitializeGit
