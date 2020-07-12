@@ -20,6 +20,15 @@ def try_except(request):
 
 ######################################################
 
+#JAVASCRIPT
+
+#DISABLE FIELDS BY CHECKBOX
+def disable_fields(request):
+	return render(request, "disable_fields.html", {})
+
+
+######################################################
+
 #DJANGO
 
 #DJANGOSETUP 

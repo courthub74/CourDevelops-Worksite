@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+ <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>CourDevs Solutions</title>
+
+           
+
+        </head>
+
+  <body>
+
+    <div id="content">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                   
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <h2>Disable Fields By CheckBox<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*H-25KB7EbSHjv70HXrdl6w.png&f=1&nofb=1" height="50" class="ml-4"></h2>
+
+            <div class="line"></div>
+
+
+            <style type="text/css">
+                .tab20 {
+                    margin-left: 20px;
+                }
+                .tab40 {
+                    margin-left: 40px;
+                }
+                .tab80 {
+                    margin-left: 80px;
+                }
+                .tab120 {
+                    margin-left: 120px;
+                }
+                .tab180 {
+                    margin-left: 160px;
+                }
+            </style>
+
+
+
+            <div class="container-fluid">
+            <div class="media">
+            <div class="container">
+
+            <br>
+
+                <ol class="list-group mr-8">
+
+                    <li class="list-group-item list-group-item-secondary">Dissable Javascript for OnSite when InStudio is checked</li>
+
+
+                                    <li class="list-group-item">BELOW 'Onsite' value is disabled when 'Instudio' is checked <br>
+                                                                <span class="tab40"><small>You can plug in ANY two values for this sequence</small><br>
+                                                                <hr>
+
+                                        (script type="text/javascript"> <br>
+                                        <span class="tab20">$(function() { </span><br>
+                                            <span class="tab40">$("#checked").change(function() { </span><br>
+                                                <span class="tab40">var set = this.checked;</span> <br>
+                                                <span class="tab40">if (set) { </span><br>
+                                                    <span class="tab80">$("#other").prop("disabled", false); //OnSite </span><br>
+                                                    <span class="tab80">$("#other2").prop("disabled", false); //OnSite </span><br> 
+                                                    <span class="tab80">$("#other3").prop("disabled", false); //OnSite </span><br>
+                                                    <span class="tab80">$("#other4").prop("disabled", false); //OnSite </span><br>
+                                                    <span class="tab80">$("#other5").prop("disabled", false); //OnSite </span><br>
+                                                <span class="tab40">} </span><br>
+
+                                                <span class="tab40">else </span>{ <br>
+                                                    <span class="tab80">$("#other").prop("disabled", true); //InStudio </span><br>
+                                                <span class="tab40">} <br>
+                                            <span class="tab20">}); <br>
+                                        }); <br>
+
+
+                                        $(function() { </span><br> 
+                                            <span class="tab20">$("#checked2").change(function() { </span><br> 
+                                                <span class="tab20">var set2 = this.checked; </span><br>
+                                                <span class="tab40">if (set2) { <br>
+                                                    <span class="tab80">$("#other").prop("disabled", true); </span><br>
+                                                    <span class="tab80">$("#other2").prop("disabled", true); </span><br>
+                                                    <span class="tab80">$("#other3").prop("disabled", true); </span><br>
+                                                    <span class="tab80">$("#other4").prop("disabled", true); </span><br>
+                                                    <span class="tab80">$("#other5").prop("disabled", true); </span><br>
+                                                <span class="tab40">} <br>
+
+                                                <span class="tab40">else { <br>
+                                                    <span class="tab80">$("#other").prop("disabled", false); <br>
+                                                <span class="tab40">} <br>
+                                            <span class="tab20">}); <br>
+                                        }); <br>
+                                    (/script) </li>
+
+
+{% endblock %}

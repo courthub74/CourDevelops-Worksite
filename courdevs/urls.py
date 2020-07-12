@@ -10,6 +10,11 @@ urlpatterns = [
 	#Try Except
 	path('try_except/', views.try_except, name="try_except"),
 
+	#JAVASCRIPT
+	#Disable Fields by CheckBox
+	path('disable_fields/', views.disable_fields, name="disable_fields"),
+
+
 	#DJANGO
 	#Django Notes
 	path('setupdjango/', views.setupdjango, name="setupdjango"),
@@ -24,11 +29,15 @@ urlpatterns = [
 	#Django Heroku
 	path('django_heroku/', views.django_heroku, name="django_heroku"),
 
+
+
 	#FLASK
 	#Flask Basic Structure
 	path('flaskbasic/', views.flaskbasic, name="flaskbasic"),
 	#Flask Heroku
 	path('flask_heroku/', views.flask_heroku, name="flask_heroku"),
+
+
 
 	#Projects Checklist
 	path('projects/', views.projects, name="projects"),
@@ -38,6 +47,8 @@ urlpatterns = [
 	path('project_edit/<list_id>', views.project_edit, name="project_edit"),
 
 
+
+
 	#Deliverables Checklist
 	path('deliverables/', views.deliverables, name="deliverables"),
 	path('delivs_cross_off/<list_id>', views.delivs_cross_off, name="delivs_cross_off"),
@@ -45,12 +56,16 @@ urlpatterns = [
 	path('delivs_delete/<list_id>', views.delivs_delete, name="delivs_delete"),
 	path('delivs_edit/<list_id>', views.delivs_edit, name="delivs_edit"),
 
+
+
 	#Practices Checklist
 	path('practices/', views.practices, name="practices"),
 	path('practices_cross_off/<list_id>', views.practices_cross_off, name="practices_cross_off"),
 	path('practices_uncross/<list_id>', views.practices_uncross, name="practices_uncross"),
 	path('practices_delete/<list_id>', views.practices_delete, name="practices_delete"),
 	path('practices_edit/<list_id>', views.practices_edit, name="practices_edit"),
+
+
 
 	#GIT
 	#InitializeGit
@@ -61,6 +76,8 @@ urlpatterns = [
 	path('pushtoheroku/', views.pushtoheroku, name="pushtoheroku"),
 	#GitIgnore
 	path('gitignore/', views.gitignore, name="gitignore"),
+
+
 
 	#GITHUB
 	#InitialGithub
