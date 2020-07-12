@@ -86,6 +86,10 @@ def gitignore(request):
 def initialgithub(request):
 	return render(request, "initialgithub.html", {})
 
+#GITHUB ACTIONS
+def github_actions(request):
+	return render(request, "github_actions.html", {})
+
 ######################################################
 
 #PROJECTS TODO LIST

@@ -63,5 +63,7 @@ urlpatterns = [
 	#GITHUB
 	#InitialGithub
 	path('initialgithub/', views.initialgithub, name="initialgithub"),
+	#GitHubActions
+	path('github_actions/', views.github_actions, name="github_actions"),
 
 ]
