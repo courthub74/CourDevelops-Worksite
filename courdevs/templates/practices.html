@@ -74,8 +74,10 @@
                 	<div class="center-block">	
 						<form class="form-inline my-2 my-lg-0" method="POST">
 							{% csrf_token %}
-                    		<input class="form-control mr-5 center" size="90" placeholder="Enter Practices" name="practices">
-                    		<button type="submit" class="btn blue">Add to Practices</button>
+                            <div class="container">
+                    		<input class="form-control mr-5 ml-auto center" size="30" placeholder="Enter Practices" name="practices">
+                    		<button type="submit" class="btn blue mr-5">Add to Practices</button>
+                            </div>
                     	</form>
                     </div>
                     	
@@ -99,7 +101,7 @@
 
 
 <!--MESSAGES-->
-<div class="container">
+
 
 		{% if messages %}
 			  {% for message in messages %}
