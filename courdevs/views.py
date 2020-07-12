@@ -74,6 +74,18 @@ def deletegitrepo(request):
 def pushtoheroku(request):
 	return render(request, "pushtoheroku.html", {})
 
+#GITIGNORE
+def gitignore(request):
+	return render(request, "gitignore.html", {})
+
+######################################################
+
+#GITHUB
+
+#INITIALPUSH
+def initialgithub(request):
+	return render(request, "initialgithub.html", {})
+
 ######################################################
 
 #PROJECTS TODO LIST

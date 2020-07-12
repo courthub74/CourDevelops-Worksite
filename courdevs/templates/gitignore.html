@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<!DOCTYPE html>
+ <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>CourDevs Solutions</title>
+
+           
+
+        </head>
+
+  <body>
+
+    <div id="content">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                   
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+    <h2><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fterokarvinen.com%2Fwp-content%2Fuploads%2F2012%2F08%2Fgit-logo-cc-by-300x300.png&f=1&nofb=1" height="70" class="ml-4 mr-3" >Ignore</h2>
+
+    <div class="line"></div>
+
+                <style type="text/css">
+                        .tab {
+                            margin-left: 40px;
+                        }
+                        .tab80 {
+                            margin-left: 80px;
+                        }
+                        .tab120 {
+                            margin-left: 120px;
+                        }
+                    </style>
+
+
+    <div class="container-fluid">
+            <div class="media">
+            <div class="container">
+
+
+            <br>
+
+
+                <ol class="list-group mr-8">
+
+                    <li class="list-group-item list-group-item-secondary">Creating the <b>.gitignore</b> file <br>
+                    <li class="list-group-item">First you make a .gitignore file in your main folder<br>
+                        <span class="tab"><small>NOTE: the <b>.</b> in front of the name is what hides the file</small></span>
+                    <hr>
+                    Then type in the actuall files you want ignored<br>
+                    <hr>
+                    Here are some examples: <br>
+                        <span class="tab"><b>.env</b></span><br>
+                            <span class="tab80"><small>this is a file in Django where you supply the SECRET_KEY</small><br>
+                                <br>
+                        <span class="tab"><b>/[Ff]older Name/</b></span><br>
+                            <span class="tab80"><small>ABOVE ignores a directory(folder) entirely</small></span><br>
+                                <br>
+                        <span class="tab"><b>project.html</b></span><br>
+                            <span class="tab80"><small>You can directly type in a file like ABOVE and Git will ignore that</small></span><br>
+                            <br>
+                        <span class="tab"><b>*.js</b></span><br>
+                            <span class="tab80"><small>ABOVE is by extension where <b>*</b> means ALL of the JavaScript files</small></span><br>
+                    <hr>
+                    Or you can just enter <b>node_modules/</b> it depends on what you are doing <br>
+                    </li>
+                    
+
+
+
+{% endblock %}

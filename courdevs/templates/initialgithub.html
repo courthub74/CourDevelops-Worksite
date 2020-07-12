@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<!DOCTYPE html>
+ <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>CourDevs Solutions</title>
+
+           
+
+        </head>
+
+  <body>
+
+    <div id="content">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                   
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+    <h2>Initial push to <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn4.iconfinder.com%2Fdata%2Ficons%2Ficonsimple-logotypes%2F512%2Fgithub-512.png&f=1&nofb=1" height="90" alt="GitHub" class="ml-2"></h2>
+
+    <div class="line"></div>
+
+                    <style type="text/css">
+                        .tab {
+                            margin-left: 40px;
+                        }
+                        .tab80 {
+                            margin-left: 80px;
+                        }
+                        .tab120 {
+                            margin-left: 120px;
+                        }
+                    </style>
+
+    <div class="container-fluid">
+            <div class="media">
+            <div class="container">
+
+
+            <br>
+
+
+                <ol class="list-group mr-8">
+
+                    <li class="list-group-item list-group-item-secondary">Initialize Git Repository</li>
+                    <li class="list-group-item">git config --global user.name "Your Name" <br>
+                                                git config --global user.email "you@youraddress.com" <br>
+                                                git config --global push.default matching <br>
+                                                git config --global alias.co checkoutgit init <br>
+                                                git add . <br>
+                                                git commit -m "message here" <br>
+                                                </li>
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">Add Files to Git</li>
+                    <li class="list-group-item">git init <br>
+                                                git add . <br></li>
+                    
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">Set up the GitHub Repository</li>
+                    <li class="list-group-item">Log into Github.com account<br>
+                        <span class="tab"><small>Set one up if you haven't already</small></span>
+                        <hr>
+                        Go to Repositories <br>
+                        <hr>
+                        Click 'New' <br>
+                        <hr>
+                        Enter Repository Name <br>
+                        <hr>
+                        Enter Description <br>
+                        <hr>
+                        Choose 'Public' or 'Private' <br>
+                        <hr>
+                        Don't do Readme yet <br>
+                        <span class="tab"><small>Save that for later</small></span></li>
+
+                    <br>
+
+                    <li class="list-group-item list-group-item-secondary">NOW push it to GitHub</li>
+                    <li class="list-group-item">FIRST type: <br>
+                                                <hr> 
+                                                <span class="tab"><b>git remote add origin git@github.com: courthub74/(repo name here)</b><br>
+                                                    <span class="tab80"><small>this just adds the origin to push to</small></span><br>
+                                                        <hr>
+                                                <span class="tab"><b>git push -u origin master</b><br>
+                                                    <span class="tab80"><small>this pushes the code/build to to repo location</small>
+                    </li>
+
+
+                    <br>
+
+
+                    <li class="list-group-item list-group-item-secondary">If Original Add Origin is Rejected</li>
+                    <li class="list-group-item"><b>git remote set-url origin https://github.com/courthub74/(repo name here)</b><br></li>
+
+
+
+
+
+                      
+
+
+{% endblock %}

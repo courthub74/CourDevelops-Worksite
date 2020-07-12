@@ -57,5 +57,11 @@ urlpatterns = [
 	path('deletegitrepo/', views.deletegitrepo, name="deletegitrepo"),
 	#PushToHeroku
 	path('pushtoheroku/', views.pushtoheroku, name="pushtoheroku"),
+	#GitIgnore
+	path('gitignore/', views.gitignore, name="gitignore"),
+
+	#GITHUB
+	#InitialGithub
+	path('initialgithub/', views.initialgithub, name="initialgithub"),
 
 ]

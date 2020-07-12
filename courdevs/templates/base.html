@@ -141,6 +141,9 @@
                             <a href="{% url 'initializegit' %}">General Git</a>
                         </li>
                         <li>
+                            <a href="{% url 'gitignore' %}">.gitignore</a>
+                        </li>
+                        <li>
                             <a href="{% url 'deletegitrepo' %}">Delete Git Repo</a>
                         </li>
                         <li>
@@ -154,13 +157,7 @@
                     <a href="#github" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">GitHub</a>
                     <ul class="collapse list-unstyled" id="github">
                         <li>
-                            <a href="#">Initial Push to Github</a>
-                        </li>
-                        <li>
-                            <a href="#">Push Existing Repo</a>
-                        </li>
-                        <li>
-                            <a href="#">.gitignore</a>
+                            <a href="{% url 'initialgithub' %}">Initial Push to Github</a>
                         </li>
                           <li>
                             <a href="#">GitHub Actions</a>
