@@ -119,7 +119,7 @@
                         {% else %}
 
                         <tr>
-                            <td>{{ stuff.delivs }}</td>
+                            <td><a href="{% url 'delivs_edit' stuff.id %}">{{ stuff.delivs }}</a></td>
                             <td><center><a href="{% url 'delivs_cross_off' stuff.id %}">Cross Off</a></center></td>
                             <td><center><a href="{% url 'delivs_delete' stuff.id %}">Delete</a></center></td>
                         </tr>

@@ -187,6 +187,23 @@ def delivs_delete(request, list_id):
 	messages.success(request, ('Deliverable Has Been Deleted'))
 	return redirect ('deliverables')
 
+#DELIVERABLESedit
+def delivs_edit(request, list_id):
+	if request.method == 'POST':
+		ditem = Deliverables.objects.get(pk=list_id)
+
+		dform = DeliverablesForm(request.POST or None, instance=ditem)
+
+		if dform.is_valid():
+			dform.save()
+			messages.success(request, ('Deliverable Has Been Edited'))
+			return redirect ('deliverables')
+
+	else:
+		ditem = Deliverables.objects.get(pk=list_id)
+		return render(request, 'delivs_edit.html', {'ditem': ditem})
+		
+
 ########################################################
 
 #PRACTICES

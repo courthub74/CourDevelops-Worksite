@@ -43,6 +43,7 @@ urlpatterns = [
 	path('delivs_cross_off/<list_id>', views.delivs_cross_off, name="delivs_cross_off"),
 	path('delivs_uncross/<list_id>', views.delivs_uncross, name="delivs_uncross"),
 	path('delivs_delete/<list_id>', views.delivs_delete, name="delivs_delete"),
+	path('delivs_edit/<list_id>', views.delivs_edit, name="delivs_edit"),
 
 	#Practices Checklist
 	path('practices/', views.practices, name="practices"),
