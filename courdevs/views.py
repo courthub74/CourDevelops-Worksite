@@ -26,6 +26,10 @@ def try_except(request):
 def disable_fields(request):
 	return render(request, "disable_fields.html", {})
 
+#COLOR CODE SELECTION BY RADIODIAL
+def color_code(request):
+	return render(request, "color_code.html", {})
+
 
 ######################################################
 

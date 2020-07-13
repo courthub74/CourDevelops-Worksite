@@ -13,6 +13,8 @@ urlpatterns = [
 	#JAVASCRIPT
 	#Disable Fields by CheckBox
 	path('disable_fields/', views.disable_fields, name="disable_fields"),
+	#Color Code by Radiodial selection
+	path('color_code/', views.color_code, name="color_code"),
 
 
 	#DJANGO
