@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+ <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>CourDevs Solutions</title>
+
+           
+
+        </head>
+
+  <body>
+
+    <div id="content">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto ml-5" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+    <h2><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.w3.org%2Fhtml%2Flogo%2Fdownloads%2FHTML5_Logo_512.png&f=1&nofb=1" height="70" width="80" class="ml-4 mr-3">Tables</h2>
+
+    <div class="line"></div>
+
+                <style type="text/css">
+                        .tab20 {
+                            margin-left: 20px;
+                        }
+                        .tab {
+                            margin-left: 40px;
+                        }
+                        .tab80 {
+                            margin-left: 80px;
+                        }
+                        .tab120 {
+                            margin-left: 120px;
+                        }
+                    </style>
+
+
+    <div class="container-fluid">
+            <div class="media">
+            <div class="container">
+
+
+            <br>
+
+
+                <ol class="list-group mr-8">
+
+                    <li class="list-group-item list-group-item-secondary">Tables.html</li>
+                                <li class="list-group-item">BELOW makes an HTML table: <br>
+                                                            <br>
+
+                                                           (table)</span><br>
+
+                                                           <span class="tab20">(tr)</span><br>
+                                                           <span class="tab">(th scope="col")Saturday(/th)<br>
+                                                           <span class="tab">(th scope="col")Saturday(/th)<br>
+                                                           <span class="tab20">(tr)</span><br>
+
+                                                           <span class="tab20">(tr)</span><br>
+                                                           <span class="tab">(th scope="row")Temperature(/th)<br>
+                                                           <span class="tab">(td)73(/td)<br>
+                                                           <span class="tab">(td)81(/td)<br>
+                                                           <span class="tab20">(tr)</span><br>
+
+                                                           (table)</span><br>
+                                                            <br>
+                                                           <b>(th) - Table Heading <br>
+                                                           (tr) - Table Row <br>
+                                                           (td) - Table Data <br></b>
+
+                                                           <hr>
+
+                                                           NOTE: the SCOPE attribute, which can take one of two values here:<br>
+                                                                <br>
+                                                            <span class="tab20"><b>row</b> - this value makes it clear that the heading is for a ROW. <br>
+                                                            <span class="tab20"><b>col</b> - this value makes it clear that the heading is for a COLUMN</li>
+
+
+                                                           <br>
+                                                           </li>
+
+
+
+
+
+
+
+
+{% endblock %}

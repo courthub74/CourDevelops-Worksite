@@ -16,6 +16,12 @@ urlpatterns = [
 	#Color Code by Radiodial selection
 	path('color_code/', views.color_code, name="color_code"),
 
+	#HTML
+	#Forms
+	path('html_forms/', views.html_forms, name="html_forms"),
+	#Tables
+	path('html_tables/', views.html_tables, name="html_tables"),
+
 
 	#DJANGO
 	#Django Notes

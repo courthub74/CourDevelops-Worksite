@@ -33,6 +33,18 @@ def color_code(request):
 
 ######################################################
 
+#HTML
+
+#HTMLforms
+def html_forms(request):
+	return render(request, "html_forms.html", {})
+
+#HTMLtables
+def html_tables(request):
+	return render(request, "html_tables.html", {})
+
+######################################################
+
 #DJANGO
 
 #DJANGOSETUP 

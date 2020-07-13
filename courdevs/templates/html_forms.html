@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
-
 
 <!DOCTYPE html>
  <html lang="en">
@@ -53,28 +51,50 @@
                 </div>
             </nav>
 
-	{% if pitem %}
+
+    <h2><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.w3.org%2Fhtml%2Flogo%2Fdownloads%2FHTML5_Logo_512.png&f=1&nofb=1" height="70" width="80" class="ml-4 mr-3">Forms</h2>
+
+    <div class="line"></div>
+
+                <style type="text/css">
+                        .tab20 {
+                            margin-left: 20px;
+                        }
+                        .tab {
+                            margin-left: 40px;
+                        }
+                        .tab80 {
+                            margin-left: 80px;
+                        }
+                        .tab120 {
+                            margin-left: 120px;
+                        }
+                    </style>
 
 
-		<br><br>
-
-		<div class="container">
-			<h3>EDIT PROJECT:</h3>
-			<form class="form-inline my-2 my-lg-0" method="POST">
-				{% csrf_token %}
-
-				<input class="form-control mr-sm-2" size="30" placeholder="{{ pitem.projects}}" value="{{ pitem.projects}}" name="projects">
-
-				<input type="hidden" value="{{ projects.projectscomplete}}" name="projectscomplete">
-
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit Edit</button>
-				<button class="btn btn-outline-primary my-2 my-sm-0 ml-2"><a href="{% url 'projects' %}">Cancel</a></button>
-			</form>
-		</div>
+    <div class="container-fluid">
+            <div class="media">
+            <div class="container">
 
 
+            <br>
 
-	{% endif %}
+
+                <ol class="list-group mr-8">
+
+                    <li class="list-group-item list-group-item-secondary">Forms.html</li>
+                               <li class="list-group-item"><span class="tab20"><b>(form action="/example.html" method="POST")</span><br>
+                               <span class="tab">(/form)</b></span> <br>
+                               <br>
+                               In the above example, we’ve created the skeleton for a (form) that will send information to example.html as a POST request: <br>
+                               The action attribute determines where the information is sent <br>
+                               The method attribute is assigned a HTTP verb that is included in the HTTP request </li>
+
+
+
+
+
+
 
 
 {% endblock %}

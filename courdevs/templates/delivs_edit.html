@@ -63,7 +63,7 @@
 			<form class="form-inline my-2 my-lg-0" method="POST">
 				{% csrf_token %}
 
-				<input class="form-control mr-sm-2" size="80" placeholder="{{ ditem.delivs }}" value="{{ ditem.delivs }}" name="delivs">
+				<input class="form-control mr-sm-2" size="30" placeholder="{{ ditem.delivs }}" value="{{ ditem.delivs }}" name="delivs">
 
 				<input type="hidden" value="{{ delivs.delivscomplete }}" name="delivscomplete">
 
