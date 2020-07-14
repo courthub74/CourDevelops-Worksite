@@ -27,6 +27,12 @@ urlpatterns = [
 	path('dropdown/', views.dropdown, name="dropdown"),
 	#User Authentication
 	path('user_auth/', views.user_auth, name="user_auth"),
+	#Numberbox
+	path('numberbox/', views.numberbox, name="numberbox"),
+	#Radiodial
+	path('radio/', views.radio, name="radio"),
+	#Slider
+	path('slider/', views.slider, name="slider"),
 
 
 	#DJANGO

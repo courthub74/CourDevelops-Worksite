@@ -55,6 +55,18 @@ def dropdown(request):
 def user_auth(request):
 	return render(request, "user_auth.html", {})
 
+#HTMLnumber box
+def numberbox(request):
+	return render(request, "numberbox.html", {})
+
+#HTMLslider
+def slider(request):
+	return render(request, "slider.html", {})
+
+#HTMLradiodial
+def radio(request):
+	return render(request, "radio.html", {})
+
 ######################################################
 
 #DJANGO

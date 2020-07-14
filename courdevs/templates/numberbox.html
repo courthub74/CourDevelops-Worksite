@@ -52,20 +52,16 @@
             </nav>
 
 
-    <h2><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.w3.org%2Fhtml%2Flogo%2Fdownloads%2FHTML5_Logo_512.png&f=1&nofb=1" height="70" width="80" class="ml-4 mr-3">Dropdown Menu</h2>
+    <h2><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.w3.org%2Fhtml%2Flogo%2Fdownloads%2FHTML5_Logo_512.png&f=1&nofb=1" height="70" width="80" class="ml-4 mr-3">Numberbox</h2>
 
     <div class="line"></div>
 
-
-      <style type="text/css">
+                <style type="text/css">
                         .tab20 {
                             margin-left: 20px;
                         }
                         .tab40 {
                             margin-left: 40px;
-                        }
-                        .tab60 {
-                            margin-left: 60px;
                         }
                         .tab80 {
                             margin-left: 80px;
@@ -90,36 +86,28 @@
 
                 <ol class="list-group mr-8">
 
-                    <li class="list-group-item list-group-item-secondary">Dropdown.html</li>
-                                <li class="list-group-item">BELOW makes a Dropdown Menu: <br>
-                                    <hr>
-
-                                <div class="code">
-                                   <span class="tab20">&ltform></span> <br>
-                                   <span class="tab40">&ltlabel for="lunch">What's for lunch?&lt/label></span> <br>
-                                   <span class="tab40">&ltselect id="lunch" name="lunch"></span><br>
-                                   <span class="tab60">&ltoption value="pizza">Pizza</option></span><br>
-                                   <span class="tab60">&ltoption value="currychicken">Curry Chicken</option></span><br>
-                                   <span class="tab60">&ltoption value="salad">Salad</option></span><br>
-                                   <span class="tab60">&ltoption value="ramen">Ramen</option></span><br>
-                                   <span class="tab60">&ltoption value="tacos">Tacos</option></span><br>
-                                   <span class="tab40">&lt/select></span><br>
-                                   <span class="tab20">&lt/form></span>
-                                </div> 
-
-                                <hr>
-
-                                <form>
-                                    <label for="lunch">What's for lunch?</label>
-                                    <select id="lunch" name="lunch">
-                                        <option>Select:</option>
-                                        <option value="pizza">Pizza
-                                        <option value="currychicken">Curry Chicken
-                                        <option value="salad">Salad
-                                        <option value="ramen">Ramen
-                                        <option value="tacos">Tacos
-                                    </select>
-                                </form></li>
+                    <li class="list-group-item list-group-item-secondary">Numberbox.html</li>
+                               <li class="list-group-item">
+                            <div class="code">
+                                <span class="tab20"><b>&ltform></span><br>
+                                    <span class="tab40">&ltlabel for="years"> Years of experience:&lt/label></span><br>
+                                     <span class="tab40">&ltinput id="years" name="years" type="number" step="1"></span><br>   
+                               <span class="tab20">&lt/form></b></span> <br>
+                               <br>
+                            </div>
+                            <hr>
+                            <form>
+                                <label for="years"> Years of experience:</label>
+                                <input id="years" name="years" type="number" step="1" >
+                            </form>
+                            <span class="tab40"><small>* Hover over box and click the arrows</small></span>
+                               </li>
 
 
-    {% endblock %}
+
+
+
+
+
+
+{% endblock %}
