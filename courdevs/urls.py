@@ -21,6 +21,12 @@ urlpatterns = [
 	path('html_forms/', views.html_forms, name="html_forms"),
 	#Tables
 	path('html_tables/', views.html_tables, name="html_tables"),
+	#Submit Button
+	path('submit_button/', views.submit_button, name="submit_button"),
+	#Dropdown Menu
+	path('dropdown/', views.dropdown, name="dropdown"),
+	#User Authentication
+	path('user_auth/', views.user_auth, name="user_auth"),
 
 
 	#DJANGO

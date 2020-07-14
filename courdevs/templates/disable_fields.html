@@ -72,6 +72,10 @@
                 .tab180 {
                     margin-left: 160px;
                 }
+                .code {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
             </style>
 
 
@@ -91,8 +95,10 @@
                                                                 <span class="tab40"><small>You can plug in ANY two values for this sequence</small><br>
                                                                 <hr>
 
-                                        (script type="text/javascript"> <br>
-                                        <span class="tab20">$(function() { </span><br>
+
+                                    <div class="code">
+                                        &ltscript type="text/javascript"> <br>
+                                        <span class="tab20">$&ltfunction() { </span><br>
                                             <span class="tab40">$("#checked").change(function() { </span><br>
                                                 <span class="tab40">var set = this.checked;</span> <br>
                                                 <span class="tab40">if (set) { </span><br>
@@ -126,7 +132,7 @@
                                                 <span class="tab40">} <br>
                                             <span class="tab20">}); <br>
                                         }); <br>
-                                    (/script) </li>
+                                    &lt/script></div></li>
 
 
 {% endblock %}

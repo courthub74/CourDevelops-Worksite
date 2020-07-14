@@ -43,6 +43,18 @@ def html_forms(request):
 def html_tables(request):
 	return render(request, "html_tables.html", {})
 
+#HTMLsubmit button
+def submit_button(request):
+	return render(request, "submit_button.html", {})
+
+#HTMLdropdown
+def dropdown(request):
+	return render(request, "dropdown.html", {})
+
+#HTMLuser authentication
+def user_auth(request):
+	return render(request, "user_auth.html", {})
+
 ######################################################
 
 #DJANGO

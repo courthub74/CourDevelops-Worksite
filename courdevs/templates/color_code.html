@@ -72,6 +72,11 @@
                 .tab180 {
                     margin-left: 160px;
                 }
+                 
+                .code {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
             </style>
 
 
@@ -92,19 +97,30 @@
                                                                 <span class="tab40"><small>You can plug in ANY colors or other CSS settings for this sequence</small><br>
                                                                 <hr>
 
-                                        <b>Le CSS</b> <br>
-                                        (style type="text/css"> <br>
+
+
+                                        <span class="badge badge-primary code">Le CSS</span> <br>
+                                        <br>
+
+                                    <div class="code">
+                                        &ltstyle type="text/css"> <br>
                                             <span class="tab20">.goldy { <br>
                                                 <span class="tab40">background-color: #FFD700; <br>
                                             <span class="tab20">} <br>
                                             <span class="tab20">.prince { <br>
                                                 <span class="tab40">background-color: #DDA0DD; <br>
                                             <span class="tab20">} <br>
-                                        (/style)
+                                        &lt/style>
                                         <hr>
-                                        <b>Le JavaScript</b> <br>
 
-                                        (script type="text/javascript"> <br>
+
+
+                                        <span class="badge badge-warning code">Le JavaScript</span> <br>
+                                        <br>
+                                    </div>
+
+                                    <div class="code">
+                                        &ltscript type="text/javascript"> <br>
                                         
                                         <span class="tab20">var colorElements = document.querySelectorAll('.color');</span><br>
                                         
@@ -122,7 +138,9 @@
                                                 
                                         <span class="tab20">});</span><br>
                                                   
-                                        (/script)</span></li>
+                                        &lt/script></span></li>
+
+                                    </div>
 
 
 {% endblock %}

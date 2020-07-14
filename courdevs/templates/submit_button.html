@@ -52,16 +52,20 @@
             </nav>
 
 
-    <h2><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.w3.org%2Fhtml%2Flogo%2Fdownloads%2FHTML5_Logo_512.png&f=1&nofb=1" height="70" width="80" class="ml-4 mr-3">Forms</h2>
+    <h2><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.w3.org%2Fhtml%2Flogo%2Fdownloads%2FHTML5_Logo_512.png&f=1&nofb=1" height="70" width="80" class="ml-4 mr-3">Submit Button</h2>
 
     <div class="line"></div>
 
-                <style type="text/css">
+
+      <style type="text/css">
                         .tab20 {
                             margin-left: 20px;
                         }
-                        .tab {
+                        .tab40 {
                             margin-left: 40px;
+                        }
+                        .tab60 {
+                            margin-left: 60px;
                         }
                         .tab80 {
                             margin-left: 80px;
@@ -86,22 +90,15 @@
 
                 <ol class="list-group mr-8">
 
-                    <li class="list-group-item list-group-item-secondary">Forms.html</li>
-                               <li class="list-group-item">
-                            <div class="code">
-                                <span class="tab20"><b>&ltform action="/example.html" method="POST"></span><br>
-                               <span class="tab">&lt/form></b></span> <br>
-                               <br>
-                               </div>
-                               In the above example, we’ve created the skeleton for a (form) that will send information to example.html as a POST request: <br>
-                               The action attribute determines where the information is sent <br>
-                               The method attribute is assigned a HTTP verb that is included in the HTTP request  </li>
+                    <li class="list-group-item list-group-item-secondary">SubmitButton.html</li>
+                                <li class="list-group-item">BELOW makes a submit button: <br>
+                                    <hr>
+
+                                <div class="code">
+                                   <span class="tab40">&ltform></span> <br>
+                                      <span class="tab80">&ltinput type="submit" value="Send"></span> <br>
+                                    <span class="tab40">&lt/form></span> <br>
+                                </div> </li>
 
 
-
-
-
-
-
-
-{% endblock %}
+    {% endblock %}
