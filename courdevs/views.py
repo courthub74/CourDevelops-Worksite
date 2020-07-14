@@ -65,7 +65,9 @@ def slider(request):
 
 #HTMLradiodial
 def radio(request):
-	return render(request, "radio.html", {})
+	return render(request, "radio.html", {
+		
+		})
 
 ######################################################
 
