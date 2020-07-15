@@ -77,6 +77,12 @@ def bobs_burger(request):
 
 ######################################################
 
+#CSS
+
+#CSS Notes
+def css_notes(request):
+	return render(request, "css_notes.html", {})
+
 #DJANGO
 
 #DJANGOSETUP 

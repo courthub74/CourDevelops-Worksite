@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+ <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>CourDevs Solutions</title>
+
+           
+
+        </head>
+
+  <body>
+
+    <div id="content">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto ml-5" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <h2><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.freebiesupply.com%2Flogos%2Flarge%2F2x%2Fcss3-logo-png-transparent.png&f=1&nofb=1" height="50" width="60" class="ml-4 mr-3">Notes</h2>
+
+            <div class="line"></div>
+
+
+            <style type="text/css">
+                        .tab20 {
+                            margin-left: 20px;
+                        }
+                        .tab40 {
+                            margin-left: 40px;
+                        }
+                        .tab60 {
+                            margin-left: 60px;
+                        }
+                        .tab80 {
+                            margin-left: 80px;
+                        }
+                        .tab120 {
+                            margin-left: 120px;
+                        }
+                        .code {
+                            font-size: 20px;
+                            font-weight: bold;
+                        }
+                        .comments {
+                          color: grey;
+                        }
+                        #overlay {
+                          margin-right: auto;
+                          margin-left: auto;
+                        }
+                    </style>
+
+
+
+
+    <div class="container-fluid">
+        <div class="media">
+            <div class="container">
+
+
+            <br>
+
+
+            <ol class="list-group mr-8">
+
+
+
+           <li class="list-group-item list-group-item-secondary">CSS Notes</li>
+                <li class="list-group-item"><pre class="">
+                    <code>
+                            p { (p is a tag call for styling)
+                                color: red; 
+                            }
+                            
+
+                            <hr>
+
+                            
+                            body { 
+                                background-color: #eee; 
+                            }  
+                            
+
+                            <hr>
+                              
+                            
+                            h1 {
+                              color: maroon;
+                            }
+                            
+
+                            <hr>
+                              
+                            
+                            .title {  (.title is the title CLASS)
+                              color: teal;
+                            }
+                            
+
+                            <hr>
+                              
+                            
+                            #bigger {
+                              font-size: 50px;(#bigger is the bigger ID)
+                            }
+                            
+
+                            <hr>
+                              
+                            
+                            .uppercase {
+                              text-transform: uppercase;
+                            }
+                            
+
+                            <hr>
+                              
+                            
+                            .publish-time {
+                              color: gray;
+                            }
+                            
+
+                            <hr>
+                              
+                            
+                            .cursive {
+                              font-family: cursive;
+                            }
+                            
+
+                            <hr>
+                              
+                            
+                            .capitalize {
+                              text-transform: capitalize;
+                            }
+                            
+
+                            <hr>
+                              
+                            
+                            h2.destination {  
+                              font-family: cursive;
+                            }
+
+                            (CHAINING of the h2 tag and the .destination class)<br>
+                            (It will only style the h2 that is also a member of the destination class)
+                            
+
+                            <hr>
+                              
+                            
+                            .description h5 { (NESTING of h5 elements selected with the description id)
+                              color: teal;
+                            }
+                            
+
+                            <hr>
+                              
+                          
+                            p {
+                              color: blue;
+                            }
+                                       
+                            .main p {
+                              color: red;
+                            }
+                           
+                                        (Both of these CSS rules define what a p element should look like. <br>
+                                        Since .main p has a class and a p tag as its selector, only the p elements <br>
+                                        inside the .main element will appear red. This occurs despite there being <br>
+                                        another more general rule that states p elements should be blue) <br>
+
+                            <hr>
+                              
+                          
+                            .main p {
+                              color: red;
+                            }
+                            
+
+                            <hr>
+                              
+                            h5, p {  (MULTIPLE SELECTORS putting h5 and p tags under the same styling)
+                              font-family: Georgia; 
+                            }
+                    </code>
+  
+                </pre>
+
+            </ol>
+        </div>
+    </div>
+</div>
+           
+
+
+
+
+{% endblock %}

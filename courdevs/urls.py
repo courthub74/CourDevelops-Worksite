@@ -39,6 +39,11 @@ urlpatterns = [
 	path('bobs_burger/', views.bobs_burger, name="bobs_burger"),
 
 
+	#CSS
+	#CSS Notes
+	path('css_notes/', views.css_notes, name="css_notes"),
+
+
 	#DJANGO
 	#Django Notes
 	path('setupdjango/', views.setupdjango, name="setupdjango"),
