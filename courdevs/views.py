@@ -65,9 +65,11 @@ def slider(request):
 
 #HTMLradiodial
 def radio(request):
-	return render(request, "radio.html", {
-		
-		})
+	return render(request, "radio.html", {})
+
+#HTML DEMO
+def bobs_burger(request):
+	return render(request, "bobs_burger.html", {})
 
 ######################################################
 

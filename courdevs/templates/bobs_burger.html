@@ -1,0 +1,304 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+ <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>CourDevs Solutions</title>
+
+           
+
+        </head>
+
+  <body>
+
+    <div id="content">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto ml-5" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+    <h2><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.w3.org%2Fhtml%2Flogo%2Fdownloads%2FHTML5_Logo_512.png&f=1&nofb=1" height="70" width="80" class="ml-4 mr-3">Bobs Burger Menu</h2>
+
+    <div class="line"></div>
+
+                <style type="text/css">
+                        .tab20 {
+                            margin-left: 20px;
+                        }
+                        .tab40 {
+                            margin-left: 40px;
+                        }
+                        .tab60 {
+                            margin-left: 60px;
+                        }
+                        .tab80 {
+                            margin-left: 80px;
+                        }
+                        .tab120 {
+                            margin-left: 120px;
+                        }
+                        .code {
+                            font-size: 12px;
+                            font-weight: bold;
+                        }
+                        .comments {
+                          color: grey;
+                        }
+                        #overlay {
+                          margin-right: auto;
+                          margin-left: auto;
+                        }
+                    </style>
+
+
+    <div class="container-fluid">
+            <div class="media">
+            <div class="container">
+
+
+            <br>
+
+
+                <ol class="list-group mr-8">
+
+                    <li class="list-group-item list-group-item-secondary">Tables.html</li>
+                                <li class="list-group-item">BELOW makes an HTML table: <br>
+
+                                                        <div class="code">
+                                                          &lt!DOCTYPE html><br>
+                                                            <span class="tab20">&lthtml lang="en" dir="ltr"></span><br>
+                                                              &lthead><br>
+                                                                <span class="tab20">&ltmeta charset="utf-8"><br>
+                                                                <span class="tab40">&ltlink rel="stylesheet" type="text/css" href="style.css"><br>
+                                                                <span class="tab40">&ltlink href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"><br>
+                                                                <span class="tab20">&lttitle>Forms Review&lt/title><br>
+                                                              &lt/head><br>
+                                                              &ltbody><br>
+                                                                <span class="tab20">&ltsection id="overlay"><br>
+                                                                  <span class="tab40">&ltimg src="https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_burger-logo.svg" alt="Davie's Burgers Logo" id="logo"><br>
+                                                                  &lthr><br>
+                                                                  &ltform action="submission.html" method="POST"><br>
+                                                                    <span class="tab20">&lth1>Create a burger!&lt/h1><br>
+                                                                  <span class="tab20">&ltsection class="protein"><br>
+                                                                      <span class="tab40">&ltlabel for="patty">What type of protein would you like?&lt/label><br>
+                                                                      <span class="tab40">&ltinput type="text" name="patty" id="patty"><br>
+                                                                  <span class="tab20">&lt/section><br>
+                                                                    &lthr><br>
+                                                                    
+                                                                    <span class="tab20">&ltsection class="patties"><br>
+                                                                      <span class="tab40">&ltlabel for="amount">How many patties would you like?&lt/label><br>
+                                                                      <span class="tab40">&ltinput type="number" name="amount" id="amount"><br>
+                                                                    <span class="tab20">&lt/section><br>
+                                                                    &lthr><br>
+                                                                    
+                                                                    <span class="tab20">&ltsection class="cooked"><br>
+                                                                      <span class="tab40">&ltlabel for="doneness">How do you want your patty cooked&lt/label><br>
+                                                                      <span class="tab40">&ltbr><br>
+                                                                      <span class="tab40">&ltspan>Rare&lt/span><br>
+                                                                      <span class="tab40">&ltinput type="range" name="doneness" id="doneness" value="3" min="1" max="5"><br>
+                                                                      <span class="tab40">&ltspan>Well-Done&lt/span><br>
+                                                                    <span class="tab20">&lt/section><br>
+                                                                    &lthr><br>
+                                                                    
+                                                                    <span class="tab20">&ltsection class="toppings"><br>
+                                                                      <span class="tab40">&ltspan>What toppings would you like?&lt/span><br>
+                                                                      <span class="tab40">&ltbr><br>
+                                                                      <span class="tab40">&ltinput type="checkbox" name="topping" id="lettuce" value="lettuce"><br>
+                                                                      <span class="tab40">&ltlabel for="lettuce">Lettuce&lt/label><br>
+                                                                      <span class="tab40">&ltinput type="checkbox" name="topping" id="tomato" value="tomato"><br>
+                                                                      <span class="tab40">&ltlabel for="tomato">Tomato&lt/label><br>
+                                                                      <span class="tab40">&ltinput type="checkbox" name="topping" id="onion" value="onion"><br>
+                                                                      <span class="tab40">&ltlabel for="onion">Onion&lt/label><br>
+                                                                    <span class="tab20">&lt/section><br>
+                                                                    &lthr><br>
+                                                                    
+                                                                    <span class="tab20">&ltsection class="cheesy"><br>
+                                                                      <span class="tab40">&ltspan>Would you like to add cheese?&lt/span><br>
+                                                                      <span class="tab40">&ltbr><br>
+                                                                      <span class="tab40">&ltinput type="radio" name="cheese" id="yes" value="yes"><br>
+                                                                      <span class="tab40">&ltlabel for="yes">Yes&lt/label><br>
+                                                                      <span class="tab40">&ltinput type="radio" name="cheese" id="no" value="yes"><br>
+                                                                      <span class="tab40">&ltlabel for="no">No&lt/label><br>
+                                                                    <span class="tab20">&lt/section><br>
+                                                                    &lthr><br>
+                                                                   
+                                                                    <span class="tab20">&ltsection class="bun-type"><br>
+                                                                      <span class="tab40">&ltlabel for="bun">What type of bun would you like?&lt/label><br>
+                                                                      <span class="tab40">&ltselect name="bun" id="bun"><br>
+                                                                        <span class="tab60">&ltoption value="sesame">Sesame&lt/option><br>
+                                                                        <span class="tab60">&ltoption value="potatoe">Potato&lt/option><br>
+                                                                        <span class="tab60">&ltoption value="pretzel">Pretzel&lt/option><br>
+                                                                      <span class="tab40">&lt/select><br>
+                                                                    <span class="tab20">&lt/section><br>
+                                                                    &lthr><br>
+                                                                    
+                                                                    <span class="tab20">&ltsection class="sauce-selection"><br>
+                                                                      <span class="tab40">&ltlabel for="sauce">What type of sauce would you like?&lt/label><br>
+                                                                      <span class="tab40">&ltinput list="sauces" id="sauce" name="sauce" placeholder="enter or select here"><br>
+                                                                      <span class="tab40">&ltdatalist id="sauces"><br>
+                                                                        <span class="tab60">&ltoption value="ketchup">&lt/option><br>
+                                                                        <span class="tab60">&ltoption value="mayo">&lt/option><br>
+                                                                        <span class="tab60">&ltoption value="mustard">&lt/option><br>
+                                                                      <span class="tab40">&lt/datalist><br>
+                                                                    <span class="tab20">&lt/section><br>
+                                                                    &lthr><br>
+                                                                    <span class="tab20">&ltsection class="extra-info"><br>
+                                                                      <span class="tab40">&ltlabel for="extra">Anything else you want to add?&lt/label><br>
+                                                                      <span class="tab40">&ltbr><br>
+                                                                      <span class="tab40">&lttextarea id="extra" name="extra" rows="3" cols="40">&lt/textarea><br>
+                                                                    <span class="tab20">&lt/section><br>
+                                                                    &lthr><br>
+
+                                                                    <span class="tab20">&ltsection class="submission"><br>
+                                                                      <span class="tab40">&ltinput type="submit" value="Submit"><br>
+                                                                    <span class="tab20">&lt/section><br>
+                                                                  &lt/form><br>
+                                                                &lt/section><br>
+                                                              &lt/body><br>
+                                                            &lt/html><br>
+                                                          </div>
+
+
+                                                    <!--The Actual Menu-->
+                                                      <hr>
+                                                        
+                                                          <!DOCTYPE html>
+                                                            <html lang="en" dir="ltr">
+                                                              <head>
+                                                                <meta charset="utf-8">
+                                                                
+                                                                <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+                                                                <title>Forms Review</title>
+                                                              </head>
+                                                              <body>
+                                                                <div id="overlay">
+                                                                  <img src="https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_burger-logo.svg" alt="Davie's Burgers Logo" id="logo" width="500">
+                                                                </div>
+                                                                  <hr>
+                                                                  <form action="submission.html" method="POST">
+                                                                    <h1>Create a burger!</h1>
+                                                                    <section class="protein">
+                                                                      <label for="patty">What type of protein would you like?</label>
+                                                                      <input type="text" name="patty" id="patty">
+                                                                    </section>
+                                                                    <hr>
+                                                                    
+                                                                    <section class="patties">
+                                                                      <label for="amount">How many patties would you like?</label>
+                                                                      <input type="number" name="amount" id="amount">
+                                                                    </section>
+                                                                    <hr>
+                                                                    
+                                                                    <section class="cooked">
+                                                                      <label for="doneness">How do you want your patty cooked</label>
+                                                                      <br>
+                                                                      <span>Rare</span>
+                                                                      <input type="range" name="doneness" id="doneness" value="3" min="1" max="5">
+                                                                      <span>Well-Done</span>
+                                                                    </section>
+                                                                    <hr>
+                                                                    
+                                                                    <section class="toppings">
+                                                                      <span>What toppings would you like?</span>
+                                                                      <br>
+                                                                      <input type="checkbox" name="topping" id="lettuce" value="lettuce">
+                                                                      <label for="lettuce">Lettuce</label>
+                                                                      <input type="checkbox" name="topping" id="tomato" value="tomato">
+                                                                      <label for="tomato">Tomato</label>
+                                                                      <input type="checkbox" name="topping" id="onion" value="onion">
+                                                                      <label for="onion">Onion</label>
+                                                                    </section>
+                                                                    <hr>
+                                                                    
+                                                                    <section class="cheesy">
+                                                                      <span>Would you like to add cheese?</span>
+                                                                      <br>
+                                                                      <input type="radio" name="cheese" id="yes" value="yes">
+                                                                      <label for="yes">Yes</label>
+                                                                      <input type="radio" name="cheese" id="no" value="yes">
+                                                                      <label for="no">No</label>
+                                                                    </section>
+                                                                    <hr>
+                                                                   
+                                                                    <section class="bun-type">
+                                                                      <label for="bun">What type of bun would you like?</label>
+                                                                      <select name="bun" id="bun">
+                                                                        <option value="sesame">Sesame</option>
+                                                                        <option value="potatoe">Potato</option>
+                                                                        <option value="pretzel">Pretzel</option>
+                                                                      </select>
+                                                                    </section>
+                                                                    <hr>
+                                                                    
+                                                                    <section class="sauce-selection">
+                                                                      <label for="sauce">What type of sauce would you like?</label>
+                                                                      <input list="sauces" id="sauce" name="sauce" placeholder="enter or select here">
+                                                                      <datalist id="sauces">
+                                                                        <option value="ketchup"></option>
+                                                                        <option value="mayo"></option>
+                                                                        <option value="mustard"></option>
+                                                                      </datalist>
+                                                                    </section>
+                                                                    <hr>
+                                                                    <section class="extra-info">
+                                                                      <label for="extra">Anything else you want to add?</label>
+                                                                      <br>
+                                                                      <textarea id="extra" name="extra" rows="3" cols="40"></textarea>
+                                                                    </section>
+                                                                    <hr>
+
+                                                                    <section class="submission">
+                                                                      <input type="submit" value="Submit">
+                                                                    </section>
+                                                                  </form>
+                                                                </section>
+                                                              </body>
+                                                            </html>
+
+                                                           </div>
+
+                                                           </li>
+
+
+
+
+
+
+
+
+{% endblock %}
