@@ -73,11 +73,14 @@
                             margin-left: 120px;
                         }
                         .code {
-                            font-size: 20px;
+                            font-size: 16px;
                             font-weight: bold;
                         }
                         .comments {
                           color: grey;
+                        }
+                        .blue {
+                          background-color: #ADD8E6;
                         }
                     </style>
 
@@ -93,7 +96,7 @@
                 <ol class="list-group mr-8">
 
                     <li class="list-group-item list-group-item-secondary">Tables.html</li>
-                                <li class="list-group-item">BELOW makes an HTML table: <br>
+                                <li class="list-group-item">BELOW makes an HTML table:
                                                             <br>
                                                         <div class="code">
                                                            <span class="tab40">&lttable></span><br>
@@ -168,19 +171,253 @@
                                                           <span class="tab40">}</span><br>
                                                           </div>
 
+                                                          <hr>
 
+                                                          SO the CSS would work on the HTML ABOVE <br>
 
-                                                           <!-- <table border="1">
-                                                              <tr>
-                                                                <th scope="col">Saturday</th>
-                                                                <th scope="col">Sunday</th>
+                                                          <hr>
+
+                                                          BELOW is an example of columnspan: <br>
+
+                                                        <div class="code">
+                                                          &lttable border="1"><br>
+                                                            <span class="tab20">&lttr></span><br>
+                                                              <span class="tab40">&ltth>Monday&lt/th><br>
+                                                              <span class="tab40">&ltth>Tuesday</th><br>
+                                                              <span class="tab40">&ltth>Wednesday</th><br>
+                                                            <span class="tab20">&lt/tr><br>
+                                                            <span class="tab20">&lttr><br>
+                                                              <span class="tab40">&lttd colspan="2">Out of Town</td><br>
+                                                              <span class="tab40">&lttd>Back in Town</td><br>
+                                                            <span class="tab20">&lt/tr><br>
+                                                          &lt/table><br>
+                                                          </div>
+
+                                                          <br>
+
+                                                          <table border="1">
+                                                            <tr>
+                                                              <th>Monday</th>
+                                                              <th>Tuesday</th>
+                                                              <th>Wednesday</th>
+                                                            </tr>
+                                                            <tr>
+                                                              <td colspan="2"><center>Out of Town</center></td>
+                                                              <td>Back in Town</td>
+                                                            </tr>
+                                                          </table>
+
+                                                          <span class="tab20"><small>* HERE 'Out of Town' covers both Mon and Tue</small>
+
+                                                            <hr>
+
+                                                            BELOW is an example of rowspan: <br>
+                                                            <div class="code">
+                                                            &lttable border="2"><br>
+                                                              <span class="tab20">&lttr> <span class="comments">&lt!-- TableRow 1 --></span><br>
+                                                                <span class="tab40">&ltth></th><br>
+                                                                <span class="tab40">&ltth>Saturday</th><br>
+                                                                <span class="tab40">&ltth>Sunday</th><br>
+                                                              <span class="tab20">&lt/tr><br>
+                                                              <span class="tab20">&lttr> <span class="comments">&lt!-- TableRow 2 --></span><br>
+                                                                <span class="tab40">&ltth>Morning</th><br>
+                                                                <span class="tab40">&lttd rowspan="2">Work</td><br>
+                                                                <span class="tab40">&lttd rowspan="3">Relax</td><br>
+                                                              <span class="tab20">&lt/tr><br>
+                                                              <span class="tab20">&lttr> <span class="comments">&lt!-- TableRow 3 --></span><br>
+                                                                <span class="tab40">&ltth>Afternoon</th><br>
+                                                              <span class="tab20">&lt/tr><br>
+                                                              <span class="tab20">&lttr> <span class="comments">&lt!-- TableRow 4 --></span><br>
+                                                                <span class="tab40">&ltth>Evening</th><br>
+                                                                <span class="tab40">&lttd>Dinner</td><br>
+                                                              <span class="tab20">&lt/tr><br>
+                                                            &lt/table>
+                                                            </div>
+
+                                                            <br>
+
+                                                            <table border="2">
+                                                              <tr> <!-- Row 1 -->
+                                                                <th></th>
+                                                                <th>Saturday</th>
+                                                                <th>Sunday</th>
                                                               </tr>
-                                                              <tr>
-                                                                <th scope="row">Temperature</th>
-                                                                  <td>73</td>
-                                                                  <td>81</td>
-                                                              <tr>
-                                                          <table> -->
+                                                              <tr> <!-- Row 2 -->
+                                                                <th>Morning</th>
+                                                                <td rowspan="2">Work</td>
+                                                                <td rowspan="3">Relax</td>
+                                                              </tr>
+                                                              <tr> <!-- Row 3 -->
+                                                                <th>Afternoon</th>
+                                                              </tr>
+                                                              <tr> <!-- Row 4 -->
+                                                                <th>Evening</th>
+                                                                <td>Dinner</td>
+                                                              </tr>
+                                                            </table>
+                                                            <span class="tab20"><small>* SO its scheduled to WORK Saturday Morning and Afternoon
+                                                                                          AND relax all of Sunday</small>
+
+                                                            <hr>
+
+                                                            BELOW we use a TABLE BODY to section off table so that it is easier to manage: <br>
+
+                                                            <div class="code">
+                                                              &lttable><br>
+                                                                    <span class="tab20">&lttr><br>
+                                                                    <span class="tab40">&ltth>Company Name&lt/th><br>
+                                                                    <span class="tab40">&ltth>Number of Items to Ship&lt/th><br>
+                                                                    <span class="tab40">&ltth>Next Action%lt/th><br>
+                                                                    <span class="tab20">&lt/tr><br>
+                                                              &lttbody><br>
+                                                                    <span class="tab40">&lttr><br>
+                                                                    <span class="tab60">&lttd>Adam’s Greenworks&lt/td><br>
+                                                                    <span class="tab60">&lttd>14&lt/td><br>
+                                                                    <span class="tab60">&lttd>Package Items&lt/td><br>
+                                                                    <span class="tab40">&lt/tr><br>
+                                                                    <span class="tab40">&lttr><br>
+                                                                    <span class="tab60">&lttd>Davie's Burgers&lt/td><br>
+                                                                    <span class="tab60">&lttd>2&lt/td><br>
+                                                                    <span class="tab60">&lttd>Send Invoice&lt/td><br>
+                                                                    <span class="tab40">&lt/tr><br>
+                                                                &lt/tbody><br>
+
+                                                              &lt/table><br>
+                                                            </div>
+
+                                                            <br>
+
+                                                           <table border="2">
+                                                                <tr>
+                                                                <th>Company Name</th>
+                                                                <th>Number of Items to Ship</th>
+                                                                <th>Next Action</th>
+                                                                </tr>
+                                                              <tbody>
+                                                                <tr>
+                                                                <td>Adam’s Greenworks</td>
+                                                                <td><center>14</center></td>
+                                                                <td>Package Items</td>
+                                                                </tr>
+                                                                <tr>
+                                                                <td>Davie's Burgers</td>
+                                                                <td><center>2</center></td>
+                                                                <td>Send Invoice</td>
+                                                               </tr>
+                                                            </tbody>
+
+                                                          </table>
+
+
+
+
+                                                            <hr>
+
+                                                            BELOW we use a TABLE HEAD to section off the Head of the table: <br>
+
+                                                            <div class="code">
+                                                              &lttable border="2"><br>
+                                                                  <span class="tab20">&ltthead class="blue"><br>
+                                                                  <span class="tab40">&lttr><br>
+                                                                  <span class="tab60">&ltth>Company Name&lt/th><br>
+                                                                  <span class="tab60">&ltth>Number of Items to Ship&lt/th><br>
+                                                                  <span class="tab60">&ltth>Next Action&lt/th><br>
+                                                                  <span class="tab40">&lt/tr><br>
+                                                                <span class="tab20">&lt/thead><br>
+                                                                <span class="tab20">&lttbody><br>
+                                                                  <span class="tab40">&lttr><br>
+                                                                  <span class="tab60">&lttd>Adam’s Greenworks&lt/td><br>
+                                                                  <span class="tab60">&lttd>14&lt/td><br>
+                                                                  <span class="tab60">&lttd>Package Items&lt/td><br>
+                                                                  <span class="tab40">&lt/tr><br>
+                                                                  <span class="tab40">&lttr><br>
+                                                                   <span class="tab60">&lttd>Davie's Burgers&lt/td><br>
+                                                                   <span class="tab60">&lttd>2&lt/td><br>
+                                                                   <span class="tab60">&lttd>Send Invoice&lt/td><br>
+                                                                 <span class="tab40">&lt/tr><br>
+                                                                 <span class="tab20">&lt/tbody><br>
+                                                              &lt/table>
+                                                            </div>
+
+                                                            <br>
+
+                                                            <table border="2">
+                                                                  <thead class="blue">
+                                                                    <tr>
+                                                                    <th>Company Name</th>
+                                                                    <th>Number of Items to Ship</th>
+                                                                    <th>Next Action</th>
+                                                                    </tr>
+                                                                  </thead>
+                                                                      <tbody>
+                                                                    <tr>
+                                                                    <td>Adam’s Greenworks</td>
+                                                                    <td>14</td>
+                                                                    <td>Package Items</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                     <td>Davie's Burgers</td>
+                                                                     <td>2</td>
+                                                                     <td>Send Invoice</td>
+                                                                   </tr>
+                                                                   </tbody>             
+                                                            </table>
+
+                                                            <span class="tab20"><small>* SO you separated the table head and then added the 'blue' class which is actually more of a baby blue</small>
+
+                                                              <hr>
+
+                                                              BELOW we use a TABLE FOOTER to section off the Foot of the table:<br>
+
+
+                                                              <div class="code">
+                                                                <span class="tab20">&lttfoot><br>
+                                                                  <span class="tab40">&lttr><br>
+                                                                    <span class="tab60">&ltth>Total&lt/th><br>
+                                                                    <span class="tab80">&lttd>16&lt/td><br>
+                                                                    <span class="tab80">&lttd class="blue">&lt/td><br>
+                                                                  <span class="tab40">&lt/tr><br>
+                                                                  <span class="tab20">&lt/tfoot>
+                                                              </div>
+                                                              <br>
+                                                            <table border="2">
+                                                                  <thead class="blue">
+                                                                    <tr>
+                                                                    <th>Company Name</th>
+                                                                    <th>Number of Items to Ship</th>
+                                                                    <th>Next Action</th>
+                                                                    </tr>
+                                                                  </thead>
+                                                                      <tbody>
+                                                                    <tr>
+                                                                    <td>Adam’s Greenworks</td>
+                                                                    <td>14</td>
+                                                                    <td>Package Items</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                     <td>Davie's Burgers</td>
+                                                                     <td>2</td>
+                                                                     <td>Send Invoice</td>
+                                                                   </tr>
+                                                                   </tbody>             
+                                                            
+                                                                  <tfoot>
+                                                                  <tr>
+                                                                    <th>Total</th>
+                                                                    <td>16</td>
+                                                                    <td class="blue"></td>
+                                                                  </tr>
+                                                                  </tfoot>
+                                                            </table>
+                                                            <span class="tab20"><small>* SO its added to the BOTTOM of the existing table</small>
+
+
+
+
+
+
+
+
 
                                                            </li>
 

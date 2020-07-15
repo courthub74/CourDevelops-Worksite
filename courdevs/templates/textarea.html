@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+ <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>CourDevs Solutions</title>
+
+           
+
+        </head>
+
+  <body>
+
+    <div id="content">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto ml-5" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+    <h2><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.w3.org%2Fhtml%2Flogo%2Fdownloads%2FHTML5_Logo_512.png&f=1&nofb=1" height="70" width="80" class="ml-4 mr-3">Text Area</h2>
+
+    <div class="line"></div>
+
+                <style type="text/css">
+                        .tab20 {
+                            margin-left: 20px;
+                        }
+                        .tab40 {
+                            margin-left: 40px;
+                        }
+                        .tab80 {
+                            margin-left: 80px;
+                        }
+                        .tab120 {
+                            margin-left: 120px;
+                        }
+                        .code {
+                            font-size: 20px;
+                            font-weight: bold;
+                        }
+                    </style>
+
+
+    <div class="container-fluid">
+            <div class="media">
+            <div class="container">
+
+
+            <br>
+
+
+                <ol class="list-group mr-8">
+
+                    <li class="list-group-item list-group-item-secondary">Textarea.html</li>
+                               <li class="list-group-item">
+                            <div class="code">
+                                <span class="tab20"><b>&ltform></span><br>
+                                    <span class="tab40">&ltlabel for="blog">New Blog Post: &lt/label></span><br>
+                                    <span class="tab40">&ltbr><br>
+                                     <span class="tab40">&lttextarea id="blog" name="blog" rows="5" cols="30"></span><br>   
+                               <span class="tab20">&lt/textarea></b></span> <br>
+                               <br>
+                            </div>
+                            <hr>
+
+                            <form>
+                              <label for="blog">New Blog Post: </label>
+                              <br>
+                              <textarea id="blog" name="blog" rows="5" cols="30">
+                              </textarea>
+                            </form>
+                            <span class="tab40"><small>* Submit Button could go here ya know</small></span>
+                               </li>
+
+
+
+
+
+
+
+
+{% endblock %}

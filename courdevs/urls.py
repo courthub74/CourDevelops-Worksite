@@ -33,6 +33,8 @@ urlpatterns = [
 	path('radio/', views.radio, name="radio"),
 	#Slider
 	path('slider/', views.slider, name="slider"),
+	#Text Area
+	path('textarea/', views.textarea, name="textarea"),
 	#Bobs Burger
 	path('bobs_burger/', views.bobs_burger, name="bobs_burger"),
 

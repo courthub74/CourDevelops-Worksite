@@ -67,6 +67,10 @@ def slider(request):
 def radio(request):
 	return render(request, "radio.html", {})
 
+#HTMLtextarea
+def textarea(request):
+	return render(request, "textarea.html", {})
+
 #HTML DEMO
 def bobs_burger(request):
 	return render(request, "bobs_burger.html", {})
