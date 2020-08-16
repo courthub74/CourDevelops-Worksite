@@ -58,6 +58,9 @@
             	.tab80 {
             		margin-left: 80px;
             	}
+                .code {
+                    font-size: 10px;
+                }
             </style>
 
 
@@ -66,16 +69,16 @@
     <div class="line"></div>
 
     <div class="container">
-    <ol class="list-group mr-8">
-			    	<li class="list-group-item list-group-item-secondary">Django is <b>MVC</b> Architecture</li>
-												<li class="list-group-item"><span class="tab">M - Models: [Database] <br>
-												<span class="tab">V - Views: [Webpages] <br>
-												<span class="tab">C - Controller: [Routers (URLS)]</li>
+    <ol class="list-group mr-8 code">
+			    	<li class="list-group-item list-group-item-secondary"><h5>Django is <br><b>MVC</b> Architecture</h5></li>
+												<li class="list-group-item"><span>M - Models: [Database] <br>
+												<span>V - Views: [Webpages] <br>
+												<span>C - Controller: [Routers (URLS)]</li>
 			    	<br>
 			    	<li class="list-group-item list-group-item-secondary"><h5>MODELS.PY</h5></li>
-												<li class="list-group-item">class deliverables(models.Model):<br>
-												<span class="tab">delivs = models.CharField(max_length=200) <br>
-												<span class="tab">completeddelivs = models.BooleanField(default=False) <br>
+												<li class="list-group-item code">class deliverables(models.Model):<br>
+												<span class="tab code">delivs = models.CharField(max_length=200) <br>
+												<span class="tab code">completeddelivs = models.BooleanField(default=False) <br>
                                                         <br>
 												<span class="tab">def __str__(self): <br>
 													<span class="tab">return self.delivs</li> 
@@ -100,15 +103,17 @@
                     <br>
 
 			    		<li class="list-group-item list-group-item-secondary"><h5>DELIVERABLES.HTML</h5></li>
-								<li class="list-group-item"><span class="tab">(%if all_delivs%) <br>
+								<li class="list-group-item"><span>(%if all_delivs%) <br>
 
-															<span class="tab">(ul) <br>
-																<span class="tab">(%for things in all_delivs%) <br>
-																	<span class="tab80">(li)(( all_delivs ))(li) --All Objects in the Deliverables Table--<br>
-																	<span class="tab80">(li)(( things.delivs )) | (( things.completeddelivs ))(li) --Breaks those
-																	objects down by rendering directly from models.py--<br>
-																<span class="tab">(%endfor%)<br>
-															<span class="tab">(ul)</li>
+															<span>(ul) <br>
+																<span>(%for things in all_delivs%) <br>
+																	<span class="tab">(li)(( all_delivs ))(li) <br>
+                                                                        <span class="tab">--All Objects in the Deliverables Table--<br>
+																	<span class="tab">(li)(( things.delivs )) | (( things.completeddelivs ))(li)<br> 
+                                                                        <span class="tab">--Breaks those objects down by rendering <br>
+                                                                         <span class="tab">directly from models.py--<br>
+																<span>(%endfor%)<br>
+															<span>(ul)</li>
 			    	
 			    	<br>
 			    </div>
