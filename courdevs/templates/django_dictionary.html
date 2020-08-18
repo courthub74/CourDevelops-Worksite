@@ -62,17 +62,20 @@
                         .tab120 {
                             margin-left: 120px;
                         }
+                        .code {
+                            font-size: 10px;
+                        }
                     </style>
 
             <div class="media-body ml-8" >
-			    <h3 class="mt-0"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.vizteams.com%2Fwp-content%2Fuploads%2F2014%2F04%2Fdjango.png&f=1&nofb=1" height="50"  class="mr-3" alt="Django">Context Dictionary  <br></h3> 
+			    <h3 class="mt-0"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.vizteams.com%2Fwp-content%2Fuploads%2F2014%2F04%2Fdjango.png&f=1&nofb=1" height="50"  class="mr-3" alt="Django">ContextDictionary  <br></h3> 
         
 			</div>
 			<div class="line"></div>
 
             <br>
 
-            <span class="tab120"><small>Transport Info from models.py</small>
+            <span class="tab"><small>Transport Info from models.py</small>
       
 
            <div class="container-fluid">
@@ -88,56 +91,62 @@
 			    	<li class="list-group-item list-group-item-secondary">in <b>views.py</b></li>
                     <li class="list-group-item">Set up the 'Home' page <br>
                         <br>
-			    	<span class="tab">def home(request):<br>
-                    <span class="tab80">my_name = "Court"<br>
-                    <span class="tab80">return render(request, 'home.html', {'name': <b>my_name</b>})</li>
+			    	<span class="code"><b>def home(request):</b><br>
+                    <span class="tab code"><b>my_name = "Court"</b><br>
+                    <span class="tab code"><b>return render(request, 'home.html',</b><br>
+                    <span class="tab code"><b>{'name': <b>my_name</b>})</b></li>
 
 	                <br>
 
+
 			    	<li class="list-group-item list-group-item-secondary">in <b>home.html</b></li>
                     
-                    <li class="list-group-item"><span class="tab">Transport the variable <b>'my_name'</b> by calling the 'name' dictionary from above <br>
+                    <li class="list-group-item"><span>Transport the variable <b>'my_name'</b> by calling the 'name' dictionary from above <br>
                         <br>
-                        <span class="tab">(% extends 'home.html' %)<br>
-                        <span class="tab80">(% block content %)<br>
-                        <span class="tab80">My name is: <b>(( name ))</b><br>
-                        <span class="tab">(% endblock %) <hr>
-                            <span class="tab80">The output on home.html will read:<br>
-                                                <span class="tab80">My name is: <b>Court</b></span></li>
+                        <span class="code"><b>(% extends 'home.html' %)</b><br></span>
+                        <span class="code"><b>(% block content %)</b><br></span>
+                        <span class="tab code">My name is: <b>(( name ))</b><br></span>
+                        <span class="code"><b>(% endblock %) </b><hr></span>
+                            <span class="code">The output on home.html will read:<br><br>
+                                                <span class="tab">"My name is: <b>Court</b>"</span></li>
 
                     <br>
 
                     <li class="list-group-item list-group-item-secondary">Change the output by just changing the value</li>
-                    <li class="list-group-item"> <span class="tab">in the dictionary you can change anything by just changing the value <br><hr>
-                                                <span class="tab">def home(request):<br>
-                                                <span class="tab80">my_name = "Court"<br>
-                                                <span class="tab80">number = 4 + 9 <br>
-                                                <span class="tab80">return render(request, 'home.html', {'name': <b>number</b>})<br>
-                                                    <span class="tab120"><small>We've changed the value from my_name to number</small>
+                    <li class="list-group-item"> <span>in the dictionary you can change anything by just changing the value <br><hr>
+                                                <span class="code"><b>def home(request):</b><br></span>
+                                                <span class="tab code"><b>my_name = "Court"</b><br></span>
+                                                <span class="tab code"><b>number = 4 + 9 </b><br></span>
+                                                <span class="tab code"><b>return render(request, 'home.html',</b><br></span> 
+                                                    <span class="tab code"><b>{'name': <b>number</b>})</b><br></span>
+                                                    <br>
+                                                    <span><small>We've changed the value from my_name to number</small></span>
 
                     <hr>
-                    <span class="tab">The output from:<br><br>
-                        <span class="tab">(% extends 'home.html' %)<br>
-                        <span class="tab80">(% block content %)<br>
-                        <span class="tab80">My name is: <b>(( name ))</b><br>
-                        <span class="tab">(% endblock %)                        
+                    <span>The output from:<br><br>
+                        <span class="code"><b>(% extends 'home.html' %)</b><br>
+                        <span class="tab code"><b>(% block content %)</b><br>
+                        <span class="tab code">My name is: <b>(( name ))</b><br>
+                        <span class="tab code"><b>(% endblock %)</b>                        
 
                         <hr>
-                     <span class="tab80">will now read what's in the number variable:<br>
-                    <span class="tab80">4 + 9 which equals <b>13</b>
-                        <br><br>
-                        <span class="tab120">So the home.html screen will say: <br>
-                            <span class="tab120">My name is: <b>13</b></li>
+                     <span>will now read what's in the number variable:<br>
+                    <span class="tab">4 + 9 which equals <b>13</b>
+                        <br>
+                        <span>So the home.html screen will say: <br>
+                            <span class="tab">My name is: <b>13</b></li>
 
 
                     <br>
 
                     <li class="list-group-item list-group-item-secondary">You can also have more than one dictionary</li>
                     <li class="list-group-item"> <span class="tab">BELOW we have firstname and lastname<br><hr>
-                                                <span class="tab">def home(request):<br>
-                                                <span class="tab80">firstname = "Court"<br>
-                                                <span class="tab80">lastname = "Jacobs"<br>
-                                                <span class="tab80">return render(request, 'home.html', {<b>'firstname': firstname, 'lastname': lastname</b>})<br></li>
+                                                <span class="code"><b>def home(request):</b><br>
+                                                <span class="tab code"><b>firstname = "Court"</b><br>
+                                                <span class="tab code"><b>lastname = "Jacobs"</b><br>
+                                                <span class="tab code"><b>return render(request, 'home.html', </b><br>
+                                                <span class="tab80 code">  {<b>'firstname': firstname, <br>
+                                                <span class="tab80 code">'lastname': lastname</b>})<br></li>
 
 
                     <br>
@@ -145,14 +154,14 @@
                     <li class="list-group-item list-group-item-secondary">in <b>home.html</b> (more than one dictionary)</li>
                     <li class="list-group-item">You can have:<br>
                         <br>
-                        <span class="tab">(% extends 'home.html' %)<br>
-                        <span class="tab80">(% block content %)<br>
-                        <span class="tab80">My first name is: <b>(( firstname ))</b><br>
-                        <span class="tab80">My last name is: <b>(( lastname ))</b> <br>
-                        <span class="tab">(% endblock %) <br><hr>
-                        <span class="tab80">The output on home.html will read:<br>
-                                                <span class="tab120">My first name is: <b>Court</b> <br>
-                                                <span class="tab120">My last name is: <b>Jacobs</b></li>
+                        <span class="code"><b>(% extends 'home.html' %)</b><br>
+                        <span class="tab code"><b>(% block content %)</b><br>
+                        <span class="tab code"><b>My first name is:</b> (( firstname ))<br>
+                        <span class="tab code"><b>My last name is:</b> (( lastname )) <br>
+                        <span class="code"><b>(% endblock %)</b><br><hr>
+                        <span class="code">The output on home.html will read:<br>
+                                                <span class="tab code">My first name is: <b>Court</b> <br>
+                                                <span class="tab code">My last name is: <b>Jacobs</b></li>
                     
 
 

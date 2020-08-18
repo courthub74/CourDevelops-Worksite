@@ -61,11 +61,14 @@
                 .tab120 {
                     margin-left: 120px;
                 }
+                .code {
+                    font-size: 10px;
+                }
             </style>
 
 
             <div class="media-body ml-8" >
-                <h3 class="mt-0"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.vizteams.com%2Fwp-content%2Fuploads%2F2014%2F04%2Fdjango.png&f=1&nofb=1" height="50"  class="mr-3 ml-3" alt="Django">Database (Models)</h3> 
+                <h3 class="mt-0"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.vizteams.com%2Fwp-content%2Fuploads%2F2014%2F04%2Fdjango.png&f=1&nofb=1" height="50"  class="mr-3 ml-3" alt="Django">Database(Models)</h3> 
             </div>
             <div class="line"></div>
 
@@ -85,28 +88,28 @@
                         you create a CLASS like below:
                         <br>
                         <small>you can call it whatever you need.  In this case, it's the 'Items' class</small><br>
-                        <br>
-                        <span class="tab"><b>class Items(models.Model): <br>
-                        <span class="tab80">item1 = models.CharField(max_length=#) <br>
-                        <span class="tab80">item2 = models.BooleanField(default=False) <br>
-                        <span class="tab80">item3 = models.EmailField() <br>
-                        <span class="tab80">item4 = models.IntegerField() <br>
+                        
+                        <span class="code"><b>class Items(models.Model):<br>
+                        <span class="tab code">item1 = models.CharField() <br>
+                        <span class="tab code">item2 = models.BooleanField() <br> 
+                        <span class="tab code">item3 = models.EmailField() <br>
+                        <span class="tab code">item4 = models.IntegerField()
                         
                         <br>
                         
-                        <span class="tab80">def __str__(self): <br>
-                            <span class="tab120">return self.item1</b>    <-- always do the first item on the class list</li>
+                        <span class="tab">def __str__(self): <br>
+                            <span class="tab80">return self.item1</b>   <br> <-- always do the first item on the class list</li>
 
                     <br>
 
                     <li class="list-group-item list-group-item-secondary">NEXT go to <b>admin.py</b></li>
                     <li class="list-group-item">
                         
-                        <b>from .models import Items</b><small> <-- or from ALL models import Items class</small>
+                        <span class="code"><b>from .models import Items</b><small> <br><-- or from ALL models import Items class</small>
                         <br><hr>
                         now register your model
                         <br>
-                        <span class="tab"><b>admin.site.register(Items)</b><br></li>
+                        <span class="code"><b>admin.site.register(Items)</b><br></li>
 
                             <br>
 
@@ -114,10 +117,10 @@
                     <li class="list-group-item">
                         <br>
                         <ul>
-                        <li class="tab">python manage.py makemigrations</li><br>
+                        <li>python manage.py makemigrations</li><br>
                         <small>then....</small>
                         <br><br>
-                        <li class="tab">python manage.py migrate</li>
+                        <li>python manage.py migrate</li>
                         </ul> <br>
                         <hr>
                         NOW you can go into admin and add data to newly created table</li>

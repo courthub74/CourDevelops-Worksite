@@ -62,6 +62,12 @@
                         .tab120 {
                             margin-left: 120px;
                         }
+                        .code {
+                            font-size: 12px;
+                        }
+                        .code10 {
+                            font-size: 10px;
+                        }
                     </style>
 
 
@@ -84,49 +90,64 @@
 
                 <ol class="list-group mr-8">
                     <li class="list-group-item list-group-item-secondary">Flask app to Heroku</li>
-                    <li class="list-group-item">in directory of your app code, install gunicorn with <b>pip install gunicorn</b><br>
-                                                    <span class="tab"><small>Make sure you're using pip from your virtual environment</small><br>
+                    <li class="list-group-item">in directory of your app code, install gunicorn with <br>
+
+                                            <span class="tab code"><b><br>pip install gunicorn</b></span><br><br>
+
+                                                    <span><small>Make sure you're using pip from your virtual environment</small><br>
                                                     <hr>
                                                     Create a <b>requirement.txt</b> file in the main app directory where the main Python app file is located <br>
                                                     <br>
-                                                    <span class="tab">You can create that file by running <b>pip freeze > requirements.txt</b> in (cmdline)<br>
-                                                    <span class="tab80"><small>Make sure you're using pip from your virtual environment</small><br>
+                                                    <span>You can create that file by running <br>
+                                                     <span class="tab code"><br><b>pip freeze > requirements.txt</b></span><br><br> in (cmdline)<br>
+
+                                                    <span class="code"><small>Make sure you're using pip from your virtual environment</small></span><br>
                                                         <br>
-                                                    <span class="tab">The <b>requirement.txt</b> file should now contain a list of Python packages <br>
+                                                    <span>The <b>requirement.txt</b> file should now contain a list of Python packages <br>
                                                     <hr>
                                                     Create a file named <b>Procfile</b> in the main app directory <br>
-                                                    <span class="tab"><small>The file should not contain any extension</small><br>
+                                                    <span class="code"><small>The file should not contain any extension</small></span><br>
                                                     <hr>
-                                                    Then type in this line inside: <b>web: gunicorn script1:app</b> <br>
-                                                    <span class="tab"><small>where <b>script1</b> should be replaced with the name of your Python script <br>
-                                                        <span class="tab">and "app" with the name of the variable holding your Flask app</small><br>
+                                                    Then type in this line inside:<span class="code"><b>web: gunicorn script1:app</b></span><br><br>
+                                                    <span><small>where <b>script1</b> should be replaced with the name of your Python script <br>
+                                                        <span>and "app" with the name of the variable holding your Flask app</small><br>
                                                     <hr>
                                                     Create a runtime.txt file in the main app directory and type "python-3.5.1" (or your version if later) inside <br>
                                                     <hr>
                                                     in (cmdline) cd back into directory of your app code <br>
                                                     <hr>
-                                                    in the (cmdline) type: <b>heroku login</b><br>
-                                                    <span class="tab"><small>you will be brought to a login page just accept</small><br>
+                                                    in the (cmdline) type: <br> <span class="tab code"><b>heroku login</b></span><br>
+                                                    <span class="code10">you will be brought to a login page just accept</span><br>
                                                     <hr>
-                                                    Create a new Heroku app with <b>heroku create myawesomeappname</b>
+                                                    Create new Heroku app with <br> <span class="code"><b>heroku create myawesomeappname</b></span>
                                                     <hr>
                                                     Initialize a local git repository with <b>git init</b>
                                                     <hr>
                                                     Add your local application files to git with <b>git add .</b>
                                                     <hr>
-                                                    Tell git your email address with <b>git config --global user.email "myemail@email.com"</b> <br>
-                                                    <span class="tab"><small>Make sure the email address is inside quotes</small>
+                                                    Tell git your email address <br><span class="code"><b>git config --global user.email</b></span> <br> 
+                                                    <span class="tab code"><b>"myemail@email.com"</b></span> <br>
+                                                    <span class="code"><small>Make sure the email address is inside quotes</small></span>
                                                     <hr>
-                                                    Tell git your username (just pick whatever username) with <b>config --global user.name "whateverusername"</b><br>
+                                                    Tell git your username <br>(pick whatever username) <br><br>
+                                                    <span class="code"><b>config --global user.name <br>
+                                                    <span class="tab code">"whateverusername"</b><br><br>
                                                     <span class="tab"><small>The username should be in quotes</small>
                                                     <hr>
-                                                    Commit the changes with <b>git commit -m "first commit"</b><br>
+
+                                                    Commit the changes with <br>
+                                                    <span class="code"><b>git commit -m "first commit"</b><br>
                                                     <span class="tab"><small>Make sure "first commit" is inside quotes</small>
                                                     <hr>
+
+
                                                     Before pushing the changes to Heroku <br>
-                                                    <span class="tab"><small>tell heroku the name of the app you want to use with heroku <b>git:remote --app myawesomeappname</b></small>
+                                                    <span><small>tell heroku the name of the app you want to use with heroku</small></span> 
+
+                                                    <span class="code"><br><b>git:remote --app</b></span> 
+                                                    <span class="tab code"><b>myawesomeappname</b></span>
                                                     <hr>
-                                                    Push the changes to Heroku with <b>git push heroku master</b><br>
+                                                    Push the changes to Heroku with <br> <b>git push heroku master</b><br>
                                                     <hr>
                                                     That should do it. Go ahead and open your app with <b>heroku open"</b></li>
 

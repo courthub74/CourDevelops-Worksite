@@ -61,6 +61,12 @@
                         .tab120 {
                             margin-left: 120px;
                         }
+                        .code {
+                            font-size: 10px;
+                        }
+                        .code12 {
+                            font-size: 12px;
+                        }
                     </style>
 
 
@@ -82,85 +88,95 @@
 
                 <ol class="list-group mr-8">
                     <li class="list-group-item list-group-item-secondary">Login to Heroku</li>
-                    <li class="list-group-item">in the (cmdline) type: <b>heroku login</b><br>
-                                                <span class="tab"><small>you will be brought to a login page just accept</small><br></li>
+                    <li class="list-group-item">in the (cmdline) type: <br><span class="code12"><b>heroku login</b><br>
+                                                <span class="code">you will be brought to a login page just accept<br></li>
 
                         <br>
 
                     <li class="list-group-item list-group-item-secondary">Create the app</li>
-                    <li class="list-group-item">in the (cmdline) type: <b>heroku create</b><br>
-                                                <span class="tab"><small>you have the option to name your app here (heroku create appname)</small><br></li>
+                    <li class="list-group-item">in the (cmdline) type: <br><span class="code12"><b>heroku create</b><br>
+                                                <span class="code">you have the option to name your app here (heroku create appname)<br></li>
 
                       <br>
 
                     <li class="list-group-item list-group-item-secondary">Secret Key Settings</li>
                     <li class="list-group-item">in <b>settings.py:</b><br><br>
-                                                copy the <b>SECRET_KEY = '0984309240943skfiekfDILS###'</b> <--just an example<br><br> 
-                                                <span class="tab">go to your Heroku project and click settings <br><br>
-                                                <span class="tab">click Reveal Config Vars <br><br>
-                                                <span class="tab">paste the key(i.e. '0984309240943skfiekfDILS###') where it says 'VALUE' <br><br>
-                                                <span class="tab">paste 'SECRET_KEY' where it says 'KEY'</li>
+                                                <span class="code12">copy the <br>
+                                                <span class="code"><b>SECRET_KEY = '#*@---#$'</b> <--example <br>
+                                                    <br>
+                                                <span class="code">go to your Heroku project and click settings click Reveal Config Vars<br>
+                                                    <br>
+                                                <span class="code">paste key(i.e. '#*@---#$') where it says: <b>'VALUE'</b><br>
+                                                <span class="code"><br>
+                                                <span class="code">paste 'SECRET_KEY' where it says <b>'KEY'</b></li>
 
                     <br>
 
                     <li class="list-group-item list-group-item-secondary">Installations</li>
                     <li class="list-group-item">Go back to terminal and install:<br><br>
-                                                <span class="tab">pip install gunicorn<br><br> 
-                                                <span class="tab">pip install django-heroku<br><br>
-                                                <span class="tab">pip install python-decouple<br><br>
-                                                <span class="tab80"><small>NOTE: Do a <b>pip freeze</b> to check if its all there</small></li>
+                                                <span class="code"><b>pip install gunicorn</b><br><br> 
+                                                <span class="code"><b>pip install django-heroku</b><br><br>
+                                                <span class="code"><b>pip install python-decouple</b><br><br>
+                                                <span class="code">NOTE: Do a <b>pip freeze</b> to check if its all there</li>
 
                     <br>
 
                     <li class="list-group-item list-group-item-secondary">Imports</li>
                     <li class="list-group-item">in <b>settings.py</b> underneath <b>import os</b> type these:<br><br>
-                                                <span class="tab">import django_heroku<br><br>
-                                                <span class="tab">from decouple import config<br><br>
-                                                <span class="tab">import dj_database_url<br><br></li>
+                                                <span class="code"><b>import django_heroku</b><br><br>
+                                                <span class="code"><b>from decouple import config</b><br><br>
+                                                <span class="code"><b>import dj_database_url</b><br><br></li>
                                                 
                     <br>
 
                     <li class="list-group-item list-group-item-secondary">Local Settings</li>
                     <li class="list-group-item">at bottom of <b>settings.py</b> under everything type:<br><br>
-                                                <span class="tab">django_heroku.settings(locals())<br><br></li>  
+                                                <span class="code"><b>django_heroku.settings(locals())</b><br><br></li>  
 
 
                     <br>
 
                     <li class="list-group-item list-group-item-secondary">For Secret Key in Settings</li>
                     <li class="list-group-item">in <b>settings.py:</b><br><br>
-                                                type in: <b>SECRET_KEY = config('SECRET_KEY')</b><br><br> 
-                                                <span class="tab">in (cmdline) touch .env  [this creates an .env file]<br><br>
-                                                <span class="tab">cut and paste the original <b>SECRET_KEY</b> into the <b>.env</b> file save and close<br><br>
-                                                <span class="tab">in (cmdline) touch .gitignore [this creates a .gitignore file]<br><br>
-                                                <span class="tab80">type <b>.env</b> in there save and close</li>
+                                                type in: <br><br>
+                                                <span class="code"><b>SECRET_KEY = config('SECRET_KEY')</b></span><br><br> 
+                                                <span class="code">in (cmdline) <b>touch .env</b>  [creates an .env file]</span><br><br>
+                                                <span class="code">cut and paste the original <b>SECRET_KEY</b> into the <b>.env</b> file save and close</span><br><br>
+                                                <span class="code">in (cmdline) touch <b>.gitignore</b></span><br>
+                                                <span class="code">[this creates a .gitignore file]</span><br><br>
+                                                <span class="code">type <b>.env</b> in there save and close</li>
                         
                     <br>
 
                     <li class="list-group-item list-group-item-secondary">Middleware</li>
-                    <li class="list-group-item">go to <b>settings.py</b> under <b>MIDDLEWARE</b>:<br><br>
-                                                <span class="tab">underneath <b>'django.middleware.security.SecurityMiddleware'</b>, type:<br><br>
-                                                    <span class="tab80"><b>'whitenoise.middleware.WhiteNoiseMiddleware'</b></li> 
+                    <li class="list-group-item">go to <b>settings.py</b> under <span class="code"><b>MIDDLEWARE</b>:<br>
+                                                <span class="code">underneath 'django.middleware.security.SecurityMiddleware', type:<br>
+                                                    <span class="code"><b>'whitenoise.middleware.WhiteNoiseMiddleware'</b></li> 
 
                     <br>
 
                      <li class="list-group-item list-group-item-secondary">Static Files</li>
-                    <li class="list-group-item">in <b>settings.py</b> under <b>STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static') ]</b> type:<br><br>
-                                                <span class="tab"><b>STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'</b></li>
+                    <li class="list-group-item">in <b>settings.py</b> under <span class="code"><b>STATICFILES_DIRS = [ 
+                            <br><span class="tab code">os.path.join(BASE_DIR, 'static') </span>
+                            <br> ]</b>
+                                <br>type:<br>
+                                <span class="code"><b>STATICFILES_STORAGE = 'whitenoise.storage.
+                                    <span class="tab40 code">CompressedManifestStaticFilesStorage'</b></li>
 
                     <br>
 
                     <li class="list-group-item list-group-item-secondary">Procfile</li>
-                    <li class="list-group-item">in (cmdline)touch Procfile [this creates a Procfile] <--Case Sensitive<br><br>
-                                                <span class="tab">in <b>Procfile</b>, type:<br><br>
-                                                    <span class="tab80"><b>web: gunicorn (name of directory with wsgi file in it).wsgi</b><br>
-                                                        <br>
-                                                    <span class="tab">save and close Procfile</li> 
+                    <li class="list-group-item">in (cmdline)touch Procfile <span class="code">[creates a Procfile] <span class="code"><--Case Sensitive<br>
+                                                <span>in <b>Procfile</b>, type:<br>
+                                                    <span class="tab"><b>web: gunicorn (name of directory)</b></span> 
+                                                        <span class="tab"><b>with wsgi file in it).wsgi</b></span><br>
+                                            
+                                                    <span>save and close Procfile</li> 
 
                     <br>
 
                     <li class="list-group-item list-group-item-secondary">requirements.txt</li>
-                    <li class="list-group-item">in (cmdline) type <b>pip freeze > requirements.txt</b> [this creates the requirements.txt file]</li>
+                    <li class="list-group-item">in (cmdline) type <br> <span class="code"><b>pip freeze > requirements.txt</b> <br> [this creates the requirements.txt file]</span></li>
                                                 
                     <br>
 
@@ -168,26 +184,33 @@
                     <li class="list-group-item">If you haven't already for CSS, JS and Images purposes, make sure you add a directory called <b>static</b> in the main project folder<br><br> 
                                                 
                                                 If nothing is in it just place a 
-                                                blank file in the <b>static</b> folder and call it <b>__init__.py</b><br><br>                                             <span class="tab">This is for the purpose of the <b>'CollectStatic'</b> when deploying<br></li>
+                                                blank file in the <b>static</b> folder and call it <b>__init__.py</b><br><br>                                            
+                                                This is for the purpose of the <b>'CollectStatic'</b> when deploying<br></li>
 
 
                     <br>
 
                     <li class="list-group-item list-group-item-secondary">Push To Heroku</li>
                     <li class="list-group-item">in (cmdline) type:<br><br>
-                                                <span class="tab80"><b>git push heroku master</b><br><br>
-                                                <span class="tab">before you do this, make sure you commit to git</li>
+                                                <span class="tab code12"><b>git push heroku master</b></span><br><br>
+                                                <span>before you do this, make sure you commit to git</li>
 
 
                     <br>
 
                     <li class="list-group-item list-group-item-secondary">Heroku Migrates</li>
                     <li class="list-group-item">in (cmdline) type:<br><br> 
-                                                <span class="tab">heroku run python manage.py makemigrations<br><br>
-                                                <span class="tab">heroku run python manage.py migrate<br><br>
-                                                <span class="tab">heroku run python manage.py createsuperuser<br>
-                                                <span class="tab80"><small>set up name | email | password</small><br><br>
-                                                <span class="tab">heroku run python manage.py collectstatic</li>
+                                                <span class="code"><b>heroku run python <br>
+                                                    <span class="tab code">manage.py makemigrations</b><br><hr>
+
+                                                <span class="code"><b>heroku run python manage.py migrate</b><br><hr>
+
+                                                <span class="code"><b>heroku run python <br>
+                                                    <span class="tab code"><b>manage.py createsuperuser</b><br>
+
+                                                <span><small>set up name | email | password</small><hr>
+
+                                                <span class="code">heroku run python manage.py collectstatic</li>
                                                 
                                                      
 {% endblock %}

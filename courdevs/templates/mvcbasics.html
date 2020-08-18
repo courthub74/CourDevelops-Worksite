@@ -106,10 +106,10 @@
 								<li class="list-group-item"><span>(%if all_delivs%) <br>
 
 															<span>(ul) <br>
-																<span>(%for things in all_delivs%) <br>
+																<span>(% for things in all_delivs %) <br>
 																	<span class="tab">(li)(( all_delivs ))(li) <br>
                                                                         <span class="tab">--All Objects in the Deliverables Table--<br>
-																	<span class="tab">(li)(( things.delivs )) | (( things.completeddelivs ))(li)<br> 
+																	<span class="tab">(li)(( things.delivs )) |<br><span class="tab80">(( things.completeddelivs ))(li)<br> 
                                                                         <span class="tab">--Breaks those objects down by rendering <br>
                                                                          <span class="tab">directly from models.py--<br>
 																<span>(%endfor%)<br>

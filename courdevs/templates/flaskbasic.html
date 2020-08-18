@@ -61,7 +61,7 @@
 
             <style type="text/css">
                         .tab {
-                            margin-left: 40px;
+                            margin-left: 25px;
                         }
                         .tab80 {
                             margin-left: 80px;
@@ -81,6 +81,9 @@
                         .green {
                             color: #3CB371;
                         }
+                        .code {
+                            font-size: 10px;
+                        }
                     </style>
 
 
@@ -97,24 +100,21 @@
                     <li class="list-group-item list-group-item-secondary">Initial Setup and Installation</li>
                     <li class="list-group-item">mkdir (project)
                     <br><hr>
-                    in (project) install flask  (pip install flask)
+                    in (project) install flask <br> <span class="code"><b>pip install flask</b></span>
                     <br><hr>
                     open text editor and attach the folder (project)
                     <br><hr>
-                    create a new file within (project) called (new file) --[save as]
+                    create a new file within (project) called (new file)[save as]
                     <br><hr>
-                    then enter below in (new file):
-                    <br><br>
-                    <span class="tab"><b>from flask import Flask <br>  
-                        <br><br>
-                    <span class="tab">app = Flask(__main__) <br>
+                    enter below in (new file):
+                    <br>
+                    <span class="code"><b>from flask import Flask </b></span><br>  
+                        
+                    <span class="code"><b>app = Flask(__main__)</b></span><br>
 
 
-                    <br><br><br>
-
-
-                    <span class="tab">if __name__ == "__main__": <br>
-                        <span class="tab80">app.run(debug=True)</b>
+                    <span class="code"><b>if __name__ == "__main__":</b> </span><br>
+                        <span class="tab code"><b>app.run(debug=True)</b></span></b>
 
 
                     <br><hr>
@@ -126,34 +126,34 @@
                     <br><br>
 
 
-                    <span class="tab"><b>from flask import Flask <br> 
-                    <br>
-                    <span class="tab">app = Flask(__main__) <br>
-                    <br>
+                    <span class="code"><b>from flask import Flask</b></span> <br> 
+                    
+                    <span class="code"><b>app = Flask(__main__)</b></span><br>
+                    <hr>
 
-                    <span class="tab blue">@app.route('/')</span> <br>
-                    <span class="tab blue">def home(): <br>
-                        <span class="tab80 blue">return render_template("home.html")</span><br>
-                            <span class="tab120 blue"><small>THIS sets up the 'Home' page</small></span>
+                    <span class="blue code"><b>@app.route('/')</b></span> <br>
+                    <span class="blue code"><b>def home():</b></span><br>
+                        <span class="tab blue code"><b>return render_template("home.html")</b></span><br>
+                            <span class="tab blue code">THIS sets up the 'Home' page</span>
 
-                    <br><br>
-                    <span class="tab red">@app.route('/about')</span><br>
-                    <span class="tab red">def about(): </span><br>
-                        <span class="tab80 red">return render_template("about.html")</span><br>
-                        <span class="tab120 red"><small>THIS sets up the 'About' page</small></span>
+                    <br><hr>
+                    <span class="red code"><b>@app.route('/about')</b></span><br>
+                    <span class="red code"><b>def about():</b></span><br>
+                        <span class="tab red code"><b>return render_template("about.html")</b></span><br>
+                        <span class="tab red code">THIS sets up the 'About' page</span>
 
-                     <br><br>
-                    <span class="tab green">@app.route('/pricing')</span><br>
-                    <span class="tab green">def pricing(): </span><br>
-                        <span class="tab80 green">return render_template("pricing.html")</span><br>
-                        <span class="tab120 green"><small>THIS sets up the 'Pricing' page</small></span>
-                            <br><br><br>
+                     <br><hr>
+                    <span class="green code"><b>@app.route('/pricing')</b></span><br>
+                    <span class="green code"><b>def pricing():</b></span><br>
+                        <span class="tab green code"><b>return render_template("pricing.html")</b></span><br>
+                        <span class="tab green code">THIS sets up the 'Pricing' page</span>
+                            <br><br>
 
                   
-                    <span class="tab black">if __name__ == "__main__":</span> <br>
-                        <span class="tab80 black">app.run(debug=True)</span></b>
+                    <span class="black code"><b>if __name__ == "__main__":</b></span> <br>
+                        <span class="tab black code"><b>app.run(debug=True)</b></span></b>
 
-                        <br> <br>
+                        <br> <hr>
 
                         And so forth .... 
 
@@ -163,7 +163,7 @@
                         <li>from (cmdline) cd into (project)</li>
                         <li>type: python (new file)</li>
                     </ul>
-                    <br><hr>
+                    <hr>
                     You can then create links to the different pages inside the HTML</li>
 
 

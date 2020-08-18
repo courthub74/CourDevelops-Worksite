@@ -58,11 +58,14 @@
                 .tab80 {
                     margin-left: 80px;
                 }
+                .code {
+                    font-size: 10px;
+                }
             </style>
 
 
             <div class="media-body ml-8" >
-                <h3 class="mt-0">Cloning a<img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.vizteams.com%2Fwp-content%2Fuploads%2F2014%2F04%2Fdjango.png&f=1&nofb=1" height="50"  class="mr-3 ml-3" alt="Django">Repo</h3> 
+                <h3 class="mt-0">Cloning<img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.vizteams.com%2Fwp-content%2Fuploads%2F2014%2F04%2Fdjango.png&f=1&nofb=1" height="50"  class="mr-3 ml-3" alt="Django">Repo</h3> 
             </div>
             <div class="line"></div>
 
@@ -80,28 +83,28 @@
                     <li class="list-group-item list-group-item-secondary">Cloning GitHub Repo</li>
                     <li class="list-group-item">mkdir (project folder)
                         <br><hr>
-                        cd into folder of clone location
+                        cd into (project folder)
                         <br><hr>
-                        install virtual environment (if needed)(pip install virtualenv)
+                        install virtual environment <span class="code"><br><b>pip install virtualenv</b> (if needed)</span>
                         <br><hr>
-                        Create virtual environment (virtualenv venv)
+                        Create virtual environment <span class="code"><b>virtualenv venv</b></span>
                         <br><hr>
-                        turn on virtual environment (. venv/Scripts/activate)
+                        turn on virtual environment <span class="code"><b><br> . venv/Scripts/activate</b></span>
                         <br><hr>
-                        install Django (pip install django)
+                        install Django <span class="code"><b><br>pip install django</b></span>
                         <br><hr>
-                        Clone the project into the location (project folder)
+                        Clone project into <br>(project folder)
                         <br><hr>
                         install dependencies: <br><br>
                         <ul>
-                        <li>gunicorn (pip install gunicorn)</li>
-                        <li>django-heroku (pip install django-heroku) (if pushing to heroku)</li>
-                        <li>python-decouple (pip install python-decouple)</li>
+                        <li>gunicorn <span class="code"><b><br>pip install gunicorn</b></span></li>
+                        <li>django-heroku <span class="code"><b><br>pip install django-heroku</b><br>(if pushing to heroku)</li>
+                        <li>python-decouple <span class="code"><b><br>pip install python-decouple</b></li>
                         </ul><br><hr>
                         copy the .env file <br><br> 
-                        from the local one on your computer <br>
+                        <span class="code">from the local one on your computer <br>
                         or you will have to get the secret key from whoever owns 
-                        the repository
+                        the repository</span>
                         <br>
                     </li>
                 </ol>

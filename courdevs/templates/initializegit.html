@@ -53,6 +53,13 @@
             </nav>
 
 
+            <style type="text/css">
+            	.code {
+            		font-size: 10px;
+            	}
+            </style>
+
+
     <h2>Git-Git<img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fterokarvinen.com%2Fwp-content%2Fuploads%2F2012%2F08%2Fgit-logo-cc-by-300x300.png&f=1&nofb=1" height="70" class="ml-4"></h2>
 
     <div class="line"></div>
@@ -69,17 +76,18 @@
 			    <ol class="list-group mr-8">
 
 			    	<li class="list-group-item list-group-item-secondary">Initialize Git Repository</li>
-			    	<li class="list-group-item">git config --global user.name "Your Name" <br>
+			    	<li class="list-group-item code">git config --global user.name "Your Name" <br>
 												git config --global user.email "you@youraddress.com" <br>
 												git config --global push.default matching <br>
 												git config --global alias.co checkoutgit init <br>
+												git init <br>
 												git add . <br>
 												git commit -m "message here" <br>
 												</li>
 			    	<br>
 
 			    	<li class="list-group-item list-group-item-secondary">Basic Git Commands For Git Version Control</li>
-			    	<li class="list-group-item">git init <br>
+			    	<li class="list-group-item code">git init <br>
 												git add . <br>
 												git commit -m "message here" <br>
 												git status  <br>
@@ -88,23 +96,23 @@
 
 					<br>
 					<li class="list-group-item list-group-item-secondary">Push from Git to GitHub</li>
-					<li class="list-group-item">git remote add origin git@github.com: courthub74/(repo name here) <br>
+					<li class="list-group-item code">git remote add origin git@github.com: courthub74/(repo name here) <br>
 												git push -u origin master <br>
 												<hr>
-												<small>If Original Add Origin is Rejected try below:<br>
-												git remote set-url origin https://github.com/courthub74/(repo name here)</small></li>
+												If Original Add Origin is Rejected try below:<br>
+												git remote set-url origin https://github.com/courthub74/(repo name here)</li>
 
 					<br>
 					<li class="list-group-item list-group-item-secondary">Existing Push</li>
-					<li class="list-group-item">git status <br>
+					<li class="list-group-item code">git status <br>
 												git add . <br>
 												git commit -m "Commit Message" <br>
 												git push origin master <br>
 												<hr>
-												<small>NOTE: if changes are made in your GitHub i.e. ReadMe commits, then perform below:</small><br>
+												NOTE: if changes are made in your GitHub i.e. ReadMe commits, then perform below:<br>
 														git pull origin master <br>
 														<br>
-														<small>THEN perform:</small><br>
+														THEN perform:<br>
 															'git push origin master' again</li>
 
 

@@ -66,6 +66,12 @@
                         .tab120 {
                             margin-left: 120px;
                         }
+                        .code12 {
+                            font-size: 12px;
+                        }
+                        .code {
+                            font-size: 10px;
+                        }
                     </style>
 
     <div class="container-fluid">
@@ -79,7 +85,7 @@
                 <ol class="list-group mr-8">
 
                     <li class="list-group-item list-group-item-secondary">Initialize Git Repository</li>
-                    <li class="list-group-item">git config --global user.name "Your Name" <br>
+                    <li class="list-group-item code">git config --global user.name "Your Name" <br>
                                                 git config --global user.email "you@youraddress.com" <br>
                                                 git config --global push.default matching <br>
                                                 git config --global alias.co checkoutgit init <br>
@@ -89,14 +95,14 @@
                     <br>
 
                     <li class="list-group-item list-group-item-secondary">Add Files to Git</li>
-                    <li class="list-group-item">git init <br>
+                    <li class="list-group-item code12">git init <br>
                                                 git add . <br></li>
                     
                     <br>
 
                     <li class="list-group-item list-group-item-secondary">Set up the GitHub Repository</li>
-                    <li class="list-group-item">Log into Github.com account<br>
-                        <span class="tab"><small>Set one up if you haven't already</small></span>
+                    <li class="list-group-item code12">Log into Github.com account<br>
+                        <span class="code">Set one up if you haven't already</span>
                         <hr>
                         Go to Repositories <br>
                         <hr>
@@ -114,13 +120,13 @@
                     <br>
 
                     <li class="list-group-item list-group-item-secondary">NOW push it to GitHub</li>
-                    <li class="list-group-item">FIRST type: <br>
+                    <li class="list-group-item code12">FIRST type: <br>
                                                 <hr> 
-                                                <span class="tab"><b>git remote add origin git@github.com: courthub74/(repo name here)</b><br>
-                                                    <span class="tab80"><small>this just adds the origin to push to</small></span><br>
+                                                <span class="code"><b>git remote add origin git@github.com: courthub74/(repo name here)</b><br>
+                                                    <span>this just adds the origin to push to</span><br><br>
                                                         <hr>
-                                                <span class="tab"><b>git push -u origin master</b><br>
-                                                    <span class="tab80"><small>this pushes the code/build to to repo location</small>
+                                                <span><b>git push -u origin master</b><br>
+                                                    <span class="code">this pushes the code/build to to repo location</span>
                     </li>
 
 
@@ -128,7 +134,8 @@
 
 
                     <li class="list-group-item list-group-item-secondary">If Original Add Origin is Rejected</li>
-                    <li class="list-group-item"><b>git remote set-url origin https://github.com/courthub74/(repo name here)</b><br></li>
+                    <li class="list-group-item code"><b>git remote set-url origin https://github.com/courthub74/</b><br>
+                                        <span class="tab code"><b>(repo name here)</b><br></li>
 
 
 
