@@ -58,10 +58,10 @@
 
             <style type="text/css">
                 .tab20 {
-                    margin-left: 20px;
+                    margin-left: 10px;
                 }
                 .tab40 {
-                    margin-left: 40px;
+                    margin-left: 15px;
                 }
                 .tab80 {
                     margin-left: 80px;
@@ -73,7 +73,7 @@
                     margin-left: 160px;
                 }
                 .code {
-                    font-size: 20px;
+                    font-size: 10px;
                     font-weight: bold;
                 }
             </style>
@@ -98,39 +98,39 @@
 
                                     <div class="code">
                                         &ltscript type="text/javascript"> <br>
-                                        <span class="tab20">$&ltfunction() { </span><br>
-                                            <span class="tab40">$("#checked").change(function() { </span><br>
-                                                <span class="tab40">var set = this.checked;</span> <br>
-                                                <span class="tab40">if (set) { </span><br>
-                                                    <span class="tab80">$("#other").prop("disabled", false); //OnSite </span><br>
-                                                    <span class="tab80">$("#other2").prop("disabled", false); //OnSite </span><br> 
-                                                    <span class="tab80">$("#other3").prop("disabled", false); //OnSite </span><br>
-                                                    <span class="tab80">$("#other4").prop("disabled", false); //OnSite </span><br>
-                                                    <span class="tab80">$("#other5").prop("disabled", false); //OnSite </span><br>
-                                                <span class="tab40">} </span><br>
+                                        <span>$&ltfunction() { </span><br>
+                                            <span class="tab20">$("#checked").change(function() { </span><br>
+                                                <span class="tab20">var set = this.checked;</span> <br>
+                                                <span class="tab20">if (set) { </span><br>
+                                                    <span class="tab40">$("#other").prop("disabled", false);</span><br>
+                                                    <span class="tab40">$("#other2").prop("disabled", false);</span><br> 
+                                                    <span class="tab40">$("#other3").prop("disabled", false);</span><br>
+                                                    <span class="tab40">$("#other4").prop("disabled", false);</span><br>
+                                                    <span class="tab40">$("#other5").prop("disabled", false);</span><br>
+                                                <span class="tab20">} </span><br>
 
-                                                <span class="tab40">else </span>{ <br>
-                                                    <span class="tab80">$("#other").prop("disabled", true); //InStudio </span><br>
-                                                <span class="tab40">} <br>
-                                            <span class="tab20">}); <br>
+                                                <span class="tab20">else </span>{ <br>
+                                                    <span class="tab60">$("#other").prop("disabled", true);</span><br>
+                                                <span class="tab20">} <br>
+                                            <span>}); <br>
                                         }); <br>
 
 
                                         $(function() { </span><br> 
-                                            <span class="tab20">$("#checked2").change(function() { </span><br> 
-                                                <span class="tab20">var set2 = this.checked; </span><br>
-                                                <span class="tab40">if (set2) { <br>
-                                                    <span class="tab80">$("#other").prop("disabled", true); </span><br>
-                                                    <span class="tab80">$("#other2").prop("disabled", true); </span><br>
-                                                    <span class="tab80">$("#other3").prop("disabled", true); </span><br>
-                                                    <span class="tab80">$("#other4").prop("disabled", true); </span><br>
-                                                    <span class="tab80">$("#other5").prop("disabled", true); </span><br>
-                                                <span class="tab40">} <br>
+                                            <span>$("#checked2").change(function() { </span><br> 
+                                                <span>var set2 = this.checked; </span><br>
+                                                <span class="tab20">if (set2) { <br>
+                                                    <span class="tab40">$("#other").prop("disabled", true); </span><br>
+                                                    <span class="tab40">$("#other2").prop("disabled", true); </span><br>
+                                                    <span class="tab40">$("#other3").prop("disabled", true); </span><br>
+                                                    <span class="tab40">$("#other4").prop("disabled", true); </span><br>
+                                                    <span class="tab40">$("#other5").prop("disabled", true); </span><br>
+                                                <span class="tab20">} <br>
 
-                                                <span class="tab40">else { <br>
-                                                    <span class="tab80">$("#other").prop("disabled", false); <br>
-                                                <span class="tab40">} <br>
-                                            <span class="tab20">}); <br>
+                                                <span class="tab20">else { <br>
+                                                    <span class="tab40">$("#other").prop("disabled", false); <br>
+                                                <span class="tab20">} <br>
+                                            <span>}); <br>
                                         }); <br>
                                     &lt/script></div></li>
 
