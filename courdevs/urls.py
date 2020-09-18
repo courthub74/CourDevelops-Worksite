@@ -114,4 +114,9 @@ urlpatterns = [
 	#GitHubActions
 	path('github_actions/', views.github_actions, name="github_actions"),
 
+
+	#API
+	#API BASICS
+	path('api_basics/', views.api_basics, name="api_basics"),
+
 ]

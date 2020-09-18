@@ -155,6 +155,14 @@ def github_actions(request):
 
 ######################################################
 
+#API
+
+#API BASICS
+def api_basics(request):
+	return render(request, "api_basics.html", {})
+
+######################################################
+
 #PROJECTS TODO LIST
 
 #PROJECTSentry

@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="content">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!--NavBar-->
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark mr-5">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                    
+
+                    <!--Navbar Links-->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <div class="media-body ml-8" >
+                <h3 class="mt-0">API<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*lAR9Uh_gJ7dp23e0vhy5Hg.png&f=1&nofb=1" height="100"  class="mr-3 ml-3" alt="API"></h3> 
+            </div>
+            <div class="line"></div>
+
+
+            <div class="container-fluid"></div>
+            <div class="media"></div>
+
+            <div class="container">
+
+
+
+
+            <style type="text/css">
+                .black {
+                    color: black;
+                }
+                .navs {
+                    background-color: #DCDCDC;
+                }
+                .tab {
+                	margin-left: 20px;
+                }
+                .tab40 {
+                	margin-left: 40px;
+                }
+            </style>
+
+
+
+        <!--RESTful API-->
+        <div class="container">
+            <div class="card">
+                <h5 class="card-header">RESTful API</h5>
+                <div class="card-body">
+                <p class="card-text black">Representational State Transfer (REST): 
+											is a software architectural style that defines a set of constraints
+											to be used for creating web services. REST-compliant systems, 
+											often called RESTful systems, are characterized by how they are 
+											stateless and separate the concerns of client and server.
+
+											Systems that follow the REST paradigm are stateless, meaning that 
+											the server does not need to know anything about what state the client is in and vice versa. 
+
+											Because REST systems interact through standard operations on resources, 
+											they do not rely on the implementation of interfaces.
+											<br><br>
+
+											<div class="tab">If a system violates any of these contraints, it cannot be considered RESTful:
+												
+											<div class="tab40">
+												<br>
+												1. Client-Server architecture<br>
+												2. Statelessnesss<br>
+												3. Cacheability<br>
+												4. Layered System<br>
+												5. Code on Demand (Optional)<br>
+												6. Uniform Interface </p>
+											</div>
+
+											<br>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.openmakesoftware.com%2Fwp-content%2Fuploads%2F2017%2F10%2Frest-api-1.png&f=1&nofb=1" height="85" width="85" alt="RESTfulAPI"></a>
+                </div>
+            </div>
+        </div>
+
+
+        	<br><br>
+
+        <!--Soap API-->
+        <div class="container">
+            <div class="card">
+                <h5 class="card-header">SOAP API</h5>
+                <div class="card-body">
+                <p class="card-text black">Simple Object Access Protocol (SOAP):
+											These built-in standards do carry a bit more overhead, but can be a deciding factor for 
+											organizations that require more comprehensive features in the way of security, transactions, 
+											and ACID (Atomicity, Consistency, Isolation, Durability) compliance. </p>	
+
+											<div class="tab40">
+												<p><br>
+												<div class="black">1. SOAP has tighter security<br></div>
+												2. Successful/retry logic for reliable messaging functionality<br>
+												3. SOAP has built-in ACID compliance<br>
+												<br>
+												Overall SOAP is a Protocol system.  REST is an architectural style</p>
+											</div>
+											<br>
+
+			                <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fapi-integration.org%2Fwp-content%2Fuploads%2F2018%2F10%2Fsoap-cloud-gear-thumbnail.jpg&f=1&nofb=1" height="85" width="85" alt="RESTfulAPI"></a>
+
+			    </div>
+			  </div>
+			 </div>
+			</div>
+
+               
+
+            
+
+
+ 		
+
+
+
+
+{% endblock %}
