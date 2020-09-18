@@ -90,7 +90,7 @@
 			    <ol class="list-group mr-8">
 			    	<li class="list-group-item list-group-item-secondary">in <b>views.py</b></li>
                     <li class="list-group-item">Set up the 'Home' page <br>
-                        <br>
+                        
 			    	<span class="code"><b>def home(request):</b><br>
                     <span class="tab code"><b>my_name = "Court"</b><br>
                     <span class="tab code"><b>return render(request, 'home.html',</b><br>
@@ -102,12 +102,12 @@
 			    	<li class="list-group-item list-group-item-secondary">in <b>home.html</b></li>
                     
                     <li class="list-group-item"><span>Transport the variable <b>'my_name'</b> by calling the 'name' dictionary from above <br>
-                        <br>
+                        
                         <span class="code"><b>(% extends 'home.html' %)</b><br></span>
                         <span class="code"><b>(% block content %)</b><br></span>
                         <span class="tab code">My name is: <b>(( name ))</b><br></span>
                         <span class="code"><b>(% endblock %) </b><hr></span>
-                            <span class="code">The output on home.html will read:<br><br>
+                            <span class="code">The output on home.html will read:<br>
                                                 <span class="tab">"My name is: <b>Court</b>"</span></li>
 
                     <br>
@@ -119,11 +119,11 @@
                                                 <span class="tab code"><b>number = 4 + 9 </b><br></span>
                                                 <span class="tab code"><b>return render(request, 'home.html',</b><br></span> 
                                                     <span class="tab code"><b>{'name': <b>number</b>})</b><br></span>
-                                                    <br>
+                                                    
                                                     <span><small>We've changed the value from my_name to number</small></span>
 
                     <hr>
-                    <span>The output from:<br><br>
+                    <span>The output from:<br>
                         <span class="code"><b>(% extends 'home.html' %)</b><br>
                         <span class="tab code"><b>(% block content %)</b><br>
                         <span class="tab code">My name is: <b>(( name ))</b><br>
