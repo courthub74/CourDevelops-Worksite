@@ -21,6 +21,10 @@ def try_except(request):
 def self_param(request):
 	return render(request, "python/selfparameter.html", {})
 
+#WEB SCRAPING
+def web_scraping_html(request):
+	return render(request, "python/webscrapinghtml.html", {})
+
 ######################################################
 
 #JAVASCRIPT

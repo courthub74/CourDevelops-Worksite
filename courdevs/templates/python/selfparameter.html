@@ -43,10 +43,13 @@
             		margin-left: 40px;
             	}
             	.tab80 {
-            		margin-left: 80px;
+            		margin-left: 60px;
             	}
             	.tab120 {
             		margin-left: 120px;
+            	}
+            	.tab160 {
+            		margin-left: 160px;
             	}
                 .blue {
                     color: #1E90FF;
@@ -65,7 +68,7 @@
 
     		<div class="container">
    				 <ol class="list-group mr-8">
-			    	<li class="list-group-item"><h5>First we have:</h5>
+			    	<li class="list-group-item"><h5></h5>
 
 												<span class="code blue"># The self parameter is a reference to the current instance of the class </span><br><br>
                                                 <span class="code blue"># and is used to access variables that belong to the class </span><br><br>
@@ -77,9 +80,12 @@
 												<span class="code tab black">self.ppg = ppg
                                                  <br><br>
 
-												<span class="code black">def printstat(a,b):</span><br>
-												<span class="code tab black">print(str(a.name) + " Averages "</span><br>
-												<span class="code tab black">+ str(b.ppg) + " ppg" )</span>
+												<span class="tab code black">def printstat(a,b):</span><br>
+												<span class="code tab80 black">print(str(a.name) + " Averages "</span><br>
+												<span class="code tab80 black">+ str(b.ppg) + " ppg" )</span><br><br>
+												<span class="code blue"># Make sure that the def is indented properly under the class</span><br>
+												<span class="code blue">  or you will get an error stating: </span><br>
+												<span class="code blue">    <b>'Player' has no attribute 'printstat'</b></span>
                                                 <hr>
 
                                                 <span class="code blue"># King James<br><br>
@@ -103,7 +109,9 @@
                                                      	<span class="code blue"># ABOVE prints out the variable 'bron' through</span>
                                                      	<span class="code blue">  the 'printstat' function</span><br><br>
 
-                                                     	<span class="code black">prints: <b>Jimmy Averages 26 ppg</b></span><br><hr>
+                                                     	<span class="code black">prints: <b>Jimmy Averages 26 ppg</b></span>
+
+
 													
 												
 												

@@ -11,6 +11,8 @@ urlpatterns = [
 	path('try_except/', views.try_except, name="try_except"),
 	# Self Parameter
 	path('self_param/', views.self_param, name="self_param"),
+	# Web Scraping HTML
+	path('web_scrape_html', views.web_scraping_html, name="web_scraping_html"),
 
 	#JAVASCRIPT
 	#Disable Fields by CheckBox

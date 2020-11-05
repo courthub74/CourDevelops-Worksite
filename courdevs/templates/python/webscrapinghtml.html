@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+                   
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <style type="text/css">
+            	.tab {
+            		margin-left: 40px;
+            	}
+            	.tab80 {
+            		margin-left: 60px;
+            	}
+            	.tab120 {
+            		margin-left: 120px;
+            	}
+            	.tab160 {
+            		margin-left: 160px;
+            	}
+                .blue {
+                    color: #1E90FF;
+                }
+                .black {
+                    color: black;
+                }
+                .code {
+                    font-size: 12px;
+                }
+            </style>
+
+            <h2>Web-Scraping HTML <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finsidehpc.com%2Fwp-content%2Fuploads%2F2016%2F01%2FPython-logo-notext.svg_.png&f=1&nofb=1" height="70" class="ml-2 mr-1"></h2>
+
+
+<div class="line"></div>
+
+    		<div class="container">
+   				 <ol class="list-group mr-8">
+			    	<li class="list-group-item"><h5>Example wikipedia scrape</h5><br>
+  
+<span class="code black">from bs4 import BeautifulSoup</span><br>
+<span class="code black">import requests</span><br>
+<span class="code black">import lxml</span><br><br>
+
+<span class="code black">base_url = "https://en.wikipedia.org/wiki/</span><br>
+<span class="code tab black">Black_players_in_ice_hockey"</span><br><br>
+
+<span class="code blue">#Send get http request</span><br>
+<span class="code black">page = requests.get(base_url)</span><br><br>
+
+<span class="code black">print(page.status_code)</span><br><br>
+
+<span class="code blue"># Verify we had a successful get request</span><br>
+<span class="code black">if page.status_code == requests.codes.ok:</span><br><br>
+
+<span class="code blue"># Get the whole webpage in beautiful soup format</span><br>
+<span class="code black">bs = BeautifulSoup(page.text, 'lxml')</span><br><br>
+
+<span class="code blue">#prints out the whole html page text</span><br>
+<span class="code blue">#print(page.text)</span><br><br>
+
+<span class="code blue">#Find something you specify in HTML</span><br>
+<span class="code black">black_hockey_players = bs.find('table', class_='multicol').find('td').find_all('tr')</span><br>
+<span class="code blue">#print(type(list(black_hockey_players)))</span><br><br>
+
+<span class="code blue">#Use Python Indexing to slice thru the list</span><br>
+<span class="code blue">#print(black_hockey_players[-10:])</span><br><br>
+
+<span class="code black">last_ten_players = black_hockey_players[-10:]</span><br><br>
+
+<span class="code blue">#print(last_ten_players)</span><br><br>
+
+<span class="code blue">#Will hold our data</span><br><br>
+<span class="code black">data = {</span><br>
+  <span class="code tab black">'Player': [],</span><br>
+  <span class="code tab black">'GamesPlayed': [],</span><br>
+  <span class="code tab black">'Goals': [],</span><br>
+  <span class="code tab black">'Points': [],</span><br>
+<span class="code tab black">}</span><br><br>
+
+
+<span class="code black">player = last_ten_players[0]</span><br>
+<span class="code black">name = player.find('td').find('a')</span><br>
+<span class="code black">year = player.find('td')</span><br><br>
+
+<span class="code black">print(name)</span>
+
+
+
+{% endblock %}
