@@ -17,6 +17,9 @@ def main(request):
 def try_except(request):
 	return render(request, "try_except.html", {})
 
+#SELF PARAMETER
+def self_param(request):
+	return render(request, "python/selfparameter.html", {})
 
 ######################################################
 

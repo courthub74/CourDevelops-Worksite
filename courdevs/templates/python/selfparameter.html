@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+                   
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <style type="text/css">
+            	.tab {
+            		margin-left: 40px;
+            	}
+            	.tab80 {
+            		margin-left: 80px;
+            	}
+            	.tab120 {
+            		margin-left: 120px;
+            	}
+                .blue {
+                    color: #1E90FF;
+                }
+                .black {
+                    color: black;
+                }
+                .code {
+                    font-size: 12px;
+                }
+            </style>
+
+            <h2>SELF-Parameter <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finsidehpc.com%2Fwp-content%2Fuploads%2F2016%2F01%2FPython-logo-notext.svg_.png&f=1&nofb=1" height="70" class="ml-2 mr-1"></h2>
+
+    <div class="line"></div>
+
+    		<div class="container">
+   				 <ol class="list-group mr-8">
+			    	<li class="list-group-item"><h5>First we have:</h5>
+
+												<span class="code blue"># The self parameter is a reference to the current instance of the class </span><br><br>
+                                                <span class="code blue"># and is used to access variables that belong to the class </span><br><br>
+
+                                                <span class="code black">class Player:</span><br>
+											
+												<span class="code tab black">def __init__(self, name, ppg):</span><br>
+												<span class="code tab black">self.name = name <br>
+												<span class="code tab black">self.ppg = ppg
+                                                 <br><br>
+
+												<span class="code black">def printstat(a,b):</span><br>
+												<span class="code tab black">print(str(a.name) + " Averages "</span><br>
+												<span class="code tab black">+ str(b.ppg) + " ppg" )</span>
+                                                <hr>
+
+                                                <span class="code blue"># King James<br><br>
+                                                    
+                                                    <span class="code black">bron = Player("Lebron", 37)<br>
+                                                    	<span class="code blue"># ABOVE sets a variable 'bron' and</span><br>
+                                                    	<span class="code blue">  passes two params thru the 'Player' class</span><br><br>
+
+                                                     <span class="black">bron.printstat(bron)<br>
+                                                     	<span class="code blue"># ABOVE prints out the variable 'bron' through</span>
+                                                     	<span class="code blue">  the 'printstat' function</span><br><br>
+
+                                                     	<span class="code black">prints: <b>Lebron Averages 37 ppg</b></span><br><hr>
+
+                                                <span class="code blue"># Jimmy Butler<br><br>
+                                                    
+                                                    <span class="black">jimmy = Player("Jimmy", 26)<br>
+                                                    	<span class="code blue"># ABOVE sets a variable 'jimmy' and</span><br>
+                                                    	<span class="code blue">  passes two params thru the 'Player' class</span><br><br>
+                                                     <span class="black">jimmy.printstat(jimmy)<br>
+                                                     	<span class="code blue"># ABOVE prints out the variable 'bron' through</span>
+                                                     	<span class="code blue">  the 'printstat' function</span><br><br>
+
+                                                     	<span class="code black">prints: <b>Jimmy Averages 26 ppg</b></span><br><hr>
+													
+												
+												
+
+{% endblock %}
+

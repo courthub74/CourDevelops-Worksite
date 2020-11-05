@@ -9,6 +9,8 @@ urlpatterns = [
 	#PYTHON
 	#Try Except
 	path('try_except/', views.try_except, name="try_except"),
+	# Self Parameter
+	path('self_param/', views.self_param, name="self_param"),
 
 	#JAVASCRIPT
 	#Disable Fields by CheckBox
