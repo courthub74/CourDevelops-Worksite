@@ -25,6 +25,22 @@ def self_param(request):
 def web_scraping_html(request):
 	return render(request, "python/webscrapinghtml.html", {})
 
+#FOR LOOP
+def for_loop(request):
+	return render(request, "python/forloop.html", {})
+
+#WHILE LOOP
+def while_loop(request):
+	return render(request, "python/whileloop.html", {})
+
+#COUNTER
+def counter(request):
+	return render(request, "python/counter.html", {})
+
+#CLASSES
+def classes(request):
+	return render(request, "python/classes.html", {})
+
 ######################################################
 
 #JAVASCRIPT

@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+                   
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <style type="text/css">
+            	.tab {
+            		margin-left: 20px;
+            	}
+            	.tab80 {
+            		margin-left: 60px;
+            	}
+            	.tab120 {
+            		margin-left: 120px;
+            	}
+            	.tab160 {
+            		margin-left: 160px;
+            	}
+                .blue {
+                    color: #1E90FF;
+                }
+                .black {
+                    color: black;
+                }
+                .red {
+                    color: red;
+                }
+                .code {
+                    font-size: 12px;
+                }
+            </style>
+
+            <h2>Classes <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finsidehpc.com%2Fwp-content%2Fuploads%2F2016%2F01%2FPython-logo-notext.svg_.png&f=1&nofb=1" height="70" class="ml-2 mr-1"></h2>
+
+
+<div class="line"></div>
+
+    		<div class="container">
+   				 <ol class="list-group mr-8">
+			    	<li class="list-group-item"><h5></h5>
+
+
+<span class="code blue">'''Classes Basics'''</span><br><br>
+<span class="code black">class User:</span><br>
+<span class="code red tab">    pass</span><br><br>
+
+<span class="code black">user1 = User()</span><br>
+<span class="code black">user1.first_name = "Courtney"</span><br>
+<span class="code black">user1.last_name = "Jacobs"</span><br>
+<span class="code black">user1.age = 43</span><br>
+<br>
+<span class="code black">print(user1.first_name)</span><br>
+<span class="code black">print(user1.last_name)</span><br>
+<span class="code black">print(user1.age)</span><br>
+<br>
+<span class="code black">user2 = User()</span><span class="code blue">#Basically you just said that you want user2 to fall under the user class</span><br>
+<span class="code black">user2.first_name = "Charlize"</span><br>
+<span class="code black">user2.last_name = "Theron"</span><br>
+<span class="code black">user2.age = 44</span><br>
+<br>
+<span class="code black">print(user2.first_name)</span><br>
+<span class="code black">print(user2.last_name)</span><br>
+<span class="code black">print(user2.age)</span><span class="code blue">#Under the class you can associate different data types with the object</span><br>
+<br>
+<span class="code blue"># If you create just a random first name last name they wont fall under the User class<br>
+<span class="code black">first_name = "Arthur"</span><br>
+<span class="code black">last_name = "Cake"</span><br>
+<span class="code black">age = 79</span><br>
+<br>
+<span class="code black">print(first_name)</span><br>
+<span class="code black">print(last_name)</span><br>
+<span class="code black">print(age)</span><br><br>
+
+<span class="code blue"><b>Prints:</b> Courtney Jacobs 43  Charlize Theron 44 Arthur Cake 79</span>
+
+
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+                   
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <style type="text/css">
+            	.tab {
+            		margin-left: 20px;
+            	}
+            	.tab80 {
+            		margin-left: 60px;
+            	}
+            	.tab120 {
+            		margin-left: 120px;
+            	}
+            	.tab160 {
+            		margin-left: 160px;
+            	}
+                .blue {
+                    color: #1E90FF;
+                }
+                .black {
+                    color: black;
+                }
+                .code {
+                    font-size: 12px;
+                }
+            </style>
+
+            <h2>Counter <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finsidehpc.com%2Fwp-content%2Fuploads%2F2016%2F01%2FPython-logo-notext.svg_.png&f=1&nofb=1" height="70" class="ml-2 mr-1"></h2>
+
+
+<div class="line"></div>
+
+    		<div class="container">
+   				 <ol class="list-group mr-8">
+			    	<li class="list-group-item"><h5></h5>
+
+<span class="code black">counter = 100</span><br>
+<span class="code black">while counter >= 0::</span><br>
+<span class="code black tab">print(counter)</span><br><span class="code blue tab"> # If I run this it will go on forever as there is nothing to increment down to zero.  Counter will stay at 100 S0:</span><br>
+<span class="code black tab">counter = counter - 1</span><br><span class="code blue tab"> # NOW it will add one everytime till it reaches 49 and then stop</span><br>
+<br>
+<span class="code blue"> # BOOM</span><br>
+
+<span class="code black">counter = 100</span><br>
+<span class="code black">while counter >= 0:</span><br>
+<span class="code black tab">print(counter)</span>
+<span class="code black">while counter == 0:</span><br>
+<span class="code black tab">print("Boom")</span>
+<span class="code black">counter = counter - 1</span><br><span class="code blue tab"># If this wasn't here it would be 100 forever</span>
+
+
+{% endblock %}

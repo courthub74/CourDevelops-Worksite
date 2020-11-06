@@ -12,7 +12,15 @@ urlpatterns = [
 	# Self Parameter
 	path('self_param/', views.self_param, name="self_param"),
 	# Web Scraping HTML
-	path('web_scrape_html', views.web_scraping_html, name="web_scraping_html"),
+	path('web_scrape_html/', views.web_scraping_html, name="web_scraping_html"),
+	# For Loop
+	path('for_loop/', views.for_loop, name="for_loop"),
+	# While Loop
+	path('while_loop/', views.while_loop, name="while_loop"),
+	# Counter 
+	path('counter/', views.counter, name="counter"),
+	# Classes 
+	path('classes/', views.classes, name="classes"),
 
 	#JAVASCRIPT
 	#Disable Fields by CheckBox
