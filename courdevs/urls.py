@@ -27,6 +27,10 @@ urlpatterns = [
 	path('disable_fields/', views.disable_fields, name="disable_fields"),
 	#Color Code by Radiodial selection
 	path('color_code/', views.color_code, name="color_code"),
+	#Scopes JS
+	path('scopes_js/', views.scopes_js, name="scopes_js"),
+	#Arrays Accessing Elements
+	path('arrays_elem/', views.arrays_elements, name="arrays_elements"),
 
 	#HTML
 	#Forms

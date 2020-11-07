@@ -53,6 +53,14 @@ def disable_fields(request):
 def color_code(request):
 	return render(request, "color_code.html", {})
 
+#SCOPES JS
+def scopes_js(request):
+	return render(request, "javascript/scopesjs.html", {})
+
+#ARRAYS ACCESSING ELEMENTS
+def arrays_elements(request):
+	return render(request, "javascript/arrayselements.html", {})
+
 
 ######################################################
 

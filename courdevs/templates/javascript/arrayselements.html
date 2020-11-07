@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+                   
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <style type="text/css">
+                .tab {
+                    margin-left: 10px;
+                }
+                .tab20 {
+                    margin-left: 20px;
+                }
+                .tab120 {
+                    margin-left: 120px;
+                }
+                .tab160 {
+                    margin-left: 160px;
+                }
+                .blue {
+                    color: #1E90FF;
+                }
+                .black {
+                    color: black;
+                }
+                .code {
+                    font-size: 12px;
+                }
+                .grey {
+                    color: grey;
+                }
+            </style>
+
+            <h2>Arrays-Accessing-Elements<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*H-25KB7EbSHjv70HXrdl6w.png&f=1&nofb=1" height="50" class="ml-4"></h2>
+
+
+<div class="line"></div>
+
+            <div class="container">
+                 <ol class="list-group mr-8">
+                    <li class="list-group-item"><h5>Elements within Arrays</h5><br>
+  
+<span class="code grey">// Individual elements in arrays can also be stored to variables</span><br><br>
+<span class="code grey">// Create a variable named listItem and set it equal to the first item in the famousSayings array using square bracket notation ([])</span><br><br>
+<span class="code grey">// Then use console.log() to print the listItem variable to the console</span><br><br>
+
+<span class="code black">const famousSayings = ['Fortune favors the brave.', 'A joke is a very serious thing.', 'Where there is love there is life.'];</span><br><br>
+<span class="code black">const listItem = famousSayings[0];</span><br><br>
+
+<span class="code black">console.log(listItem)</span><br><br>
+<span class="code grey">// NOW, console.log() the third element in the famousSayings array using bracket notation to access the element</span><br><br>
+
+<span class="code grey">// Do not save the element to a new variable before you log it</span><br><br>
+
+<span class="code black">console.log(famousSayings[2])</span><br><br>
+<span class="code grey">// Change the second element of the array groceryList to 'avocados'</span><br><br>
+
+<span class="code black">let groceryList = ['bread', 'tomatoes', 'milk'];</span><br><br>
+<span class="code black">groceryList[1] = 'avocados';</span><br><br>
+
+<div class="line"></div>
+
+<span class="code grey">// LET and CONST</span><br><br>
+<span class="code grey">// Variables declared with let can be reassigned</span><br><br>
+<span class="code grey">// Variables declared with the const keyword cannot be reassigned</span><br><br>
+
+<span class="code grey">// For Exemple:</span><br>
+<span class="code black">let condiments = ['Ketchup', 'Mustard', 'Soy Sauce', 'Sriracha'];</span><br><br>
+
+<span class="code grey">// reassigned to just Ketchup</span><br>
+<span class="code black">condiments = ['Ketchup'];</span><br><br>
+
+<span class="code black">console.log(condiments)</span><br><br>
+
+<span class="code grey">// To log the length of 'objectives' to the console:</span><br>
+<span class="code black">const objectives = ['Learn a new languages', 'Read 52 books', 'Run a marathon'];</span><br><br>
+
+<span class="code black">console.log(objectives.length);</span><br><br>
+
+<div class="line"></div>
+
+<span class="code grey">// PUSH (allows you to add items to end of array)</span><br><br>
+
+<span class="code black">const itemTracker = ['item 0', 'item 1', 'item 2'];</span><br><br>
+<span class="code black">itemTracker.push('item 3', 'item 4');</span><br><br>
+  <span class="code black">console.log(itemTracker);</span><br>
+  <span class="code grey">// [ 'item 0', 'item 1', 'item 2', 'item 3', 'item 4' ]</span><br><br>
+
+  <div class="line"></div>
+
+
+  <span class="code grey">// POP (removes an item)</span><br><br>
+  <span class="code black">const newItemTracker = ['item 0', 'item 1', 'item 2'];</span><br>
+  <span class="code black">newItemTracker.pop();</span><br>
+  <span class="code black">console.log(newItemTracker)</span><br><br>
+  <span class="code grey"><b>RESULT:</b> // ['item 0', 'item 1']</span><br><br>
+
+
+   <div class="line"></div>
+
+
+<span class="code grey">// SLICE</span><br><br>
+
+<span class="code grey">// You’re in a hurry so you decide to ask a friend to help you with your grocery shopping. You want him to pick up the 'bananas', 'coffee beans', and 'brown rice'.</span><br><br>
+
+<span class="code grey">// Under the code you added for step 2, use .slice() to provide your friend with a list of these three things</span><br><br>
+
+<span class="code black">const groceryList2 = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];</span><br><br>
+
+<span class="code black">console.log(groceryList2.slice(1,4));</span><br><br>
+
+    <div class="line"></div>
+
+<span class="code grey">// PUSH </span><br><br>
+
+<span class="code grey">// Variable set</span><br><br>
+<span class="code black">const babes = ['Charlize', 'Gabrielle', 'Daniella'];</span><br><br>
+
+<span class="code grey">// create function to add a new element</span><br><br>
+<span class="code black tab">function addBabe(babe) {</span><br>
+<span class="code black tab20">  babe.push('Lindsay');</span><br>
+<span class="code black">}</span><br><br>
+
+<span class="code grey">// apply the function to the variable
+addBabe(babes);</span><br><br>
+
+<span class="code grey">// now print it out
+console.log(babes); //[ 'Charlize', 'Gabrielle', 'Daniella', 'Lindsay' ]</span><br><br>
+
+
+    <div class="line"></div>
+
+
+
+<span class="code grey">// NESTED</span><br><br>
+<span class="code black">const numberClusters = [[1,2], [3,4],[5,6]];</span><br><br>
+
+<span class="code black">const target = numberClusters[2][1]; <br><span class="code grey"> //Targets third bracket, 2nd element</span><br><br>
+
+<span class="code black">console.log(target);<br>  <span class="code grey">// 6
+
+
+
+{% endblock %}

@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+ <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>CourDevs Solutions</title>
+
+           
+
+        </head>
+
+  <body>
+
+    <div id="content">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                   
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <h2>Scopes<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*H-25KB7EbSHjv70HXrdl6w.png&f=1&nofb=1" height="50" class="ml-4"></h2>
+
+            <div class="line"></div>
+
+
+            <style type="text/css">
+                .tab {
+                    margin-left: 10px;
+                }
+                .tab15 {
+                    margin-left: 15px;
+                }
+                .tab80 {
+                    margin-left: 80px;
+                }
+                .tab120 {
+                    margin-left: 120px;
+                }
+                .tab180 {
+                    margin-left: 160px;
+                }
+                .code {
+                    font-size: 10px;
+                    font-weight: bold;
+                }
+                .grey {
+                    color: grey;
+                }
+                .black {
+                    color: black;
+                }
+                .pink {
+                    color: pink;
+                }
+                .blue {
+                    color: blue;
+                }
+            </style>
+
+
+
+            <div class="container-fluid">
+            <div class="media">
+            <div class="container">
+
+            <br>
+
+                <ol class="list-group mr-8">
+
+                    <li class="list-group-item list-group-item-secondary">Scopes Exemple</li>
+
+
+                                    <li class="list-group-item">
+                                                        
+
+                                    <div class="code">
+
+                                        <div class="container">
+                                             <ol class="list-group mr-8">
+                                                <li class="list-group-item"><h5>NYC in Scope</h5></li><br><br>
+
+                                                    <span class="code black">const city = 'New York City';</span><br><br>
+                                                      <span class="code black">function logCitySkyline() {</span>
+                                                      <span class="code black tab">let skyscraper = 'Empire State Building';</span>
+                                                      <span class="code black tab">return 'The stars over the ' + skyscraper + ' in ' + city;</span>
+                                                      <span class="code black">}</span><br>
+
+
+                                                    <span class="code black">console.log(logCitySkyline())</span>
+                                                    <br> <br>
+
+                                                    <span class="grey code">// ABOVE You’ll notice that the logCitySkyline() function is able to access both variables 'city' and 'skyscraper' without any problems. In the next exercise we’ll consider why would it be preferable to have one variable outside of a block and the other inside of a block.</span><br><br>
+
+                                                    <span class="code grey"><b>Prints:</b> The Stars over the Empire State Building in New York City</span>
+
+                                    <!-- Block Scope -->
+
+                                    <div class="code">
+
+                                        <div class="line"></div>
+
+                                        <div class="container">
+                                             <ol class="list-group mr-8">
+                                                <li class="list-group-item"><h5>Block Scope</h5></li><br><br>
+
+                                                    <span class="code black">const satellite = 'The Moon';</span><br>
+                                                    <span class="code black">const galaxy = 'The Milky Way';</span><br>
+                                                    <span class="code black">const stars = 'North Star';</span><br>
+                                                      <span class="code black">function callMyNightSky() {</span>
+                                                      <span class="code black tab">return 'Night Sky: ' + satellite + ', ' + stars + ', and ' + galaxy;</span>
+                                                      <span class="code black">}</span><br>
+
+
+                                                    <span class="code black">console.log(callMyNightSky())</span>
+                                                    <br> <br>
+
+                                                    <span class="code grey"><b>// ABOVE You’ll notice that the function block for callMyNightSky() is able to access the global variables freely since the variables are available to all lines of code in the file.</span>
+
+                                    <!-- Block Scope as defined within an if block -->
+
+                                    <div class="code">
+
+                                        <div class="line"></div>
+
+                                        <div class="container">
+                                             <ol class="list-group mr-8">
+                                                <li class="list-group-item"><h5>Block Scope as defined within an 'if' block</h5></li><br><br>
+
+                                                      <span class="code black">const logSkyColor = () => {</span>
+                                                      <span class="code black tab">const dusk = true;</span>
+                                                      <span class="code black tab">let color = 'blue';</span>
+                                                      <span class="code black tab">if (dusk) {</span>
+                                                      <span class="code black tab15">let color = 'pink';</span>
+                                                      <span class="code black tab15">console.log(color);<br><span class="code pink">// pink</span></span><br>
+                                                      <span class="code black tab">}</span>
+                                                      <span class="code black tab">console.log(color);<br><span class="code blue">// blue</span></span><br>
+                                                      <span class="code black">};</span><br>                                              
+                                                      
+                                                    <span class="code black">console.log(color);<br><span class="code grey">// ReferenceError</span></span><br></span>
+                                                    <br><br>
+
+                                                    <span class="code grey">// We create a variable dusk inside the logSkyColor() function.</span><br><br>
+                                                        <span class="code grey">// After the if statement, we define a new code block with the {} braces. Here we assign a new value to the variable color if the if statement is truthy</span><br><br>
+                                                            <span class="code grey">// Within the if block, the color variable holds the value 'pink', though outside the if block, in the function body, the color variable holds the value 'blue'</span><br><br>
+                                                                <span class="code grey">// While we use block scope, we still pollute our namespace by reusing the same variable name twice. A better practice would be to rename the variable inside the block</span><br>
+
+                                    <!-- Scope Review -->
+
+                                    <div class="code">
+
+                                        <div class="line"></div>
+
+                                        <div class="container">
+                                             <ol class="list-group mr-8">
+                                                <li class="list-group-item"><h5>Review: Scope</h5></li><br><br>
+
+
+                                                <span class="code grey">// In this lesson, you learned about scope and how it impacts the accessibility of different variables.</span><br><br>
+
+                                                <span class="code grey">// Let’s review the following terms:</span><br><br>
+
+                                                <span class="code grey">// Scope is the idea in programming that some variables are accessible/inaccessible from other parts of the program.</span><br><br>
+
+                                                <span class="code grey">// Blocks are statements that exist within curly braces {}.</span><br><br>
+
+                                                <span class="code grey">// Global scope refers to the context within which variables are accessible to every part of the program.</span><br><br>
+
+                                                <span class="code grey">// Global variables are variables that exist within global scope.</span><br><br>
+
+                                                <span class="code grey">// Block scope refers to the context within which variables that are accessible only within the block they are defined.</span><br><br>
+
+                                                <span class="code grey">// Local variables are variables that exist within block scope.</span><br><br>
+
+                                                <span class="code grey">// Global namespace is the space in our code that contains globally scoped information.</span><br><br>
+
+                                                <span class="code grey">// Scope pollution is when too many variables exist in a namespace or variable names are reused.</span><br><br>
+
+
+
+
+
+
+
+
+                                     
+                                    </div></li>
+
+
+{% endblock %}
