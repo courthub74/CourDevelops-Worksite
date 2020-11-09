@@ -61,6 +61,10 @@ def scopes_js(request):
 def arrays_elements(request):
 	return render(request, "javascript/arrayselements.html", {})
 
+#FUNCTIONS
+def functions_js(request):
+	return render(request, "javascript/functionsjs.html", {})
+
 
 ######################################################
 

@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+                   
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <style type="text/css">
+                .tab {
+                    margin-left: 10px;
+                }
+                .tab20 {
+                    margin-left: 20px;
+                }
+                .tab120 {
+                    margin-left: 120px;
+                }
+                .tab160 {
+                    margin-left: 160px;
+                }
+                .blue {
+                    color: #1E90FF;
+                }
+                .black {
+                    color: black;
+                }
+                .code {
+                    font-size: 12px;
+                }
+                .grey {
+                    color: grey;
+                }
+            </style>
+
+            <h2>Functions<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*H-25KB7EbSHjv70HXrdl6w.png&f=1&nofb=1" height="50" class="ml-4"></h2>
+
+
+<div class="line"></div>
+
+            <div class="container">
+                 <ol class="list-group mr-8">
+                    <li class="list-group-item"><h5>Function Basix</h5><br>
+
+
+<span class="code black">function Hello() {</span><br>
+ <span class="code black tab"> console.log("Bonjour")</span><br>
+<span class="code black">}</span><br>
+
+<br>
+
+<span class="code black">Hello()</span><br>
+<span class="code grey">// Prints: Bonjour</span><br>
+
+<div class="line"></div>
+
+<span class="code grey">// Function with Parameters</span><br>
+<span class="code black">function groups(gr1, gr2) {</span><br>
+  <span class="code black tab">console.log("One of my fave Hip Hop groups is " + gr1)</span><br>
+  <span class="code black tab">console.log("Another one of my fave Hip Hop groups is " + gr2)</span><br>
+<span class="code black">}</span><br>
+
+<span class="code black">groups("Gang Starr", "Public Enemy")</span><br>
+<span class="code grey">// Prints: One of my fave Hip Hop groups is Gang Starr <br> Another on of my fave Hip Hop groups is Public Enemy</span><br>
+
+<div class="line"></div>
+
+<span class="code grey">// Define a function using and identifier and function expressions</span><br>
+<span class="code black">const calculatearea = function(width, height) {</span><br>
+<span class="code black tab">  const area = width * height;</span><br>
+<span class="code black tab">  return area</span><br>
+<span class="code black">}</span><br>
+
+<span class="code black">console.log(calculatearea(123, 456))</span><br>
+<span class="code grey">// You are using 'calculatearea' as a constant for the actual function 'area'</span><br>
+<span class="code grey">// Prints: 56088</span><br>
+
+<div class="line"></div>
+
+
+<span class="code grey">// Function using arrow notation</span><br>
+<span class="code grey">// This is like same as ABOVE but instead of using 'function' you use an =></span><br>
+<span class="code black">const calculate_age = (current_year, birth_year) => {</span><br>
+<span class="code black tab">  const age = current_year - birth_year;</span><br>
+<span class="code black tab">  return age;</span><br>
+<span class="code black">}</span><br>
+
+<span class="code black">console.log(calculate_age(2020,1976))</span><br>
+<span class="code grey">// Prints: 44</span><br>
+
+<div class="line"></div>
+
+<span class="code grey">// Single Line Block (arrow notation)</span><br>
+<span class="code black">const sumNumbers = number => number + number;</span><br>
+<span class="code grey">//ABOVE passes number through function</span><br>
+
+<span class="code black">console.log(sumNumbers(4,4))</span><br>
+<span class="code grey">// Prints: 8</span><br>
+
+<div class="line"></div>
+
+<span class="code grey">// Multi-Line Block (arrow notation)</span><br>
+<span class="code black">const quantity = number => {</span><br>
+<span class="code black tab">  const sum = number + number;</span><br>
+ <span class="code black tab"> return sum;</span><br>
+<span class="code black">}</span><br>
+
+<span class="code black">console.log(quantity(4,4))</span><br>
+<span class="code grey">// Prints: 8</span><br>
+
+<div class="line"></div>
+
+<span class="code grey">//BELOW is a function Declaration</span><br>
+<span class="code black">function volumeOfCube (side) {</span><br>
+  <span class="code black tab">return side * side * side;</span><br>
+<span class="code black">}</span><br>
+
+<span class="code black">volumeOfCube(5);</span><br>
+<span class="code grey">// Prints: 125.</span><br>
+
+<span class="code grey">// Block in an 'if' statement</span><br>
+<span class="code black">if (ball) {</span><br>
+  <span class="code black tab">let sport = 'Basketball';</span><br>
+  <span class="code black tab">console.log(sport);</span><br>
+<span class="code black">}</span><br>
+
+
+{% endblock %}

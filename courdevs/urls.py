@@ -31,6 +31,8 @@ urlpatterns = [
 	path('scopes_js/', views.scopes_js, name="scopes_js"),
 	#Arrays Accessing Elements
 	path('arrays_elem/', views.arrays_elements, name="arrays_elements"),
+	#Functions 
+	path('functions_js/', views.functions_js, name="functions_js"),
 
 	#HTML
 	#Forms
