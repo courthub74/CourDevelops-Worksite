@@ -21,6 +21,8 @@ urlpatterns = [
 	path('counter/', views.counter, name="counter"),
 	# Classes 
 	path('classes/', views.classes, name="classes"),
+	# Control Flow
+	path('ctrl_flow/', views.ctrl_flow, name="ctrl_flow"),
 
 	#JAVASCRIPT
 	#Disable Fields by CheckBox

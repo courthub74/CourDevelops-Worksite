@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+                   
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <style type="text/css">
+            	.tab {
+            		margin-left: 20px;
+            	}
+            	.tab30 {
+            		margin-left: 30px;
+            	}
+            	.tab40 {
+            		margin-left: 40px;
+            	}
+            	.tab160 {
+            		margin-left: 160px;
+            	}
+                .blue {
+                    color: #1E90FF;
+                }
+                .black {
+                    color: black;
+                }
+                .code {
+                    font-size: 12px;
+                }
+            </style>
+
+            <h2>Control Flow <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finsidehpc.com%2Fwp-content%2Fuploads%2F2016%2F01%2FPython-logo-notext.svg_.png&f=1&nofb=1" height="70" class="ml-2 mr-1"></h2>
+
+ <div class="line"></div>
+
+    		<div class="container">
+   				 <ol class="list-group mr-8">
+			    	<li class="list-group-item"><h5></h5>
+
+<span class="code blue"># Control Flow with 'if' Statements</span><br><br>
+
+<span class="code black">def dave_check(user_name):</span><br>
+<span class="code black tab">  if user_name == "Dave":</span><br>
+<span class="code black tab30">    return "Get off my computer Dave!"</span><br>
+<span class="code black tab">  else:</span><br>
+<span class="code black tab30">    if user_name == "angela_catlady_87":</span><br>
+<span class="code black tab">      return  "I know it is you Dave! Go away!"</span><br><br>
+
+  
+<span class="code blue"># BELOW Enter a user name,</span><br>
+<span class="code blue">make sure to make it a string</span><br><br>
+<span class="code black">user_name = "angela_catlady_87"</span><br>
+
+<span class="code black">print(dave_check(user_name))</span><br>
+
+
+
+<div class="line"></div>
+
+
+
+<span class="code blue"># Relational Operators II</span><br><br>
+
+<span class="code blue"># Write a function called 'greater_than' that takes two integer inputs,</span><br>
+<span class="code blue"> x and y and returns the value that is greater. If x and y are equal, return the string</span><br><br>
+<span class="code black">def greater_than(x, y):</span><br>
+<span class="code black tab">  if x > y:</span><br>
+<span class="code black tab40">    return x</span><br>
+<span class="code black tab">  if y > x:</span><br>
+<span class="code black tab40">    return y</span><br>
+<span class="code black tab">  if x == y:</span><br>
+<span class="code black tab40">    return "These numbers are the same"</span><br>
+
+
+
+<div class="line"></div>
+
+
+<span class="code blue"><b># Calvin Coolidge</b></span><br><br>
+
+<span class="code blue"># The nearby college, Calvin Coolidge’s</span><br> 
+	<span class="code blue">Cool College (or 4C, as the locals call it) requires students to earn</span><br> 
+		<span class="code blue">120 credits to graduate. Write a function called graduation_reqs that takes an</span><br>
+			<span class="code blue">input credits and checks if the student</span><br> 
+							<span class="code blue">has enough credits to graduate.</span><br> 
+						<span class="code blue"> If they do, return the string</span><br><br>
+
+<span class="code blue"># Call 'graduation_reqs' with an input</span><br> 
+	<span class="code blue">120 credits and print the result to the terminal. Can a student with 120 credits</span><br> 
+		<span class="code blue">graduate from Calvin Coolidge’s Cool College?</span><br><br>
+
+
+<span class="code black">def graduation_reqs(credits):</span><br>
+<span class="code black tab">  if credits >= 120:</span><br>
+<span class="code black tab40">    return "You have enough credits to</span><br>
+ <span class="code black tab40"> graduate!"</span><br>
+<span class="code black">print(graduation_reqs(120))</span><br><br>
+
+
+<span class="code blue"><b># Boolean: And</b></span><br><br>
+
+<span class="code blue"># Let’s return to Calvin Coolidge’s Cool</span><br> 
+	<span class="code blue">College. 120 credits aren’t the only</span><br>
+	<span class="code blue">graduation requirement, you also need to</span><br> 
+		<span class="code blue">have a GPA of 2.0 or higher. Rewrite the graduation_reqs function so it takes </span><br> 
+			<span class="code blue">two inputs, gpa and credits, and checks </span><br>
+				<span class="code blue">to see if a student meets both requirements using an and statement.</span><br><br>
+
+
+<span class="code blue"># If they do, return the string</span><br><br>
+<span class="code black">statement_one = (2 + 2 + 2 >= 6)</span><br> 
+<span class="code black">and (-1 * -1 < 0)</span><br><br>
+
+<span class="code black">statement_two = (4 * 2 <= 8)</span><br>
+<span class="code black">and (7 - 1 == 6)</span><br><br>
+
+<span class="code black">def graduation_reqs(gpa,credits):</span><br>
+<span class="code black tab">  if credits >= 120 and gpa >= 2.0:</span><br>
+<span class="code black tab40">    return "You meet the requirements to</span><br>
+<span class="code black tab40">graduate!"</span><br><br>
+
+
+<span class="code blue"><b># Boolean: or</b></span><br><br>
+
+<span class="code blue"># Write a function called</span><br>
+ <span class="code blue">'graduation_mailer' that takes two inputs,</span><br>
+	<span class="code blue">gpa and credits and checks if a student either has 120 or more credits or a GPA 2.0</span><br>
+	<span class="code blue"> or higher and if so returns True</span><br><br>
+
+<span class="code black">def graduation_mailer(gpa,credits):</span><br>
+<span class="code black tab">  if gpa >= 2.0 or credits >= 120:</span><br>
+<span class="code black tab40">    return True</span><br><br>
+
+
+<span class="code blue"><b># Boolean: not</b></span><br><br>
+
+<span class="code black">def graduation_reqs(gpa, credits):</span><br>
+<span class="code black tab">  if (gpa >= 2.0) and (credits >= 120):</span><br>
+<span class="code black tab40">    return "You meet the requirements to</span><br>
+<span class="code black tab40">graduate!"</span><br>
+<span class="code black tab40">  if (gpa >= 2.0) and not</span><br>
+<span class="code black tab40"> (credits >= 120):</span><br>
+   <span class="code black tab40"> return "You do not have enough</span><br>
+   <span class="code black tab40">credits to graduate."</span><br><br>
+  <span class="code black tab">if not (gpa >= 2.0) and (credits >= 120):</span><br>
+   <span class="code black tab40"> return "Your GPA is not high enough</span><br> 
+   <span class="code black tab40">to graduate."</span><br>
+  <span class="code black tab">if not (gpa >= 2.0) and not </span><br>
+  	<span class="code black tab">(credits >= 120):</span><br>
+    <span class="code black tab40">return "You do not meet either</span><br>
+     <span class="code black tab40">requirement to graduate!"</span><br><br>
+
+
+<span class="code blue"><b># add else</b></span><br><br>
+<span class="code black">def graduation_reqs(gpa, credits):</span><br>
+<span class="code black tab">  if (gpa >= 2.0) and (credits >= 120):</span><br>
+    <span class="code black tab40">return "You meet the requirements to </span><br>
+    <span class="code black tab40">graduate!"</span><br>
+  <span class="code black tab">if (gpa >= 2.0) and not (credits >= 120):</span><br>
+    <span class="code black tab40">return "You do not have enough </span><br>
+    <span class="code black tab40">credits to graduate."</span><br>
+  <span class="code black tab">if not (gpa >= 2.0) and (credits >= 120):</span><br>
+    <span class="code black tab40">return "Your GPA is not high enough </span><br>
+    <span class="code black tab40">to graduate."</span><br>
+  <span class="code black tab">else:</span><br>
+     <span class="code black tab40"> return "You do not meet the GPA or</span><br> 
+     <span class="code black tab40">the credit requirement for</span><br>
+     <span class="code black tab40">graduation."</span><br>
+
+
+<div class="line"></div>
+
+
+<span class="code blue"><b># try / Except</b></span><br><br>
+<span class="code black">def divides(a,b):</span><br>
+<span class="code black tab">  try: </span><br>
+<span class="code black tab40">  result = a / b</span><br>
+<span class="code black tab40">    print (result)</span><br>
+<span class="code black tab">  except ZeroDivisionError:</span><br>
+<span class="code black tab40">    print ("Can't divide by zero!")</span><br>
+
+<div class="line"></div>
+
+<span class="code blue"><b># another try / Except</b></span><br><br>
+<span class="code black">def raises_value_error():</span><br>
+<span class="code black tab">  try:</span><br>
+ <span class="code black tab40">   raise ValueError</span><br>
+<span class="code black tab">  except:</span><br>
+ <span class="code black tab40">   print ("You raised a ValueError!")</span><br><br>
+
+<span class="code black">raises_value_error()</span>
+
+
+{% endblock %}

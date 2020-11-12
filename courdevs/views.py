@@ -41,6 +41,10 @@ def counter(request):
 def classes(request):
 	return render(request, "python/classes.html", {})
 
+#CONTROL FLOW
+def ctrl_flow(request):
+	return render(request, "python/ctrl_flow.html", {})
+
 ######################################################
 
 #JAVASCRIPT
