@@ -35,6 +35,8 @@ urlpatterns = [
 	path('arrays_elem/', views.arrays_elements, name="arrays_elements"),
 	#Functions 
 	path('functions_js/', views.functions_js, name="functions_js"),
+	#Elements Dissapear
+	path('dissapear_elements/', views.dissapear_elements, name="dissapear_elements"),
 
 	#HTML
 	#Forms

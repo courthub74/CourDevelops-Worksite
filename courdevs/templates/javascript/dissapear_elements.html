@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+                   
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <style type="text/css">
+                .tab {
+                    margin-left: 10px;
+                }
+                .tab20 {
+                    margin-left: 20px;
+                }
+                .tab120 {
+                    margin-left: 120px;
+                }
+                .tab160 {
+                    margin-left: 160px;
+                }
+                .blue {
+                    color: #1E90FF;
+                }
+                .black {
+                    color: black;
+                }
+                .code {
+                    font-size: 12px;
+                }
+                .grey {
+                    color: grey;
+                }
+            </style>
+
+            <h2>Make Elements Dissapear<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*H-25KB7EbSHjv70HXrdl6w.png&f=1&nofb=1" height="50" class="ml-4"></h2>
+
+
+<div class="line"></div>
+
+            <div class="container">
+                 <ol class="list-group mr-8">
+                    <li class="list-group-item"><h5>Make Doors Dissapear</h5><br>
+
+        <div class="container">
+      
+        <div>
+            <li class="code black list-group-item">< li class="list-group-item go" id="item1">Door#1< /li ></li>
+            <li class="code black list-group-item"> < li class="list-group-item go" id="item2">Door#2< /li ></li>
+            <li class="code black list-group-item">< li class="list-group-item go" id="item3">Door#3< /li ></li>
+            <li class="code black list-group-item">< li class="list-group-item go" id="item4">Door#4< /li ></li>
+            <li class="code black list-group-item">< li class="list-group-item go" id="item5">Door#5< /li ></li>
+            <li class="code black list-group-item">< li class="list-group-item go" id="item6">Door#6< /li ></li>
+            <li class="code black list-group-item">< li class="list-group-item go" id="item5">Door#7< /li ></li>
+        
+
+        <br>
+
+         <li class="list-group-item">THE CSS</li>
+         <li class="list-group-item">
+
+           <span class="code black">  < style type="text/css" > </span><br>
+
+             <span class="code black tab">   .hidden {  </span><br>
+                      <span class="code black tab">  display: none; </span><br>
+                   <span class="code blac tab"> } </span><br>
+             
+             <span class="code black">< /style ></span>
+
+         </li>
+
+
+         <li class="list-group-item">JAVASCRIPT</li>
+        
+        <li class="list-group-item">
+            <span class="code black">< script type="text/javascript" ></span><br>
+            <span class="code black">const allElements = document.querySelectorAll(".go");</span><br>
+            <span class="code grey"> // make a constant variable called 'allElements' from each desired list item</span><br>
+            <span class="code grey">    that query selects from the class 'go'.  The list items</span><br><br>
+            <span class="code black">allElements.forEach(element => { </span><br>
+            <span class="code grey">// then declare that for each element of the constant variable do BELOW</span><br><br>
+            <span class="code black">    if (element.innerHTML == "None") { </span><br>  
+            <span class="code grey">// if the element's innerHTML is "None"</span><br><br>
+             <span class="code black"> element.classList.add('hidden'); </span><br>
+             <span class="code grey"> // hide the element</span><br><br>
+            <span class="code black tab">    } </span><br>
+            <span class="code black">});</span><br>
+        <span class="code black">< /script ></li></span>
+
+    </div>    
+
+
+{% endblock %}

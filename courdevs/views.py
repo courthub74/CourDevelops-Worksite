@@ -69,6 +69,10 @@ def arrays_elements(request):
 def functions_js(request):
 	return render(request, "javascript/functionsjs.html", {})
 
+#DISSAPEAR ELEMENTS
+def dissapear_elements(request):
+	return render(request, "javascript/dissapear_elements.html", {})
+
 
 ######################################################
 
