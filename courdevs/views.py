@@ -45,6 +45,10 @@ def classes(request):
 def ctrl_flow(request):
 	return render(request, "python/ctrl_flow.html", {})
 
+#FUNCTION WITH PARAMETERS
+def functionparams(request):
+	return render(request, "python/functionparams.html", {})
+
 ######################################################
 
 #JAVASCRIPT
@@ -72,6 +76,10 @@ def functions_js(request):
 #DISSAPEAR ELEMENTS
 def dissapear_elements(request):
 	return render(request, "javascript/dissapear_elements.html", {})
+
+#SHOW HIDE COLORS
+def showhidecolors(request):
+	return render(request, "javascript/showhidecolors.html", {})
 
 
 ######################################################

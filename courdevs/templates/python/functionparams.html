@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+                   
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <style type="text/css">
+            	.tab {
+            		margin-left: 20px;
+            	}
+            	.tab40 {
+            		margin-left: 40px;
+            	}
+            	.tab60 {
+            		margin-left: 60px;
+            	}
+            	.tab160 {
+            		margin-left: 160px;
+            	}
+                .blue {
+                    color: #1E90FF;
+                }
+                .black {
+                    color: black;
+                }
+                .red {
+                    color: red;
+                }
+                .code {
+                    font-size: 12px;
+                }
+            </style>
+
+            <h2>Funtions with Parameters <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finsidehpc.com%2Fwp-content%2Fuploads%2F2016%2F01%2FPython-logo-notext.svg_.png&f=1&nofb=1" height="70" class="ml-2 mr-1"></h2>
+
+
+<div class="line"></div>
+
+    		<div class="container">
+   				 <ol class="list-group mr-8">
+			    	<li class="list-group-item"><h5></h5>
+
+<span class="code blue">#Function with Parameters</span><br><br>
+<span class="code black">def classic(gr1,gr2):</span><br>
+<span class="code black tab">  print("One of my fave classic Hip-Hop</span><br>
+<span class="code black tab">groups is " + gr1)</span><br>
+<span class="code black tab">  print("Another of my fave Hip-Hop</span><br> 
+<span class="code black tab">groups is " + gr2)</span><br><br>
+
+<span class="code black">classic("UltraMagnetic MC's", "Leaders of the New School")</span><br><br>
+<span class="code blue"><b>Prints:</b>One of my fave classic Hip-Hop groups is UltraMagnetic MC's</span><br>
+<span class="code blue">Another of my fave Hip-Hop groups is Leaders of the New School</span><br>
+
+<div class="line"></div>
+
+
+<span class="code blue">#Function with Keyword Argument</span><br><br>
+<span class="code black">def classic(gr1="UltraMagnetic MC's",gr2="Leaders of the New School"):</span><br>
+<span class="code black tab">  print("One of my fave classic Hip-Hop</span><br> 
+<span class="code black tab">groups is " + gr1)</span><br>
+<span class="code black tab">  print("Another of my fave Hip-Hop</span><br> 
+<span class="code black tab">groups is " + gr2)</span><br><br>
+
+<span class="code black">classic()</span><br><br>
+
+<span class="code blue"><b>Prints:</b>One of my fave classic Hip-Hop groups is UltraMagnetic MC's</span><br>
+<span class="code blue">Another of my fave Hip-Hop groups is Leaders of the New School</span><br>
+
+<div class="line"></div>
+
+<span class="code blue">#Function with Returns</span><br><br>
+<span class="code black">def mult_589(number):</span><br>
+<span class="code black tab">  return number*589</span><br><br>
+
+<span class="code blue">#call it through another variable</span><br>
+<span class="code black">result = mult_589(1000)</span><br><br>
+
+<span class="code black">print("If XRP actually goes to $589, I</span><br> 
+<span class="code black">would easily have " + str(result) +</span><br>
+ <span class="code black">" dollars")</span><br>
+
+<div class="line"></div>
+
+<span class="code blue">#Another Example</span><br><br>
+<span class="code black">def calculate_age(current_year,</span>
+<span class="code black tab">birth_year):</span><br>
+<span class="code black tab">  age = current_year - birth_year</span><br>
+<span class="code black tab">  return age</span><br><br>
+
+<span class="code black">print(calculate_age(2020, 1976))</span><br>
+
+<div class="line"></div>
+
+<span class="code blue">#CodeAcademy Example</span><br><br>
+<span class="code blue">#Write a function called get_boundaries() that takes in two parameters, a number</span><br> 
+    <span class="code blue">called target and a number called margin</span><br><br>
+
+<span class="code blue">#It should create two variables:</span><br>
+<span class="code blue">#low_limit: target minus the margin</span><br>
+<span class="code blue">#high_limit: margin added to target</span><br><br>
+<span class="code black">def get_boundaries(target, margin):</span><br>
+<span class="code black tab">  low_limit = target - margin</span><br>
+<span class="code black tab">  high_limit = target + margin</span><br>
+<span class="code black tab">  return low_limit, high_limit</span><br><br>
+
+<span class="code blue">#Return both low_limit and high_limit from the function, in that order</span><br><br>
+<span class="code black tab">low, high = get_boundaries(100, 20)</span><br><br>
+
+<span class="code blue">#Call the function on the target 100 with a margin of 20. Save the returned values to variables called low and high</span><br>    
+<span class="code blue">#we added this print statement just to sanity-check our solution:</span><br><br>
+<span class="code black">print("Low limit: "+str(low)+", high limit: "+str(high))</span><br>
+
+<div class="line"></div>
+
+<span class="code blue">#Function with Global Variable</span><br><br>
+<span class="code black">current_year = 2048</span><br><br>
+
+<span class="code black">def calculate_age(birth_year):</span><br>
+<span class="code black tab">  age = current_year - birth_year</span><br>
+<span class="code black tab">  return age</span><br><br>
+
+<span class="code black">print(current_year)</span><br>
+<span class="code black">print(calculate_age(1970))</span><br>
+
+<div class="line"></div>
+
+<span class="code blue">#Define a function called repeat_stuff that takes in two inputs, stuff, and num_repeats.</span><br><br>
+<span class="code blue"># We will want to make this function print a string with stuff repeated num_repeats amount of times. For now, only put an empty print statement inside the function.</span><br><br>
+<span class="code blue">#Change the print statement inside repeat_stuff to a return statement instead.</span><br><br>
+<span class="code blue"># It should return stuff*num_repeats.</span><br><br>
+<span class="code blue"># Note: Multiplying a string just makes a new string with the old one repeated!</span><br><br>
+<span class="code blue">#Outside of the function, call repeat_stuff.</span><br><br>
+<span class="code blue">#You can use the value "Row " for stuff and 3 for num_repeats.</span><br><br>
+<span class="code blue">#Give the parameter num_repeats a default value of 10.</span><br><br>
+<span class="code blue">#Add repeat_stuff("Row ", 3) and the string "Your Boat. " together and save the result to a variable called lyrics.</span><br><br>
+<span class="code blue">#Create a variable called song and assign it the value of repeat_stuff called with the singular input lyrics.</span><br><br>
+<span class="code blue">#Print song</span><br><br>
+
+<span class="code black">def repeat_stuff(stuff, num_repeats=10):</span><br>
+<span class="code black tab">  return stuff*num_repeats</span><br><br>
+
+<span class="code black">lyrics = repeat_stuff("Row ", 3) + "Your Boat"</span><br>
+<span class="code black">song = repeat_stuff(lyrics)</span><br><br>
+
+<span class="code black">print(song)</span><br>
+
+<div class="line"></div>
+
+<span class="code blue"># Write a function called f_to_c that takes an input f_temp, a temperature in Fahrenheit, and converts it to c_temp, </span><br>
+    <span class="code blue">that temperature in Celsius</span><br><br>
+<span class="code blue"># It should then return c_temp</span><br><br>
+<span class="code blue"># The equation you should use is:</span><br><br>
+<span class="code blue"># Temp (C) = (Temp (F) - 32) * 5/9</span><br><br>
+<span class="code blue"># Let’s test your function with a value of 100 Fahrenheit</span><br><br>
+
+<span class="code black">def f_to_c(f_temp):</span><br>
+<span class="code black tab">  c_temp = (f_temp - 32) * 5/9</span><br>
+<span class="code black tab">  return c_temp</span><br><br>
+<span class="code black">print(f_to_c(100))</span><br>
+
+<div class="line"></div>
+
+# Define a function called get_force that takes in mass and acceleration. It should return mass multiplied by acceleration.
+# Test get_force by calling it with the variables train_mass and train_acceleration.
+# Save the result to a variable called train_force and print it out
+train_mass = 22680
+train_acceleration = 10
+train_distance = 100
+
+def get_force(mass, acceleration):
+  return mass * acceleration
+train_force = get_force(train_mass, train_acceleration)
+print(train_force)
+
+<div class="line"></div>
+
+# Define a function called get_energy that takes in mass and c.
+# c is a constant that is usually set to the speed of light, which is roughly 3 x 10^8. Set c to have a default value of 3*10**8.
+# get_energy should return mass multiplied by c squared
+# Test get_energy by using it on bomb_mass, with the default value of c. Save the result to a variable called bomb_energy
+bomb_mass = 1
+c = 3*10**8
+def get_energy(mass, c):
+  return mass * (c**2)
+
+bomb_energy = get_energy(bomb_mass, c)
+
+print("A 1kg bomb supplies " + str(bomb_energy) + " Joules")
+
+<div class="line"></div>
+
+# Define a final function called get_work that takes in mass, acceleration, and distance.
+# Work is defined as force multiplied by distance. First, get the force using get_force, then multiply that by distance. Return the result.
+# Test get_work by using it on train_mass, train_acceleration, and train_distance. Save the result to a variable called train_work.
+# Print the string "The GE train does X Joules of work over Y meters.", with X replaced with train_work and Y replaced with train_distance.
+
+def get_work(mass, acceleration, distance):
+  get_force = mass * acceleration
+  return get_force
+  
+train_work = get_work(train_mass, train_acceleration, train_distance)
+
+print("The GE train does " + str(train_work) + " Joules of work over "+ str(train_distance) + " meters." )
+
+<div class="line"></div>
+
+# Write your tenth_power function here:
+def tenth_power(num):
+  return num ** 10
+# Uncomment these function calls to test your tenth_power function:
+print(tenth_power(1))
+# 1 to the 10th power is 1
+print(tenth_power(0))
+# 0 to the 10th power is 0
+print(tenth_power(2))
+# 2 to the 10th power is 1024
+
+{% endblock %}

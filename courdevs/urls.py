@@ -23,6 +23,8 @@ urlpatterns = [
 	path('classes/', views.classes, name="classes"),
 	# Control Flow
 	path('ctrl_flow/', views.ctrl_flow, name="ctrl_flow"),
+	# Function with Parameters
+	path('functionparams/', views.functionparams, name="functionparams"),
 
 	#JAVASCRIPT
 	#Disable Fields by CheckBox
@@ -37,6 +39,8 @@ urlpatterns = [
 	path('functions_js/', views.functions_js, name="functions_js"),
 	#Elements Dissapear
 	path('dissapear_elements/', views.dissapear_elements, name="dissapear_elements"),
+	#Show Hide Colors
+	path('showhidecolors/', views.showhidecolors, name="showhidecolors"),
 
 	#HTML
 	#Forms
