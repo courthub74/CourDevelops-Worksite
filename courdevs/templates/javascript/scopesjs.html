@@ -105,8 +105,8 @@
 
                                     <li class="list-group-item">
                                                         
-
-                                    <div class="code">
+                                        <div class="code">
+                                    
 
                                         <div class="container">
                                              <ol class="list-group mr-8">
@@ -124,13 +124,13 @@
 
                                                     <span class="grey code">// ABOVE You’ll notice that the logCitySkyline() function is able to access both variables 'city' and 'skyscraper' without any problems. In the next exercise we’ll consider why would it be preferable to have one variable outside of a block and the other inside of a block.</span><br><br>
 
-                                                    <span class="code grey"><b>Prints:</b> The Stars over the Empire State Building in New York City</span>
+                                                    <span class="code grey"><b>Prints:</b> The Stars over the Empire State Building in New York City</span><br><br>
 
                                     <!-- Block Scope -->
 
                                     <div class="code">
 
-                                        <div class="line"></div>
+                                        
 
                                         <div class="container">
                                              <ol class="list-group mr-8">
@@ -147,13 +147,13 @@
                                                     <span class="code black">console.log(callMyNightSky())</span>
                                                     <br> <br>
 
-                                                    <span class="code grey"><b>// ABOVE You’ll notice that the function block for callMyNightSky() is able to access the global variables freely since the variables are available to all lines of code in the file.</span>
+                                                    <span class="code grey"><b>// ABOVE You’ll notice that the function block for callMyNightSky() is able to access the global variables freely since the variables are available to all lines of code in the file.</span><br><br>
 
                                     <!-- Block Scope as defined within an if block -->
 
                                     <div class="code">
 
-                                        <div class="line"></div>
+                                        
 
                                         <div class="container">
                                              <ol class="list-group mr-8">
@@ -175,13 +175,109 @@
                                                     <span class="code grey">// We create a variable dusk inside the logSkyColor() function.</span><br><br>
                                                         <span class="code grey">// After the if statement, we define a new code block with the {} braces. Here we assign a new value to the variable color if the if statement is truthy</span><br><br>
                                                             <span class="code grey">// Within the if block, the color variable holds the value 'pink', though outside the if block, in the function body, the color variable holds the value 'blue'</span><br><br>
-                                                                <span class="code grey">// While we use block scope, we still pollute our namespace by reusing the same variable name twice. A better practice would be to rename the variable inside the block</span><br>
+                                                                <span class="code grey">// While we use block scope, we still pollute our namespace by reusing the same variable name twice. A better practice would be to rename the variable inside the block</span><br><br>
+
+                                    <!--Training Days Exercise-->
+
+
+                                    <!--'Random' scope too lose-->
+
+                                    <div class="code">
+
+                                        
+
+                                        <div class="container">
+                                             <ol class="list-group mr-8">
+                                                <li class="list-group-item"><h5>Training Days Exercise</h5></li><br><br>
+                                                     <li class="list-group-item grey">// The scope of `random` is too loose </li><br>
+
+                                                      <span class="code black">const name = 'Nala';</span><br><br>
+
+                                                      <span class="code black">const getRandEvent = () => {</span><br>
+                                                      <span class="code black tab">const random = Math.floor(Math.random() * 3);</span>
+                                                      <span class="code black tab">if (random === 0) {</span>
+                                                      <span class="code black tab15">return 'Marathon';</span>
+                                                      <span class="code black tab">} else if (random === 1) {</span><br>
+                                                      <span class="code black tab15">return 'Triathlon';</span>
+                                                      <span class="code black tab">} else if (random === 2) {</span><br>
+                                                      <span class="code black tab15">return 'Pentathlon';</span><br>
+                                                        <span class="code black tab">}</span><br>
+                                                        <span class="code black">};</span><br>                                            
+                                                      
+                                                    <span class="code black">console.log(getRandEvent());</span><br><br>
+
+
+
+                                    <!--'Days' scope too lose-->
+
+                                    <div class="code">
+
+                                        
+
+                                        <div class="container">
+                                             <ol class="list-group mr-8">
+                                                
+                                                     <li class="list-group-item grey">// The scope of `days` is too tight  </li><br>
+
+                                                      <span class="code black">const getTrainingDays = event => {</span><br>
+                                                      <span class="code black tab">let days;</span><br>
+                                                      <span class="code grey tab">// Declared a variable with no value to be manipulated onward</span><br>
+                                                      <span class="code black">if (event === 'Marathon') {</span><br>
+                                                      <span class="code black tab15">days = 50;</span><br>
+                                                      <span class="code black tab">} else if (event === 'Triathlon') {</span><br>
+                                                      <span class="code black tab15">days = 100;</span><br>
+                                                      <span class="code black tab">} else if (event === 'Pentathlon') {</span><br>
+                                                      <span class="code black tab15">days = 200;</span><br><br>
+                                                        <span class="code black tab">}</span><br>
+                                                        <span class="code black tab15">return days;</span><br>
+                                                        <span class="code black">};</span><br>                                            
+                                                      
+                                                    <span class="code black">console.log(getTrainingDays());</span><br><br>
+
+
+
+                                    <!--The scope of `name` is too tight -->
+
+                                    <div class="code">
+
+                                       
+
+                                        <div class="container">
+                                             <ol class="list-group mr-8">
+                                               
+                                                     <li class="list-group-item grey">// The scope of `name` is too tight   </li><br>
+
+                                                      <span class="code black">const logEvent = (name,event) => {</span><br>
+                                                      <span class="code black tab">console.log(`${name}'s event is: ${event}`);</span><br>
+                                                      <span class="code black">};</span><br><br>
+
+                                                      <span class="code black">const logTime = (name,days) => {</span><br>
+                                                      <span class="code black tab15">console.log(`${name}'s time to train is: ${days} days`);</span><br>
+                                                      <span class="code black">{;</span><br><br>
+
+                                                      <span class="code black">const event = getRandEvent();</span><br>
+                                                      <span class="code black">const days = getTrainingDays(event);</span><br>
+                                                      <span class="code grey">// Define a `name` variable. Use it as an argument after updating logEvent and logTime</span><br><br> 
+
+                                                      <span class="code black">logEvent(name,event);</span><br>
+                                                      <span class="code black">logTime(name,days);</span><br><br>
+                                                      <span class="code black">const event2 = getRandEvent();</span><br>
+                                                      <span class="code black">const days2 = getTrainingDays(event2);</span><br>
+                                                      <span class="code black">const name2 = 'Warren';</span><br><br>
+                                                  
+                                                        <span class="code black">logEvent(name2, event2);</span><br>
+                                                        <span class="code black">logTime(name2, days2);</span><br><br>
+                                                                                                  
+                                                      
+                                                    <span class="code black">console.log(getTrainingDays());</span><br><br>
+                                                    
+
 
                                     <!-- Scope Review -->
 
                                     <div class="code">
 
-                                        <div class="line"></div>
+                                        
 
                                         <div class="container">
                                              <ol class="list-group mr-8">
