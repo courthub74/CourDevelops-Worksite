@@ -194,59 +194,62 @@
 
 <div class="line"></div>
 
-# Define a function called get_force that takes in mass and acceleration. It should return mass multiplied by acceleration.
-# Test get_force by calling it with the variables train_mass and train_acceleration.
-# Save the result to a variable called train_force and print it out
-train_mass = 22680
-train_acceleration = 10
-train_distance = 100
+<span class="code blue"># Define a function called get_force that takes in mass and acceleration. It should return mass multiplied by acceleration.</span><br><br>
+<span class="code blue"># Test get_force by calling it with the variables train_mass and train_acceleration.</span><br><br>
+<span class="code blue"># Save the result to a variable called train_force and print it out</span><br><br>
+<span class="code black">train_mass = 22680</span><br>
+<span class="code black">train_acceleration = 10</span><br>
+<span class="code black">train_distance = 100</span><br><br>
 
-def get_force(mass, acceleration):
-  return mass * acceleration
-train_force = get_force(train_mass, train_acceleration)
-print(train_force)
-
-<div class="line"></div>
-
-# Define a function called get_energy that takes in mass and c.
-# c is a constant that is usually set to the speed of light, which is roughly 3 x 10^8. Set c to have a default value of 3*10**8.
-# get_energy should return mass multiplied by c squared
-# Test get_energy by using it on bomb_mass, with the default value of c. Save the result to a variable called bomb_energy
-bomb_mass = 1
-c = 3*10**8
-def get_energy(mass, c):
-  return mass * (c**2)
-
-bomb_energy = get_energy(bomb_mass, c)
-
-print("A 1kg bomb supplies " + str(bomb_energy) + " Joules")
+<span class="code black">def get_force(mass, acceleration):</span><br>
+<span class="code black tab">  return mass * acceleration</span><br>
+<span class="code black tab">train_force = get_force(train_mass,</span><br> 
+<span class="code black tab">train_acceleration)</span><br><br>
+<span class="code black">print(train_force)</span><br>
 
 <div class="line"></div>
 
-# Define a final function called get_work that takes in mass, acceleration, and distance.
-# Work is defined as force multiplied by distance. First, get the force using get_force, then multiply that by distance. Return the result.
-# Test get_work by using it on train_mass, train_acceleration, and train_distance. Save the result to a variable called train_work.
-# Print the string "The GE train does X Joules of work over Y meters.", with X replaced with train_work and Y replaced with train_distance.
+<span class="code blue"># Define a function called get_energy that takes in mass and c.</span><br><br>
+<span class="code blue"># c is a constant that is usually set to the speed of light, which is roughly 3 x 10^8. Set c to have a default value of 3*10**8.</span><br><br>
+<span class="code blue"># get_energy should return mass multiplied by c squared</span><br><br>
+<span class="code blue"># Test get_energy by using it on bomb_mass, with the default value of c. Save the result to a variable called bomb_energy</span><br><br>
 
-def get_work(mass, acceleration, distance):
-  get_force = mass * acceleration
-  return get_force
+<span class="code black">bomb_mass = 1</span><br>
+<span class="code black">c = 3*10**8</span><br>
+<span class="code black">def get_energy(mass, c):</span><br>
+<span class="code black">  return mass * (c**2)</span><br><br>
+
+<span class="code black">bomb_energy = get_energy(bomb_mass,c)</span><br><br>
+
+<span class="code black">print("A 1kg bomb supplies " + str(bomb_energy) + " Joules")</span><br>
+
+<div class="line"></div>
+
+<span class="code blue"># Define a final function called get_work that takes in mass, acceleration, and distance.</span><br><br>
+<span class="code blue"># Work is defined as force multiplied by distance. First, get the force using get_force, then multiply that by distance. Return the result.</span><br><br>
+<span class="code blue"># Test get_work by using it on train_mass, train_acceleration, and train_distance. Save the result to a variable called train_work.</span><br><br>
+<span class="code blue"># Print the string "The GE train does X Joules of work over Y meters.", with X replaced with train_work and Y replaced with train_distance.</span><br><br>
+
+<span class="code black">def get_work(mass, acceleration,</span><br>
+<span class="code black tab">distance):</span><br>
+<span class="code black tab">  get_force = mass * acceleration</span><br>
+<span class="code black tab">  return get_force</span><br>
   
-train_work = get_work(train_mass, train_acceleration, train_distance)
+<span class="code black">train_work = get_work(train_mass, train_acceleration, train_distance)</span><br><br>
 
-print("The GE train does " + str(train_work) + " Joules of work over "+ str(train_distance) + " meters." )
+<span class="code black">print("The GE train does " + str(train_work) + " Joules of work over "+ str(train_distance) + " meters." )</span><br>
 
 <div class="line"></div>
 
-# Write your tenth_power function here:
-def tenth_power(num):
-  return num ** 10
-# Uncomment these function calls to test your tenth_power function:
-print(tenth_power(1))
-# 1 to the 10th power is 1
-print(tenth_power(0))
-# 0 to the 10th power is 0
-print(tenth_power(2))
-# 2 to the 10th power is 1024
+<span class="code blue"># Write your tenth_power function here:</span><br>
+<span class="code black">def tenth_power(num):</span><br>
+<span class="code black tab">  return num ** 10</span><br><br>
+<span class="code blue"># Uncomment these function calls to test your tenth_power function:</span><br><br>
+<span class="code black">print(tenth_power(1))</span><br>
+<span class="code blue"># 1 to the 10th power is 1</span><br><br>
+<span class="code black">print(tenth_power(0))</span><br>
+<span class="code blue"># 0 to the 10th power is 0</span><br><br>
+<span class="code black">print(tenth_power(2))</span><br>
+<span class="code blue"># 2 to the 10th power is 1024</span>
 
 {% endblock %}
