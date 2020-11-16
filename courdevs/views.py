@@ -49,6 +49,14 @@ def ctrl_flow(request):
 def functionparams(request):
 	return render(request, "python/functionparams.html", {})
 
+# REGEX
+def regex(request):
+	return render(request, "python/regex.html", {})
+
+# SEND EMAIL
+def email(request):
+	return render(request, "python/email.html", {})
+
 ######################################################
 
 #JAVASCRIPT

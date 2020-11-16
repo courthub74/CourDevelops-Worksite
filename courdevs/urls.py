@@ -25,6 +25,10 @@ urlpatterns = [
 	path('ctrl_flow/', views.ctrl_flow, name="ctrl_flow"),
 	# Function with Parameters
 	path('functionparams/', views.functionparams, name="functionparams"),
+	# Regional Expressions
+	path('regex/', views.regex, name="regex"),
+	# Sending Email
+	path('email/', views.email, name="email"),
 
 	#JAVASCRIPT
 	#Disable Fields by CheckBox

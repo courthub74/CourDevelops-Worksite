@@ -1,0 +1,282 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+                   
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <style type="text/css">
+            	.tab {
+            		margin-left: 20px;
+            	}
+            	.tab80 {
+            		margin-left: 60px;
+            	}
+            	.tab120 {
+            		margin-left: 120px;
+            	}
+            	.tab160 {
+            		margin-left: 160px;
+            	}
+                .blue {
+                    color: #1E90FF;
+                }
+                .black {
+                    color: black;
+                }
+                .code {
+                    font-size: 12px;
+                }
+            </style>
+
+            <h2>Sending Email <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finsidehpc.com%2Fwp-content%2Fuploads%2F2016%2F01%2FPython-logo-notext.svg_.png&f=1&nofb=1" height="70" class="ml-2 mr-1"></h2>
+
+
+<div class="line"></div>
+
+    		<div class="container">
+   				 <ol class="list-group mr-8">
+
+
+		<li class="list-group-item"><h5>
+            <u>Sending an email</u>
+        </h5><br>
+
+<span class="code blue">#Import smtplib for the actual sending function</span><br>
+<span class="code black">import smtplib</span><br><br>
+
+<span class="code blue">#Import MIME test format library  (MIME = Multipurpose Internet Mail Extensions) its and internet standart to encode email contents</span><br>
+<span class="code black">from email.mime.text import MIMEText</span><br><br>
+
+<span class="code blue">#Import Pythons email utility package</span><br>
+<span class="code black">import email.utils</span><br><br>
+
+<span class="code blue">#Import the email modules we'll need</span><br>
+<span class="code blue">#from email.message import EmailMessage</span><br><br>
+
+<span class="code black">sender_name = 'CourDevelops'</span><br>
+<span class="code black">sender_email = 'csoc783@gmail.com'</span><br>
+<span class="code black">password = 'passwordhere'</span><br><br>
+
+<span class="code black">recipient_name = 'Mike Smooth'</span><br>
+<span class="code black">recipient_email = 'courtneyj3470@gmail.com'</span><br><br>
+
+
+<span class="code black">email_text = '''</span><br>
+<span class="code black tab"> We are following email standards and protocols</span><br>
+<span class="code black">'''</span><br><br>
+
+<span class="code black">def send_email():</span><br>
+<span class="code black tab">    print('\nSending email...\n')</span><br><br>
+
+<span class="code blue">#Get message ready in email format</span><br>
+<span class="code black tab">    message = MIMEText(email_text)</span><br><br>
+
+<span class="code blue">#Populate the message object</span><br> 
+<span class="code black tab">    message['To'] = email.utils.formataddr((recipient_name, recipient_email))</span><br>
+<span class="code black tab">    message['From'] = email.utils.formataddr((sender_name, sender_email))</span><br>
+<span class="code black tab">    message['Subject'] = 'This is the Real email NOT SPAM'</span><br><br>
+
+
+<span class="code blue">#Setup the email server. Gmail host, and use a common port</span><br>
+<span class="code black tab">    server = smtplib.SMTP('smtp.gmail.com', 587) #smtp domain for gmail (google that)</span><br><br>
+
+<span class="code blue">#Additional security measures (transport layer security) all smtp commands will be encrypted after this</span><br>
+<span class="code black tab">    server.starttls()</span><br><br>
+
+<span class="code blue">#Login to senders email account</span><br>
+<span class="code black tab">    server.login(sender_email, password)</span><br><br>
+
+<span class="code blue">#print(message.as_string())</span><br><br>
+
+<span class="code blue">#Send email</span><br>
+<span class="code black tab">server.sendmail(sender_email, recipient_email, message.as_string())</span><br><br>
+
+<span class="code blue">#Cleanup</span><br>
+<span class="code black tab">    server.quit()</span><br><br>
+    
+<span class="code black tab">    print('\nEmail sent.\n')</span><br><br>
+
+<span class="code black">send_email()</span><br>
+
+<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+<div class="line"></div>
+
+<h5><u>Sending Emails with Content</u></h5><br>
+
+<span class="code blue">#Import smtplib for the actual sending function</span><br>
+<span class="code black">import smtplib</span><br><br>
+
+<span class="code blue">#Import MIME test format library  (MIME = Multipurpose Internet Mail Extensions)</span><br>
+<span class="code black">its and internet standart to encode email contents</span><br>
+<span class="code black">from email.mime.text import MIMEText</span><br><br>
+
+<span class="code blue">#Import Pythons email utility package</span><br>
+<span class="code black">import email.utils</span><br><br>
+
+<span class="code blue">#Import the email modules we'll need</span><br>
+<span class="code blue">#from email.message import EmailMessage</span><br>
+
+<span class="code blue">#Email SENDER</span><br>
+<span class="code black">sender_name = 'CourDevelops'</span><br>
+<span class="code black">sender_email = 'csoc783@gmail.com'</span><br>
+<span class="code black">password = 'passwordhere'</span><br><br>
+
+<span class="code blue">#Email RECIPIENT</span><br>
+<span class="code black">recipient_names = ['Mike Smooth', 'Cameron Bridge', 'James Hedge']</span><br>
+<span class="code black">recipient_emails = ['courtneyj3470@gmail.com', 'cjacobs124@gmail.com', 'cj8409942fb@gmail.com'] </span><br><br>
+<span class="code blue">#you can use a .csv with split(regex) to add a list</span><br>
+
+<span class="code black">email_html = '''</span><br>
+ <span class="code black tab">   < h1 >This is HTML Text< /h1 ></span><br>
+   <span class="code black tab"> < img src="https://external-content.duckduckgo.com/ </span><br>
+     <span class="code black tab">iu/?u=https%3A%2F%2Fwww.hawtcelebs.com%2Fwp-content%2Fuploads%2F2018%2F08%2F </span><br>
+     <span class="code black tab">daniela-ruah-in-cbs-watch-magazine-march-april-2018-8.jpg&f=1&nofb=1"> </span><br>
+    <span class="code black tab">< p>Thanks for joining< /p> </span><br>
+<span class="code black tab">'''</span><br><br>
+
+<span class="code black">def send_email():</span><br>
+<span class="code black tab">print('\nBroadcasting email...\n')</span><br>
+
+<span class="code blue tab">#Loop through entire email list</span><br>
+<span class="code black tab">for recipient_name, recipient_email in zip(recipient_names, recipient_emails):</span><br><br>  
+    <span class="code blue">#zip takes the corresponding elements in order specified and tuples them</span><br><br>
+
+<span class="code blue tab">#Get message ready in email format</span><br>
+ <span class="code black tab">message = MIMEText(email_html, 'html')</span><br><br>
+
+<span class="code blue tab">#Give us HTML functionality</span><br>
+<span class="code black tab">message.add_header('Content-Type', 'text/html')</span><br><br>
+
+<span class="code blue tab">#Populate the message object</span><br> 
+<span class="code black tab">message['To'] = email.utils.formataddr((recipient_name, recipient_email))</span><br>
+<span class="code black tab">message['From'] = email.utils.formataddr((sender_name, sender_email))</span><br>
+<span class="code black tab">message['Subject'] = 'I am sending an HTML email'</span><br><br>
+
+
+<span class="code blue tab">#Setup the email server. Gmail host, and use a common port</span><br>
+<span class="code black tab">server = smtplib.SMTP('smtp.gmail.com', 587) #smtp domain for gmail (google that)</span><br><br>
+
+<span class="code blue tab">#Additional security measures (transport layer security) all smtp commands will be encrypted after this</span><br>
+<span class="code black tab">server.starttls()</span><br><br>
+
+<span class="code blue tab">#Login to senders email account</span><br>
+<span class="code black tab">server.login(sender_email, password)</span><br><br>
+
+<span class="code blue tab">#print(message.as_string())</span><br><br>
+
+<span class="code blue tab">#Send email</span><br>
+<span class="code black tab">server.sendmail(sender_email, recipient_email, message.as_string())</span><br><br>
+
+<span class="code blue tab">#Cleanup</span><br>
+<span class="code black tab">server.quit()</span><br><br>
+
+<span class="code blue tab">#Confirm email sent to client</span><br>
+<span class="code black tab">print('Sent to ' + recipient_name + '' + recipient_email)</span><br><br>
+    
+<span class="code black tab">print('\nEmail broadcasted.\n')</span><br><br>
+
+<span class="code black tab">send_email()</span>
+
+<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+<div class="line"></div>
+
+<h5>
+    <u>Sending multiple emails</u>
+</h5><br>
+
+<span class="code blue">#Import smtplib for the actual sending function</span><br>
+<span class="code black">import smtplib</span><br><br>
+
+<span class="code blue">#Import MIME test format library  (MIME = Multipurpose Internet Mail Extensions) its and internet standart to encode email contents</span><br>
+<span class="code black">from email.mime.text import MIMEText</span><br><br>
+
+<span class="code blue">#Import Pythons email utility package</span><br>
+<span class="code black">import email.utils</span><br><br>
+
+<span class="code blue">#Import the email modules we'll need</span><br>
+<span class="code blue">#from email.message import EmailMessage</span><br><br>
+
+<span class="code black">sender_name = 'CourDevelops'</span><br>
+<span class="code black">sender_email = 'csoc783@gmail.com'</span><br>
+<span class="code black">password = 'passwordhere'</span><br><br>
+
+<span class="code black">recipient_name = ['Mike Smooth', 'Cameron Bridge', 'James Hedge']</span><br>
+<span class="code black">recipient_email = ['courtneyj3470@gmail.com', 'cjacobs124@gmail.com', 'cj8409942fb@gmail.com']</span><br>
+<span class="code blue">#you can use a .csv with split(regex) to add a list</span><br><br>
+
+
+<span class="code black">email_text = '''</span><br>
+<span class="code black tab"> We are following email standards and protocols</span><br>
+<span class="code black">'''</span><br><br>
+
+<span class="code black">def send_email():</span><br>
+<span class="code black tab">    print('\nSending email...\n')</span><br><br>
+
+<span class="code blue">#Get message ready in email format</span><br>
+<span class="code black tab">    message = MIMEText(email_text)</span><br><br>
+
+<span class="code blue">#Populate the message object</span><br> 
+<span class="code black tab">    message['To'] = email.utils.formataddr((recipient_name, recipient_email))</span><br>
+<span class="code black tab">    message['From'] = email.utils.formataddr((sender_name, sender_email))</span><br>
+<span class="code black tab">    message['Subject'] = 'This is the Real email NOT SPAM'</span><br><br>
+
+
+<span class="code blue">#Setup the email server. Gmail host, and use a common port</span><br>
+<span class="code black tab">    server = smtplib.SMTP('smtp.gmail.com', 587) #smtp domain for gmail (google that)</span><br><br>
+
+<span class="code blue">#Additional security measures (transport layer security) all smtp commands will be encrypted after this</span><br>
+<span class="code black tab">    server.starttls()</span><br><br>
+
+<span class="code blue">#Login to senders email account</span><br>
+<span class="code black tab">    server.login(sender_email, password)</span><br><br>
+
+<span class="code blue">#print(message.as_string())</span><br><br>
+
+<span class="code blue">#Send email</span><br>
+<span class="code black tab">server.sendmail(sender_email, recipient_email, message.as_string())</span><br><br>
+
+<span class="code blue">#Cleanup</span><br>
+<span class="code black tab">    server.quit()</span><br><br>
+    
+<span class="code black tab">    print('\nEmail sent.\n')</span><br><br>
+
+<span class="code black">send_email()</span>
+
+
+{% endblock %}

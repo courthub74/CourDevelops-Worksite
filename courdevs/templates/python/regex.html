@@ -1,0 +1,319 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+                   
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <style type="text/css">
+            	.tab {
+            		margin-left: 20px;
+            	}
+            	.tab80 {
+            		margin-left: 60px;
+            	}
+            	.tab120 {
+            		margin-left: 120px;
+            	}
+            	.tab160 {
+            		margin-left: 160px;
+            	}
+                .blue {
+                    color: #1E90FF;
+                }
+                .black {
+                    color: black;
+                }
+                .purple {
+                    color: purple;
+                }
+                .code {
+                    font-size: 12px;
+                }
+            </style>
+
+            <h2>Regional Expressions (Regex) <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finsidehpc.com%2Fwp-content%2Fuploads%2F2016%2F01%2FPython-logo-notext.svg_.png&f=1&nofb=1" height="70" class="ml-2 mr-1"></h2>
+
+
+<div class="line"></div>
+
+    		<div class="container">
+   				 <ol class="list-group mr-8">
+			    	<li class="list-group-item"><h5></h5>
+
+<span class="code blue"># MAIN</span><br><br>
+<span class="code black">import re</span><br>
+<span class="code black">import sandbox</span><br>
+<span class="code black">import dynamic</span><br>
+<span class="code black">import alphanumerics</span><br>
+<span class="code black">import whitespace</span><br>
+<span class="code black">import wildcard</span><br>
+<span class="code black">import brackets</span><br>
+<span class="code black">import braces</span><br>
+<span class="code black">import zeroormore</span><br><br>
+
+<span class="code black">text = "Hello, this is some text. Hello"</span><br><br>
+<span class="code black">pattern = "Hello"</span><br><br>
+
+<span class="code black">regex = re.compile(pattern)</span><br><br>
+<span class="code black">match = regex.search(text)</span><br>
+<span class="code blue">#'search' method only finds the first match</span><br><br>
+
+<span class="code black">print(match)</span><br>
+<span class="code black">print(match.group())</span><br>
+<span class="code black">print(match.start())</span><br>
+<span class="code black">print(match.end())</span><br>
+<span class="code black">print(match.span())</span><br><br>
+
+<span class="code black">all_matches = regex.findall(text)</span><br>
+<span class="code black">print(all_matches)</span><br>
+
+
+<div class="line"></div>
+
+
+<span class="code blue"># ALPHANUMERICS</span><br><br>
+<span class="code black">import re</span><br><br>
+
+<span class="code black">text = "123city456"</span><br><br>
+
+<span class="code black">pattern = "\w\w"</span><br>
+<span class="code blue">#'\w' picks out the alphanumerics</span><br>
+<span class="code blue">#'\W' picks out the non-alphanumerics</span><br><br>
+
+<span class="code black">regex = re.compile(pattern)</span><br><br>
+
+<span class="code black">all_matches = regex.findall(text)</span><br>
+<span class="code black">print(all_matches)</span>
+
+
+<div class="line"></div>
+
+
+<span class="code blue"># BRACES</span><br><br>
+<span class="code black">import re</span><br><br>
+
+<span class="code black">text = "Yo! You there? Yo!!! ... Yo!!!!!!"</span><br><br>
+
+<span class="code black">pattern = "Yo!{3,}"</span><br>
+<span class="code blue">#ABOVE finds Yo with 3 exclamation points behind it</span><br><br>
+
+<span class="code black">regex = re.compile(pattern)</span><br><br>
+
+<span class="code black">all_matches = regex.findall(text)</span><br>
+<span class="code black">print(all_matches)</span><br>
+
+
+<div class="line"></div>
+
+
+<span class="code blue"># BRACKETS</span><br><br>
+<span class="code black">import re</span><br><br>
+
+<span class="code black">text = "123 city 456 %#$ loRS ..."</span><br><br>
+
+<span class="code black">pattern = "[aeiou]"</span><br>
+<span class="code blue">#'[ ]' allow you to check for specific characters</span><br>
+<span class="code blue">#ABOVE is checking for vowels</span><br>
+<span class="code blue">#[aeiou][aeiou] checks to two consecutive vowels and so forth</span><br><br>
+
+<span class="code black">regex = re.compile(pattern)</span><br><br>
+
+<span class="code black">all_matches = regex.findall(text)</span><br>
+<span class="code black">print(all_matches)</span><br>
+
+
+<div class="line"></div>
+
+
+<span class="code blue"># DIGITS</span><br><br>
+<span class="code black">import re</span><br><br>
+
+<span class="code black">text = "123city456"</span><br><br>
+
+<span class="code black">pattern = "\d"</span><br>
+<span class="code blue">#'\d' matches any digits from 0-9</span><br>
+<span class="code blue">#'\d\d' matches double digit sequences</span><br>
+<span class="code blue">#'\d\d\d' matches triple and so forth</span><br>
+<span class="code blue">#'\D' matches non digits same as numerical pattern</span><br><br>
+
+<span class="code black">regex = re.compile(pattern)</span><br><br>
+
+<span class="code black">all_matches = regex.findall(text)</span><br>
+<span class="code black">print(all_matches)</span><br>
+
+
+<div class="line"></div>
+
+<span class="code blue"># POETRY.LOCK</span><br><br>
+<span class="code purple">[[package]]</span><br>
+<span class="code black">category = "main"</span><br>
+<span class="code black">description = "Class to create dynamic objects."</span><br>
+<span class="code black">name = "dynamic"</span><br>
+<span class="code black">optional = false</span><br>
+<span class="code black">python-versions = "*"</span><br>
+<span class="code black">version = "0.1.1"</span><br><br>
+
+<span class="code purple">[metadata]</span><br>
+<span class="code black">content-hash = "86689dfa8a3fd48557879a01ada39b207428</span><br>
+<span class="code black">ede3274eb0120661402dc160c292"</span><br>
+<span class="code black">python-versions = "^3.8"</span><br><br>
+
+<span class="code purple">[metadata.files]</span><br>
+<span class="code black">dynamic = [ </span><br>
+<span class="code black tab">{file = "dynamic-0.1.1.tar.gz", hash = "sha256:385a601076538274a42060b1d650</span><br>
+<span class="code black tab">fe662f7aa5b15ae95bbdd4ac</span><br>
+<span class="code black tab">6d2c49302dba"},
+<span class="code black">]</span><br><br>
+
+
+<div class="line"></div>
+
+<span class="code blue"># PYPROJECT.TOML</span><br><br>
+<span class="code purple">[[tool.poetry]]</span><br>
+<span class="code black">name = "regex-class"</span><br>
+<span class="code black">version = "0.1.0"</span><br>
+<span class="code black">description = ""</span><br>
+<span class="code black">authors = ["Your Name < you@example.com >"]</span><br><br>
+
+<span class="code purple">[[tool.poetry.dependencies]]</span><br>
+<span class="code black">python = "^3.8"</span><br>
+<span class="code black">dynamic = "^0.1.1"</span><br><br>
+
+<span class="code purple">[[tool.poetry.dev-dependencies]]</span><br>
+
+<span class="code purple">[[build-system]]</span><br>
+<span class="code black">requires = ["poetry>=0.12"]</span><br>
+<span class="code black">build-backend = "poetry.masonry.api"</span><br>
+
+
+<div class="line"></div>
+
+
+<span class="code blue"># SANDBOX</span><br><br>
+<span class="code black">import re</span><br><br>
+
+<span class="code black">text = "Go for it in the sabriadome"</span><br>
+<span class="code black">pattern = "it"</span><br><br>
+
+<span class="code black">regex = re.compile(pattern)</span><br><br>
+
+<span class="code black">match = regex.search(text)</span><br><br>
+
+<span class="code black">all_matches = regex.findall(text)</span><br><br>
+
+
+<span class="code black">print(regex)</span><br><br>
+
+<span class="code black">print(match)</span><br><br>
+
+<span class="code black">print(all_matches)</span><br><br>
+
+<span class="code black">print(match.group())</span><br><br>
+
+<span class="code black">print(match.span())</span>
+
+
+<div class="line"></div>
+
+
+<span class="code blue"># WHITESPACE</span><br><br>
+<span class="code black">import re</span><br><br>
+
+<span class="code black">text = "123 city 456"</span><br><br>
+
+<span class="code black">pattern = "\s"</span><br>
+<span class="code blue">#'\s' picks out the whitespace</span><br>
+<span class="code blue">#'\S' picks out the non-whitespace</span><br><br>
+
+<span class="code black">regex = re.compile(pattern)</span><br><br>
+
+<span class="code black">all_matches = regex.findall(text)</span><br>
+<span class="code black">print(all_matches)</span>
+
+
+<div class="line"></div>
+
+<span class="code blue"># WILDCARD</span><br><br>
+<span class="code black">import re</span><br><br>
+
+<span class="code black">text = "123 city 456 %#$ lORS ..."</span><br><br>
+
+<span class="code black">pattern = "\."</span><br>
+<span class="code blue">#'.' matches EVERYTHING</span><br>
+<span class="code blue">#'\.' escapes special characters and just picks the periods</span><br><br>
+
+<span class="code black">regex = re.compile(pattern)</span><br><br>
+
+<span class="code black">all_matches = regex.findall(text)</span><br>
+<span class="code black">print(all_matches)</span>
+
+
+<div class="line"></div>
+
+<span class="code blue"># WILDCARD</span><br><br>
+<span class="code black">import re</span><br><br>
+
+<span class="code black">text = "123 city 456 %#$ lORS ..."</span><br><br>
+
+<span class="code black">pattern = "\."</span><br>
+<span class="code blue">#'.' matches EVERYTHING</span><br>
+<span class="code blue">#'\.' escapes special characters and just picks the periods</span><br><br>
+
+<span class="code black">regex = re.compile(pattern)</span><br><br>
+
+<span class="code black">all_matches = regex.findall(text)</span><br>
+<span class="code black">print(all_matches)</span>
+
+
+<div class="line"></div>
+
+<span class="code blue"># ZERO OR MORE</span><br><br>
+<span class="code black">import re</span><br><br>
+
+<span class="code black">text = "I am groooooot.  You are yooouuuuuu."</span><br><br>
+
+<span class="code black">pattern = "[aeiou]+"</span><br>
+<span class="code blue">#ABOVE checks for any consecutive stream of one or more vowels</span><br><br>
+
+<span class="code black">regex = re.compile(pattern)</span><br><br>
+
+<span class="code black">all_matches = regex.findall(text)</span><br>
+<span class="code black">print(all_matches)</span>
+
+
+
+{% endblock %}
