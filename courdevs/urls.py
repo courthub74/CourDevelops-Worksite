@@ -47,6 +47,10 @@ urlpatterns = [
 	path('dissapear_elements/', views.dissapear_elements, name="dissapear_elements"),
 	#Show Hide Colors
 	path('showhidecolors/', views.showhidecolors, name="showhidecolors"),
+	#FizzBuzz
+	path('fizzbuzz/', views.fizzbuzz, name="fizzbuzz"),
+	#Allen Iverson
+	path('allen/', views.allen, name="allen"),
 
 	#HTML
 	#Forms

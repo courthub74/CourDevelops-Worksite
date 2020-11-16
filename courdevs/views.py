@@ -93,6 +93,14 @@ def dissapear_elements(request):
 def showhidecolors(request):
 	return render(request, "javascript/showhidecolors.html", {})
 
+#FIZZBUZZ
+def fizzbuzz(request):
+	return render(request, "javascript/fizzbuzz.html", {})
+
+#ALLEN IVERSON
+def allen(request):
+	return render(request, "javascript/jsalleniverson.html", {})
+
 
 ######################################################
 
