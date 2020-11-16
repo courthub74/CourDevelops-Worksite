@@ -61,6 +61,10 @@ def email(request):
 
 #JAVASCRIPT
 
+#JAVASCRIPT BASICS
+def basicsjs(request):
+	return render(request, "javascript/basicsjs.html", {})
+
 #DISABLE FIELDS BY CHECKBOX
 def disable_fields(request):
 	return render(request, "disable_fields.html", {})

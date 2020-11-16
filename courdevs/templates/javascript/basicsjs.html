@@ -1,0 +1,239 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+                   
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <style type="text/css">
+                .tab {
+                    margin-left: 10px;
+                }
+                .tab20 {
+                    margin-left: 20px;
+                }
+                .tab120 {
+                    margin-left: 120px;
+                }
+                .tab160 {
+                    margin-left: 160px;
+                }
+                .blue {
+                    color: #1E90FF;
+                }
+                .black {
+                    color: black;
+                }
+                .code {
+                    font-size: 12px;
+                }
+                .grey {
+                    color: grey;
+                }
+            </style>
+
+            <h2>Basics<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*H-25KB7EbSHjv70HXrdl6w.png&f=1&nofb=1" height="50" class="ml-4"></h2>
+
+
+<div class="line"></div>
+
+<span class="code grey">//////////////// VARIABLES</span><br><br>
+
+<span class="code black">var firstName = "Courtney";  // Created a variable called firstName</span><br><br>
+
+<span class="code black">firstName = "Sal"  //Sal just negated Courtney</span><br><br>
+
+<span class="code black">console.log(firstName)</span><br>
+
+
+
+<div class="line"></div>
+
+<span class="code grey">/////////////// NUMBERS</span><br><br>
+
+<span class="code black">2 + 2;</span>  <span class="code grey">//int</span><br>
+
+<span class="code black">1.3 + 5.6;</span> <span class="code grey">//floats</span><br>
+
+<span class="code black">2 * 2;</span> <span class="code grey">//multiply</span><br>
+
+<span class="code black">2 / 2;</span> <span class="code grey">//division</span><br>
+
+<span class="code black">2 ** 2;</span> <span class="code grey">//exponent</span><br>
+
+<span class="code black">10 % 2;</span> <span class="code grey">//modulus //divides 10 by 2 and gives the remainder //returns 0</span><br>
+
+<span class="code black">10 % 3;</span> <span class="code grey">//modulus  //divides 10 by 3 and gives the remainder //returns 1</span><br><br>
+
+
+<div class="line"></div>
+
+<span class="code grey">/////////////// MATH WITH VARIABLES</span><br><br>
+
+<span class="code black">num_1 = 1000</span><br>
+
+<span class="code black">num_2 = 589</span><br>
+
+<span class="code black">total_1 = num_1 * num_2;</span><br>
+
+<div class="line"></div>
+
+<span class="code grey">/////////////// INCREMENTS   //++   //--</span><br><br>
+
+<span class="code black">++total_1;</span><br>  <span class="code grey">//INCREMENTS by one avant</span><br>
+
+<span class="code black">jam = ++total_1</span><br>
+<span class="code black">console.log(jam)</span><br>
+
+<span class="code black">total_1++;</span><br> <span class="code grey">//INCREMENTS by one apres</span><br>
+
+<div class="line"></div>
+
+<span class="code grey">/////////////// ASSIGNMENT OPERATORS</span><br>
+
+<span class="code black">num_3 = 24;</span><br>
+
+<span class="code black">num_3 += 4;</span><br> <span class="code grey">// += first ADDS 4 and then reassigns that total as the num_3 variable
+
+<span class="code grey">// So therefore</span><br>
+
+<span class="code black">num_3 = num_3 + 4;</span><br>
+
+<span class="code grey">//and</span><br>
+
+<span class="code black">num_3 += 4;</span><br>
+
+<span class="code grey">//are the same thing</span><br>
+
+<span class="code grey">//the latter is more elegant</span><br>
+
+<div class="line"></div>
+
+<span class="code grey">//////////////// COMPARISON OPERATORS</span><br><br>
+
+<span class="code grey">//== // to compare two values</span><br>
+
+<span class="code black">4 == 4;</span><br>
+
+<span class="code black">3 == 4;</span><br>
+
+<span class="code black">3 != 4;</span><br>
+
+<span class="code black">3 > 4;</span><br><br>
+
+<div class="line"></div>
+
+<span class="code grey">/////////////// CONDITIONAL STATEMENTS</span><br><br>
+
+<span class="code grey">// IF STATEMENT</span><br>
+
+<span class="code black">firstName = "Court"</span><br><br>
+
+<span class="code black">if (firstName == "Court"){</span><br>
+  <span class="code black tab">console.log(firstName)</span><br>
+<span class="code black">}</span><br><br>
+
+<div class="line"></div>
+
+<span class="code grey">// ELSE STATEMENT</span><br>
+
+<span class="code black">firstName = "Court"</span><br>
+
+<span class="code black">other = "Likes to eat PB+J"</span><br><br>
+
+<span class="code black">if (firstName == "Joe"){</span><br>
+  <span class="code black tab">console.log(firstName)</span><br>
+<span class="code black">} else {</span><br>
+  <span class="code black tab">console.log(other)</span><br>
+<span class="code black">}</span><br><br>
+
+<div class="line"></div>
+
+<span class="code grey">//////////////// LOGICAL OPERATORS</span><br>
+
+<span class="code grey">// &&  and</span><br>
+<span class="code grey">// || or </span><br>
+<span class="code grey">// !  not</span><br>
+<span class="code grey">// and </span><br>
+
+<span class="code black">if (firstName == "Greg" && 4 == 4){ </span><br>
+<span class="code black tab">  console.log("Get it")</span><br>
+
+<span class="code black">} else {</span><br>
+<span class="code black tab">  console.log("Not")</span><br>
+<span class="code black">}</span><br>
+
+<div class="line"></div>
+
+<span class="code grey">// OR</span><br>
+<span class="code black">if (firstName == "Greg" || 4 == 4){</span><br>
+<span class="code black tab">  console.log("Get it")</span><br>
+
+<span class="code black">} else {</span><br>
+<span class="code black tab">  console.log("Not")</span><br>
+<span class="code black">}</span><br>
+
+<div class="line"></div>
+
+<span class="code grey">/////////////////// FOR LOOP</span><br>
+
+<span class="code grey">//for (conditional stuff){</span><br>
+ <span class="code grey">// do stuff;</span><br>
+<span class="code grey">//}</span><br>
+
+<span class="code black">for (i = 0; i < 10; i++){</span><br>
+<span class="code black tab">  console.log("Hello World")</span><br>
+<span class="code black">}</span><br>
+
+<div class="line"></div>
+
+<span class="code grey">/////////////////// WHILE LOOP</span><br>
+
+<span class="code grey">//while (conditional stuff){</span><br>
+  <span class="code grey">// do stuff;</span><br>
+  <span class="code grey">//i++;</span><br>
+<span class="code grey">//}</span><br>
+<span class="code black">var i = 0;</span><br>
+<span class="code black">while (i < 10){</span><br>
+<span class="code black tab">  console.log("Pretty")</span><br>
+<span class="code black tab">  i++;</span><br>
+<span class="code black">}</span><br>
+
+
+    </div>    
+
+
+{% endblock %}

@@ -31,6 +31,8 @@ urlpatterns = [
 	path('email/', views.email, name="email"),
 
 	#JAVASCRIPT
+	#JavaScript Basics
+	path('basicsjs/', views.basicsjs, name="basicsjs"),
 	#Disable Fields by CheckBox
 	path('disable_fields/', views.disable_fields, name="disable_fields"),
 	#Color Code by Radiodial selection
