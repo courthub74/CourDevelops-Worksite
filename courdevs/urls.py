@@ -2,9 +2,12 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+
+	#LOGIN
+	path('', views.login, name='login'),
 	
 	#DEVELOPMENT STACK PAGE
-	path('', views.main, name='main'),
+	path('stack/', views.main, name='main'),
 
 	#PYTHON
 	#Try Except

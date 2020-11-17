@@ -3,7 +3,9 @@ from .models import Projects, Deliverables, Practices
 from .forms import ProjectsForm, DeliverablesForm, PracticesForm
 from django.contrib import messages
 
-# Create your views here.
+#LOGIN
+def login(request):
+	return render(request, "login/login.html", {})
 
 #MAIN
 def main(request):

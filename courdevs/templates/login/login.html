@@ -1,0 +1,342 @@
+{% extends 'bases/loginbase.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+ <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>CourDevs Solutions</title>
+
+           
+
+        </head>
+
+  <body>
+
+    <div id="content">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto ml-5" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <style type="text/css">
+                .black {
+                    color: black;
+                }
+                .navs {
+                    background-color: #DCDCDC;
+                }
+            </style>
+
+    <h2>CourDevs Development Stack:</h2>
+
+    <div class="line"></div>
+
+     <br>
+
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light navs">
+                <div class="container-fluid">
+
+                    <h4>Languages</h4>
+
+                </div>
+            </nav>
+        </div>
+
+        <!--Python-->
+        <div class="container">
+            <div class="card">
+                <h5 class="card-header">Python</h5>
+                <div class="card-body">
+                <p class="card-text black">Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace</p>
+                <a href="https://www.python.org/" target="_blank"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fc%2Fc3%2FPython-logo-notext.svg%2F1024px-Python-logo-notext.svg.png&f=1&nofb=1" height="70" width="70" alt="python.org"></a>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+    <!--JavaScript-->
+        <div class="container">
+            <div class="card">
+              <h5 class="card-header">JavaScript</h5>
+              <div class="card-body">
+                <p class="card-text black">JavaScript is the programming language of HTML and the Web. 
+                  JavaScript enables interactive web pages and is an essential part of web applications</p>
+                <a href="https://www.javascript.com/" target="_blank"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*H-25KB7EbSHjv70HXrdl6w.png&f=1&nofb=1" height="50" width="120"></a>
+              </div>
+            </div>
+        </div>
+
+    <br>
+
+     <!--HTML/CSS-->
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">HTML</h5>
+                <p class="card-text black">Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser</p>
+                <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.w3.org%2Fhtml%2Flogo%2Fdownloads%2FHTML5_Logo_512.png&f=1&nofb=1" height="55" width="80">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">CSS</h5>
+                <p class="card-text black">CSS (Cascading Style Sheets) is designed to enable the separation of presentation and content, including layout, colors, and fonts</p>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.freebiesupply.com%2Flogos%2Flarge%2F2x%2Fcss3-logo-png-transparent.png&f=1&nofb=1" height="65" width="80">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+   <br><br><br>
+
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light navs">
+                <div class="container-fluid">
+
+                    <h4>Frameworks</h4>
+
+                </div>
+            </nav>
+        </div>
+
+    <!--Django-->
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header">Django</h5>
+            <div class="card-body">
+            <p class="card-text black">Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design</p>
+            <a href="https://www.djangoproject.com/" target="_blank"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.vizteams.com%2Fwp-content%2Fuploads%2F2014%2F04%2Fdjango.png&f=1&nofb=1" height="40" alt="Django"></a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!--Flask-->
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header">Flask</h5>
+            <div class="card-body">
+            <p class="card-text black">Flask is a lightweight WSGI(Web Server Gateway Interface) web application framework. 
+                It is designed to make getting started quick and easy, 
+                with the ability to scale up to complex applications.</p>
+            <a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank"><img src="https://flask.palletsprojects.com/en/1.1.x/_images/flask-logo.png" height="40" alt="Flask"></a>
+            <br>
+            </div>
+            
+                <div class="card-footer text-muted"> 
+                    <small>WSGI describes how a web server communicates with web applications, 
+                        and how web applications can be chained together to process one request
+                        </small>
+                </div>   
+        </div>
+    </div>
+
+    <br>
+
+    <!--React-->
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header">React JS</h5>
+            <div class="card-body">
+            <p class="card-text black">React (also known as React.js or ReactJS) is an open-source JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies</p>
+            <a href="https://www.reactjs.org/" target="_blank"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fa%2Fa7%2FReact-icon.svg%2F1200px-React-icon.svg.png&f=1&nofb=1" height="65" alt="ReactJS"></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <br><br><br>
+
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light navs">
+                <div class="container-fluid">
+
+                    <h4>Skills</h4>
+
+                </div>
+            </nav>
+        </div>
+
+   
+
+
+    <!--OOP-->
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header">Object Oriented Programming</h5>
+            <div class="card-body">
+            <p class="card-text black">Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data, 
+                in the form of fields (often known as attributes or properties), 
+                and code, in the form of procedures (often known as methods). A feature of objects is an object's procedures that can access and often 
+                modify the data fields of the object with which they are associated (objects have a notion of "this" or "self"). 
+                In OOP, computer programs are designed by making them out of objects that interact with one another. OOP languages are diverse, 
+                but the most popular ones are class-based, meaning that objects are instances of classes, which also determine their types</p>
+            </div>
+            <div class="card-footer text-muted">
+                <small>The 4 principles of object-oriented programming are: <strong>encapsulation, abstraction, inheritance, and polymorphism</strong></small>
+                </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!--Web Development-->
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header">Web Development</h5>
+            <div class="card-body">
+            <p class="card-text black">Web development is the work involved in developing a website for the Internet (World Wide Web) or an intranet (a private network). Web development can range from developing a simple single static page of plain text to complex web-based internet applications (web apps), electronic businesses, and social network services. A more comprehensive list of tasks to which web development commonly refers, may include web engineering, web design, web content development, client liaison, client-side/server-side scripting, web server and network security configuration, and e-commerce development. Among web professionals, "web development" usually refers to the main non-design aspects of building websites: writing markup and coding. Web development may use content management systems (CMS) to make content changes easier and available with basic technical skills. </p>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+
+    <!--Web Scraping-->
+    <div class="container">
+    <div class="card">
+      <h5 class="card-header">Web Scraping</h5>
+      <div class="card-body">
+        <p class="card-text black">Web scraping is a computer software technique of extracting information from websites. 
+        This technique mostly focuses on the transformation of unstructured data (HTML format) on the web into structured data (database or spreadsheet).</p>
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      </div>
+    </div>
+    </div>
+
+    <br>
+
+    <!--API-->
+    <div class="container">
+    <div class="card">
+      <h5 class="card-header">API</h5>
+      <div class="card-body">
+        <p class="card-text black">An application programming interface (API) is a computing interface which defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made, how to make them, the data formats that should be used, the conventions to follow, etc. It can also provide extension mechanisms so that users can extend existing functionality in various ways and to varying degrees. An API can be entirely custom, specific to a component, or it can be designed based on an industry standard to ensure interoperability.</p>
+        <br>
+        <p class="card-text black">Today, with the rise of REST and SOAP over HTTP, the term is often assumed to refer to APIs of such services when given no other context.</p>
+        <br>
+        <p class="card-text black">Sometimes the term API is, by extension, misused to refer to the subset of software entities (code, subcomponents, modules, etc.) that serve to actually implement the API of some encompassing component or system.</p>
+      </div>
+    </div>
+    </div>
+
+    <br><br><br>
+
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light navs">
+                <div class="container-fluid">
+
+                    <h4>Tools and Technologies</h4>
+
+                </div>
+            </nav>
+        </div>
+
+    <!--Git-->
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header">Git</h5>
+            <div class="card-body">
+            <p class="card-text black">Git is a distributed version-control system for tracking changes in source code during software development. It is designed for coordinating work among programmers, but it can be used to track changes in any set of files. Its goals include speed, data integrity, and support for distributed, non-linear workflows.</p>
+            <a href="https://git-scm.com/" target="_blank"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fterokarvinen.com%2Fwp-content%2Fuploads%2F2012%2F08%2Fgit-logo-cc-by-300x300.png&f=1&nofb=1" height="60" alt="Git"></a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!--GitHub-->
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header">GitHub</h5>
+            <div class="card-body">
+            <p class="card-text black">GitHub, Inc. is a United States-based global company that provides hosting for software development and version control using Git. It is a subsidiary of Microsoft, which acquired the company in 2018 for $7.5 billion. It offers the distributed version control and source code management (SCM) functionality of Git, plus its own features. It provides access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.</p>
+            <a href="https://github.com/" target="_blank"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn4.iconfinder.com%2Fdata%2Ficons%2Ficonsimple-logotypes%2F512%2Fgithub-512.png&f=1&nofb=1" height="60" alt="GitHub"></a>
+            </div>
+        </div>
+    </div> 
+
+
+    <br>
+
+
+    <!--Bootstrap-->
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header">Bootstrap</h5>
+            <div class="card-body">
+            <p class="card-text black">Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.</p>
+            <a href="https://www.getbootstrap.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/220px-Bootstrap_logo.svg.png" height="60" alt="Bootstrap"></a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!--JQuery-->
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header">JQuery</h5>
+            <div class="card-body">
+            <p class="card-text black">jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. It is free, open-source software using the permissive MIT License. As of May 2019, jQuery is used by 73% of the 10 million most popular websites. Web analysis indicates that it is the most widely deployed JavaScript library by a large margin, having 3 to 4 times more usage than any other JavaScript library.</p>
+            <a href="https://www.jquery.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/JQuery_logo.svg/220px-JQuery_logo.svg.png" height="50" alt="JQuery"></a>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="container">
+        <button type="button" class="btn navs btn-lg btn-block"><a href="{% url 'main' %}">Back to Top</a></button>
+    </div>
+
+    <br><br><br>
+
+   </div>
+  </body>
+
+
+{% endblock %}
