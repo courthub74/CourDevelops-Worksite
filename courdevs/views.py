@@ -426,6 +426,16 @@ def practices_edit(request, list_id):
 		return render(request, 'practices_edit.html', {'pracitem': pracitem})
 
 
+######################################################
+
+#CLASSES TODO LIST
+
+#CLASSESentry
+# def classes(request):
+# 	if request.method == 'POST':
+# 		classesform = ClassesForm(request.POST or None)
+
+
 
 
 
