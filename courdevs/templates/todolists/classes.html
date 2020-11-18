@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="content">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark mr-5">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                    
+
+                    <!--Navbar Links-->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'logout_user' %}">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--Entry Form-->
+
+                </div>
+            </nav>
+
+
+
+              		<style type="text/css">
+                    	.middle {
+                    	 	width: 100%;
+                    	 	text-align: center;
+                    	}
+                    </style>
+
+                     	<style type="text/css">
+                		.center {
+                			text-align: center;
+                		}
+                		.center-block {
+                			margin-right: auto;
+                			margin-left: auto;
+                		}
+                	</style>  
+
+
+
+
+              <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                <div class="container-fluid">
+
+
+                	<style type="text/css">
+                		.center {
+                			text-align: center;
+                		}
+                		.center-block {
+                			margin-right: auto;
+                			margin-left: auto;
+                		}
+                        .ivory {
+                            background-color: white;
+                            color: black;
+                        }
+                	</style>      
+
+
+             <h3>Classes to Take Checklist</h3> 
+
+             <div class="center-block">
+             	
+             </div>
+
+
+
+
+
+{% endblock %}

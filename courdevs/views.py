@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Projects, Deliverables, Practices
+from .models import Projects, Deliverables, Practices, Classes 
 from .forms import ProjectsForm, DeliverablesForm, PracticesForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -431,9 +431,22 @@ def practices_edit(request, list_id):
 #CLASSES TODO LIST
 
 #CLASSESentry
-# def classes(request):
-# 	if request.method == 'POST':
-# 		classesform = ClassesForm(request.POST or None)
+def classes(request):
+	if request.method == 'POST':
+		classesform = ClassesForm(request.POST or None)
+
+		if classesform.is_valid():
+			classesform.save()
+			all_classes = Classes.objects.all #Iterating through all objects of the Classes model
+			messages.success(request, ("Class Has Been Added To 'Classes to Take' List"))
+			return render(request, "todolists/classes.html", {'all_classes': all_classes})
+
+	else:
+		all_classes = Classes.objects.all
+		return render(request, "todolists/classes.html", {'all_classes': all_classes})
+
+
+
 
 
 

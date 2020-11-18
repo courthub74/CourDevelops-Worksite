@@ -137,6 +137,10 @@ urlpatterns = [
 	path('practices_edit/<list_id>', views.practices_edit, name="practices_edit"),
 
 
+	#Classes Checklist
+	path('classes/', views.classes, name="classes_to_take"),
+
+
 
 	#GIT
 	#InitializeGit
