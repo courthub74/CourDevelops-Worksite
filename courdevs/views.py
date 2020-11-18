@@ -1,15 +1,35 @@
 from django.shortcuts import render, redirect
 from .models import Projects, Deliverables, Practices
 from .forms import ProjectsForm, DeliverablesForm, PracticesForm
+from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
 #LOGIN
-def login(request):
-	return render(request, "login/login.html", {})
+def login_user(request):
+	# return render(request, "main.html", {})
+	if request.method == "POST":
+		username = request.POST['username']
+		password = request.POST['password']
+		user = authenticate(request, username=username, password=password)
+		if user is not None:
+			login(request, user)
+			messages.success(request, ('You are Logged in'))
+			return redirect('main')
+		else:
+			messages.success(request, ('Error Logging In - Please Try Again...'))
+			return redirect('login_user')
+	else:
+		return render(request, "login/login.html", {})
 
 #MAIN
 def main(request):
 	return render(request, "main.html", {})
+
+#LOGOUT
+def logout_user(request):
+	logout(request)
+	messages.success(request, ('You Have Been Logged Out'))
+	return redirect('login_user')
 
 #####################################################
 

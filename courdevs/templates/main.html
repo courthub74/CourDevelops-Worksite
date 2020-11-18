@@ -8,9 +8,6 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>CourDevs Solutions</title>
-
-           
-
         </head>
 
   <body>
@@ -29,7 +26,6 @@
                     </button>
 
 
-
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item">
@@ -44,12 +40,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
                             </li>
-                            
-                            
                         </ul>
                     </div>
                 </div>
             </nav>
+
 
             <style type="text/css">
                 .black {
@@ -61,6 +56,19 @@
             </style>
 
     <h2>CourDevs Development Stack:</h2>
+
+                    <div class="container">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-dark alert-dismissable" role="alert">
+                                    <button class="close" data-dismiss="alert">
+                                        <small><sup>x</sup></small>
+                                    </button>
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
 
     <div class="line"></div>
 

@@ -27,25 +27,13 @@
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto ml-5" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button>
-
-
+                   
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'deliverables' %}">Deliverables</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'practices' %}">Practices</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
-                            </li>
-                            
-                            
+                                <a class="nav-link"><small>Login for CourDevelops TODO Lists</small></a>
+                            </li>    
                         </ul>
                     </div>
                 </div>
@@ -60,7 +48,20 @@
                 }
             </style>
 
-    <h2>CourDevs Development Stack:</h2>
+    <h2>CourDevs Development Stack:</h2>  
+
+    				<div class="container">
+    					{% if messages %}
+                    		{% for message in messages %}
+                    			<div class="alert alert-dark alert-dismissable" role="alert">
+                    				<button class="close" data-dismiss="alert">
+										<small><sup>x</sup></small>
+									</button>
+									{{ message }}
+                    			</div>
+                    		{% endfor %}
+                        {% endif %}
+                    </div>
 
     <div class="line"></div>
 

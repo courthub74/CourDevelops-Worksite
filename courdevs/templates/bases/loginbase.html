@@ -34,25 +34,30 @@
             <ul class="list-unstyled components">
                 <p>Login Below:</p>
 
-                
+            
+                    <ul class="list-unstyled CTAs">
+                        <form method="POST">
 
-            <ul class="list-unstyled CTAs">
+                            {% csrf_token %}
 
-                <li>
-                    <input type="text" class="form-control" placeholder="User Name" name="username">
-                </li>
-                <br>
-                <li>
-                    <input type="password" class="form-control" placeholder="Password" name="password">
-                </li><br>
-                <li>
-                    <a href="{% url 'main' %}" class="article">Login</a>
-                </li>
-            </ul>
+                        <li>
+                            <input type="text" class="form-control" placeholder="User Name" name="username">
+                        </li>
+                        <br>
+                        <li>
+                            <input type="password" class="form-control" placeholder="Password" name="password">
+                        </li><br>
+                        <li>
+                            <button type="submit" class="btn btn-light btn-lg light btn-block">Login</button>
+                        </li>
+                    </ul>
+            </form>
         </nav>
 
 
         {% block content %}
+
+
 
         {% endblock %}
 
