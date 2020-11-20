@@ -26,7 +26,7 @@ urlpatterns = [
 	# Counter 
 	path('counter/', views.counter, name="counter"),
 	# Classes 
-	path('classes/', views.classes, name="classes"),
+	path('python_classes/', views.python_classes, name="python_classes"),
 	# Control Flow
 	path('ctrl_flow/', views.ctrl_flow, name="ctrl_flow"),
 	# Function with Parameters

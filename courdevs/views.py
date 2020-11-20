@@ -60,7 +60,7 @@ def counter(request):
 	return render(request, "python/counter.html", {})
 
 #CLASSES
-def classes(request):
+def python_classes(request):
 	return render(request, "python/classes.html", {})
 
 #CONTROL FLOW
