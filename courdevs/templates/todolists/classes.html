@@ -29,6 +29,9 @@
                                 <a class="nav-link" href="{% url 'practices' %}">Practices</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="{% url 'classes' %}">Classes to Take</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{% url 'main' %}">Development Stack</a>
                             </li>
                             <li class="nav-item active">
@@ -86,8 +89,81 @@
              <h3>Classes to Take Checklist</h3> 
 
              <div class="center-block">
-             	
+             	<form class="form-inline my-2 my-lg-0" method="POST">
+					{% csrf_token %}
+            		<input class="form-control mr-5 ml-auto center" size="30" placeholder="Enter Class" name="classes">
+            		<button type="submit" class="btn mr-5" id="gold">Add to Classes</button>
+            	</form>
              </div>
+           </div>
+       </nav>
+
+
+    <!--STRIKER-->
+<style type="text/css">
+	.striker {
+		text-decoration: line-through;
+	}
+	.black {
+		background-color: white;
+		color: black;
+        border: 1px solid black;
+	}
+    #gold {
+        background-color: gold;
+        color: black;
+    }
+	.ivory {
+		background-color: #FFFFF0;
+		color: white;
+
+	}
+</style>
+
+<!--MESSAGES-->
+
+
+		{% if messages %}
+			  {% for message in messages %}
+
+			      <div class="alert alert-warning alert-dismissable" role="alert">
+			        <button class="close" data-dismiss="alert">
+			             <sup><small>close</small></sup>
+			        </button>
+			           {{ message }}
+			      </div>
+
+			  {% endfor %}
+		{% endif %}
+
+<!--CLASSES TABLE-->
+	<div class="container">
+		<table class="table table-bordered">
+			<th class="table" id="gold" colspan="4">Classes To Complete</th>
+			{% for stuff in all_classes %}
+				{% if stuff.classescomplete %}
+
+				<tr>
+					<td class="striker">{{ stuff.classes }}</td>
+					<td><center><a href="{% url 'classes_uncross' stuff.id %}">Uncross</a></center></td>
+					<td><center><a href="{% url 'classes_delete' stuff.id %}">Delete</a></center></td>
+				</tr>
+
+				{% else %}
+
+				<tr>
+					<td>{{ stuff.classes }}</td>
+					<td><center><a href="{% url 'classes_cross_off' stuff.id %}">Cross Off</a></center></td>
+					<td><center><a href="{% url 'classes_delete' stuff.id %}">Delete</a></center></td>
+				</tr>
+
+				{% endif %}
+			{% endfor %}
+	</div>
+        </div> 
+    </div>
+  </div>
+    
 
 
 

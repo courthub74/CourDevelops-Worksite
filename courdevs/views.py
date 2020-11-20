@@ -13,7 +13,7 @@ def login_user(request):
 		user = authenticate(request, username=username, password=password)
 		if user is not None:
 			login(request, user)
-			messages.success(request, ('You are Logged in'))
+			messages.success(request, ('You are Logged in as'))
 			return redirect('main')
 		else:
 			messages.success(request, ('Error Logging In - Please Try Again...'))
@@ -444,6 +444,50 @@ def classes(request):
 	else:
 		all_classes = Classes.objects.all
 		return render(request, "todolists/classes.html", {'all_classes': all_classes})
+
+
+#CLASSEScrossoff
+def classes_cross_off(request, list_id):
+	classes = Classes.objects.get(pk=list_id) #pk if for Primary Key
+	classes.classescomplete = True #If the class is complete
+	classes.save() #Then save the class
+	return redirect ('classes') #Redirect to 'classes' page
+
+
+#CLASSESuncross
+def classes_uncross(request, list_id):
+	classes = Classes.objects.get(pk=list_id) #In the classes model you will get the object that is the id of what you clicked on  #pk if for Primary Key
+	classes.classescomplete = False # Opposite of cross off # Deems the classescomplete feature off
+	classes.save() #Then save that object (in this case the class)
+	return redirect ('classes') #Redirect to 'classes' page
+
+
+#CLASSESdelete
+def classes_delete(request, list_id):
+	classes = Classes.objects.get(pk=list_id)
+	classes.delete()
+	messages.success(request, ('Class Has Been Deleted'))
+	return redirect ('classes')
+
+
+#CLASSESedit
+def classes_edit(request, list_id):
+	if request.method == 'POST':
+		classesitem = Classes.objects.get(pk=list_id)
+
+		classesform = ClassesForm(request.POST or None) #Create a variable called 'classesform' call it ClassesForm and populate it with whats posted or if nothing then none
+		
+		if classesform.is_valid():
+			classesform.save()
+			messages.success(request, ('Classes Has Been Edited'))
+			return redirect ('classes')
+
+
+	else:
+		classesitem = Classes.objects.get(pk=list_id)
+		return render(request, 'todolists/classes_edit.html', {'classesitem': classesitem})
+
+
 
 
 

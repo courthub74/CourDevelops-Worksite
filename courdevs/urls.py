@@ -101,13 +101,11 @@ urlpatterns = [
 	path('django_heroku/', views.django_heroku, name="django_heroku"),
 
 
-
 	#FLASK
 	#Flask Basic Structure
 	path('flaskbasic/', views.flaskbasic, name="flaskbasic"),
 	#Flask Heroku
 	path('flask_heroku/', views.flask_heroku, name="flask_heroku"),
-
 
 
 	#Projects Checklist
@@ -118,15 +116,12 @@ urlpatterns = [
 	path('project_edit/<list_id>', views.project_edit, name="project_edit"),
 
 
-
-
 	#Deliverables Checklist
 	path('deliverables/', views.deliverables, name="deliverables"),
 	path('delivs_cross_off/<list_id>', views.delivs_cross_off, name="delivs_cross_off"),
 	path('delivs_uncross/<list_id>', views.delivs_uncross, name="delivs_uncross"),
 	path('delivs_delete/<list_id>', views.delivs_delete, name="delivs_delete"),
 	path('delivs_edit/<list_id>', views.delivs_edit, name="delivs_edit"),
-
 
 
 	#Practices Checklist
@@ -138,8 +133,11 @@ urlpatterns = [
 
 
 	#Classes Checklist
-	path('classes/', views.classes, name="classes_to_take"),
-
+	path('classes/', views.classes, name="classes"),
+	path('classes_cross_off/<list_id>', views.classes_cross_off, name="classes_cross_off"),
+	path('classes_uncross/<list_id>', views.classes_uncross, name="classes_uncross"),
+	path('classes_delete/<list_id>', views.classes_delete, name="classes_delete"),
+	path('classes_edit/<list_id>', views.classes_edit, name="classes_edit"),
 
 
 	#GIT

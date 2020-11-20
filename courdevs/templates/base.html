@@ -292,13 +292,14 @@
                             <a href="{% url 'practices' %}">Practices</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'classes_to_take' %}">Classes to Take</a>
+                            <a class="nav-link" href="{% url 'classes' %}">Classes to Take</a>
                         </li>
                     </ul>
                 </li>
             </ul>
 
             <ul class="list-unstyled CTAs">
+                <a href="#" class="badge badge-dark"><small>Logged in as: <b>{{ user }}</b></small></a><hr>
                 <li>
                     <a href="{% url 'logout_user' %}" class="btn btn-light btn-lg light btn-block">Logout</a>
                 </li>
