@@ -92,7 +92,7 @@
              	<form class="form-inline my-2 my-lg-0" method="POST">
 					{% csrf_token %}
             		<input class="form-control mr-5 ml-auto center" size="30" placeholder="Enter Class" name="classes">
-            		<button type="submit" class="btn mr-5" id="gold">Add to Classes</button>
+            		<button type="submit" class="btn mr-5" id="button">Add to Classes</button>
             	</form>
              </div>
            </div>
@@ -109,6 +109,11 @@
 		color: black;
         border: 1px solid black;
 	}
+    #button {
+        background-color: gold;
+        color: black;
+        border: 1px solid black
+    }
     #gold {
         background-color: gold;
         color: black;
