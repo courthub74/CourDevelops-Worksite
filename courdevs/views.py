@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Projects, Deliverables, Practices, Classes 
-from .forms import ProjectsForm, DeliverablesForm, PracticesForm
+from .forms import ProjectsForm, DeliverablesForm, PracticesForm, ClassesForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
