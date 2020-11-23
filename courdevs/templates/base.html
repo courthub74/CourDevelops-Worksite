@@ -23,28 +23,32 @@
 
 <body>
 
+
+    <style type="text/css">
+        .fixed {
+            position: fixed;
+        }
+    </style>
+
     <div class="wrapper">
 
         <!-- Sidebar  -->
         <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>CourDevelops Solutions</h3>
-            </div>
+           
+            <br>
 
-            <ul class="list-unstyled components">
-                <p>Select Below:</p>
+            <ul class="list-unstyled components fixed">
 
-            
-                    
-                        <li>
-                            <a href="{% url 'main' %}">Development Stack</a>
-                        </li>
-                    
+                <h3>CourDevelops</h3>
+                <h3>Solutions</h3>
+                <br>
+                <p>Select Tech Below:</p> 
+                      
                 
                 
 
                 <li>
-                    <a href="#python" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Python</a>
+                    <a href="#python" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fc%2Fc3%2FPython-logo-notext.svg%2F1024px-Python-logo-notext.svg.png&f=1&nofb=1" height="20" width="20" alt="python.org"> Python</a>
                     <ul class="collapse list-unstyled" id="python">
                         <li>
                             <a href="{% url 'try_except' %}">TryExcept</a>
@@ -91,7 +95,7 @@
 
 
                 <li>
-                    <a href="#javascript" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">JavaScript</a>
+                    <a href="#javascript" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpluspng.com%2Fimg-png%2Fjavascript-vector-png-javascript-vector-logo-600.png&f=1&nofb=1" height="20" width="20"> JavaScript</a>
                     <ul class="collapse list-unstyled" id="javascript">
 
                         <li>
@@ -129,7 +133,7 @@
                 </li>
 
                 <li>
-                    <a href="#html" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">HTML</a>
+                    <a href="#html" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.w3.org%2Fhtml%2Flogo%2Fdownloads%2FHTML5_Logo_512.png&f=1&nofb=1" height="25" width="25"> HTML</a>
                     <ul class="collapse list-unstyled" id="html">
                         <li>
                             <a href="{% url 'html_forms' %}">FORMS</a>
@@ -166,7 +170,7 @@
 
 
                 <li>
-                    <a href="#css" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">CSS</a>
+                    <a href="#css" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.freebiesupply.com%2Flogos%2Flarge%2F2x%2Fcss3-logo-png-transparent.png&f=1&nofb=1" height="30" width="30">CSS</a>
                     <ul class="collapse list-unstyled" id="css">
                         <li>
                             <a href="{% url 'css_notes' %}">CSS notes</a>
@@ -175,7 +179,7 @@
                 </li>
 
                 <li>
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Django</a>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Feddrickbutler98.github.io%2Fimg_portfolio%2Fdjango.png&f=1&nofb=1" height="35" width="35" alt="Django">Django</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
                             <a href="{% url 'setupdjango' %}">Setting up Django</a>
@@ -207,7 +211,7 @@
 
 
                 <li>
-                    <a href="#flask" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Flask</a>
+                    <a href="#flask" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstickker.net%2Fwp-content%2Fuploads%2F2016%2F01%2Fflask.svg_.png-300x300.png&f=1&nofb=1" height="50" alt="Flask">Flask</a>
                     <ul class="collapse list-unstyled" id="flask">
                         <li>
                             <a href="{% url 'flaskbasic' %}">Basic Structure</a>
@@ -219,7 +223,7 @@
                 </li>
 
                 <li>
-                    <a href="#git" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Git</a>
+                    <a href="#git" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fterokarvinen.com%2Fwp-content%2Fuploads%2F2012%2F08%2Fgit-logo-cc-by-300x300.png&f=1&nofb=1" height="30" alt="Git"> Git</a>
                     <ul class="collapse list-unstyled" id="git">
                         <li>
                             <a href="{% url 'initializegit' %}">General Git</a>
@@ -238,7 +242,7 @@
 
 
                 <li>
-                    <a href="#github" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">GitHub</a>
+                    <a href="#github" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.iconsdb.com%2Ficons%2Fpreview%2Fwhite%2Fgithub-10-xxl.png&f=1&nofb=1" height="30" alt="GitHub"> GitHub</a>
                     <ul class="collapse list-unstyled" id="github">
                         <li>
                             <a href="{% url 'initialgithub' %}">Initial Push to Github</a>
@@ -250,7 +254,7 @@
                 </li>
 
                 <li>
-                    <a href="#virtualenv" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Virtualenv</a>
+                    <a href="#virtualenv" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffiles.softicons.com%2Fdownload%2Ftoolbar-icons%2Fravenna-3d-icons-by-double-j-design%2Fpng%2F256x256%2FMonitor.png&f=1&nofb=1" height="30"> Virtualenv</a>
                     <ul class="collapse list-unstyled" id="virtualenv">
                         <li>
                             <a href="#">Install Virtualenv</a>
@@ -264,7 +268,7 @@
 
 
                 <li>
-                    <a href="#api" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">API</a>
+                    <a href="#api" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*lAR9Uh_gJ7dp23e0vhy5Hg.png&f=1&nofb=1" height="45"> API</a>
                     <ul class="collapse list-unstyled" id="api">
                         <li>
                             <a href="{% url 'api_basics' %}">API Basics</a>
@@ -278,9 +282,16 @@
                     </ul>
                 </li>
 
+                <style type="text/css">
+                    #todocolor {
+                        color: black;
+                        background-color: #D6DBDF;
+                    }
+                </style>
+
 
                  <li>
-                    <a href="#todo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">ToDo Lists</a>
+                    <a href="#todo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" id="todocolor">ToDo Lists</a>
                     <ul class="collapse list-unstyled" id="todo">
                         <li>
                             <a href="{% url 'projects' %}">Projects</a>
@@ -299,10 +310,7 @@
             </ul>
 
             <ul class="list-unstyled CTAs">
-                <a href="#" class="badge badge-dark"><small>Logged in as: <b>{{ user }}</b></small></a><hr>
-                <li>
-                    <a href="{% url 'logout_user' %}" class="btn btn-light btn-lg light btn-block">Logout</a>
-                </li>
+                
             </ul>
         </nav>
 
