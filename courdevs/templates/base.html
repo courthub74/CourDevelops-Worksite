@@ -42,10 +42,31 @@
                 <h5>CourDevelops</h5>
                 <h5>Solutions</h5>
                 <br>
-                <p>Select Tech Below:</p> 
-                    
-
+                
                 <li>
+
+
+                        
+                            <a href="#todo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" id="todocolor"><small>ToDo Lists</small></a>
+                            <ul class="collapse list-unstyled" id="todo">
+                                <li>
+                                    <a href="{% url 'projects' %}">Projects</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'deliverables' %}">Deliverables</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'practices' %}">Practices</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'classes' %}">Classes to Take</a>
+                                </li>
+                            </ul>
+                            
+                        <br>
+
+                <small>Tech Stack Notes:</small>
+
                     <a href="#python" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fc%2Fc3%2FPython-logo-notext.svg%2F1024px-Python-logo-notext.svg.png&f=1&nofb=1" height="10" width="10" alt="python.org"> <small>Python</small></a>
                     <ul class="collapse list-unstyled" id="python">
                         <li>
@@ -286,9 +307,14 @@
                         color: black;
                         background-color: #D6DBDF;
                     }
+                    #techstack {
+                        color: black;
+                        background-color: white;
+                        align-content: center;
+                    }
                 </style>
 
-
+<!-- 
                  <li>
                     <a href="#todo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" id="todocolor"><small>ToDo Lists</small></a>
                     <ul class="collapse list-unstyled" id="todo">
@@ -305,7 +331,7 @@
                             <a class="nav-link" href="{% url 'classes' %}">Classes to Take</a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
 
             <br><br><br>
