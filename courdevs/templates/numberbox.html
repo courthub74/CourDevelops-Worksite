@@ -42,6 +42,11 @@
                         .right {
                             margin-left: 1000px;
                         }
+                        .smaller {
+                            height: 30px;
+                            width: 60px;
+                            font-size: 10px;
+                        }
                     </style>
 
 
@@ -52,18 +57,16 @@
                             <small class="ml-auto">To Do Lists:</small>
 
                             <button type="button" class="btn btn-sm btn-outline-dark center ml-3"><a href="{% url 'projects' %}">Projects</a></button>
-
                             <button type="button" class="btn btn-sm btn-outline-success center ml-3"><a href="{% url 'deliverables' %}">Deliverables</a></button>
                             <button type="button" class="btn btn-sm btn-outline-primary center ml-3"><a href="{% url 'practices' %}">Practices</a></button>
                             <button type="button" class="btn btn-sm btn-outline-warning center ml-3"><a href="{% url 'classes' %}">Classes to Take</a></button>
-
                             <button type="button" class="btn btn-sm btn-outline-devstack ml-3" id="devstack"><a href="{% url 'main' %}">Home</a></button>
 
                              <div class="dropdown">
                                 <button type="button" class="btn btn-outline ml-3" id="dropdownMenuButton" data-toggle="dropdown" 
                                 aria-haspopup="true" aria-expanded="false">Logged In: <b>{{ user }}</b></button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Account Info</a>
+                                    <a class="dropdown-item" href="{% url 'acct' %}">Account Info</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{% url 'logout_user' %}"><b>Logout</b></a>
                                 </div>
