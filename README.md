@@ -6,6 +6,7 @@ A <b>login</b> has been added to this web application.
 My Oracle for Web Development Direction and Tasks
 
 Mobile-first web application designed to centralize all learning material and other record-keeping such as To-Do Lists and Scheduling matters.  
+
 I have saved myself hours of development time by having this as a reference to learned information.
 
 ----------
