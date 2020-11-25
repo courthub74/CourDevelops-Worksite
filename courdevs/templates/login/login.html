@@ -27,7 +27,7 @@
     <div id="content">
 
 
-        <div class="topfix">
+        <!-- <span class="topfix"> -->
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
@@ -40,12 +40,12 @@
                     </button>
 
 
-                       <ul class="nav navbar-nav right">
+                       <!-- <ul class="nav navbar-nav right">
                             <li class="nav-item">
                                 <a class="nav-link"><small>CourDevelops L.L.C.</small></a>
                             </li>    
                         </ul>
-                   
+                    -->
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="nav navbar-nav ml-auto">
@@ -58,7 +58,7 @@
                 </div>
             </nav>
 
-        </div>
+        <!-- </span> -->
 
             <style type="text/css">
                 .black {
@@ -69,6 +69,11 @@
                 }
                 .fixed {
                     position: fixed;
+                }
+                .grey {
+                    color: grey;
+                    font-size: 10px;
+                    text-align: center;
                 }
             </style>
 
@@ -358,7 +363,11 @@
         <button type="button" class="btn navs btn-lg btn-block"><a href="{% url 'main' %}">Back to Top</a></button>
     </div>
 
-    <br><br><br>
+    <br><br>
+
+     <hr>
+
+    <small class="dropdown-item grey center">CourDevelops L.L.C.</small>
 
    </div>
   </body>

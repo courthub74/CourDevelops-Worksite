@@ -21,7 +21,7 @@ def login_user(request):
 	else:
 		return render(request, "login/login.html", {})
 
-#MAIN
+#MAIN (STACK)
 def main(request):
 	return render(request, "main.html", {})
 
@@ -30,6 +30,10 @@ def logout_user(request):
 	logout(request)
 	messages.success(request, ('You Have Been Logged Out'))
 	return redirect('login_user')
+
+#ACCOUNT INFO
+def acct_info(request):
+	return render(request, "account_info/acct.html", {})
 
 #####################################################
 

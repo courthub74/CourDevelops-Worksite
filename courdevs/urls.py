@@ -8,6 +8,9 @@ urlpatterns = [
 
 	#LOGOUT
 	path('logout/', views.logout_user, name='logout_user'),
+
+	#ACCOUNT INFO
+	path('acct/', views.acct_info, name='acct'),
 	
 	#DEVELOPMENT STACK PAGE
 	path('stack/', views.main, name='main'),

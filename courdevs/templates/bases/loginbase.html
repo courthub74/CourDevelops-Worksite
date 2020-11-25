@@ -32,34 +32,46 @@
     <div class="wrapper">
 
         <!-- Sidebar  -->
-        <nav id="sidebar">
-            
-            <ul class="list-unstyled components fixed">
-                <br><br>
-                <h3>CourDevelops</h3> 
-                <h3>Solutions</h3>
-                <br>
-                <p>Login Below:</p>
+        
+        
+            <nav id="sidebar">
+                <div class="containter fixed">
+                <ul class="list-unstyled components fixed">
+                    <br><br>
+                    <h3>CourDevelops</h3> 
+                    <h3>Solutions</h3>
+                    <br>
+                    <p>Login Below:</p>
 
-            
-                    <ul class="list-unstyled CTAs">
-                        <form method="POST">
+                
+                        <ul class="list-unstyled CTAs">
 
-                            {% csrf_token %}
+                            
+                                  <form method="POST">
 
-                        <li>
-                            <input type="text" class="form-control" placeholder="User Name" name="username">
-                        </li>
-                        <br>
-                        <li>
-                            <input type="password" class="form-control" placeholder="Password" name="password">
-                        </li><br>
-                        <li>
-                            <button type="submit" class="btn btn-light btn-lg light btn-block">Login</button>
-                        </li>
+                                        {% csrf_token %}
+
+                                    <li>
+                                        <input type="text" class="form-control" placeholder="User Name" name="username">
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <input type="password" class="form-control" placeholder="Password" name="password">
+                                    </li><br>
+                                    <li>
+                                        <button type="submit" class="btn btn-light btn-lg light btn-block">Login</button>
+                                    </li>
+                                </form>
+                        </ul>
                     </ul>
-            </form>
-        </nav>
+                    </div>
+            </nav>
+
+    
+
+           
+
+        
 
 
         {% block content %}
@@ -69,13 +81,10 @@
         {% endblock %}
 
 
-
-    <br>
-
     <br><br>
 
         </div>
-    </div>
+   
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
