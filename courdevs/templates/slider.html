@@ -29,63 +29,52 @@
                     </button>
 
 
-
-                     <style type="text/css">
-                        .devstack {
-                            color: : 990000;
-                        }
-                        .topfix {
-                            position: fixed;
-                            top: 0;
-                            width: 100%;
-                            z-index: 5;
-                        }
-                        .right {
-                            margin-left: 1000px;
-                        }
-                        .smaller {
-                            height: 30px;
-                            width: 60px;
-                            font-size: 10px;
-                        }
-                    </style>
-
+<!--NAVBAR BUTTONS-->
+                <style type="text/css">
+                    #devstack {
+                         border: 2px solid black;
+                    }
+                    .topfix {
+                        position: fixed;
+                        top: 0;
+                        width: 100%;
+                        z-index: 5;
+                    }
+                    .right {
+                        margin-left: 1000px;
+                    }
+                    .buttonsrow {
+                        
+                        align-content: center;
+                    }
+                </style>
 
                 <div>
                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
+                        <div class="buttonsrow">
+                            <ul class="nav navbar-nav ml-auto">
 
-                            <small class="ml-auto">To Do Lists:</small>
+                                <small class="ml-auto">To Do Lists:</small>
 
-                            <button type="button" class="btn btn-sm btn-outline-dark center ml-3"><a href="{% url 'projects' %}">Projects</a></button>
-                            <button type="button" class="btn btn-sm btn-outline-success center ml-3"><a href="{% url 'deliverables' %}">Deliverables</a></button>
-                            <button type="button" class="btn btn-sm btn-outline-primary center ml-3"><a href="{% url 'practices' %}">Practices</a></button>
-                            <button type="button" class="btn btn-sm btn-outline-warning center ml-3"><a href="{% url 'classes' %}">Classes to Take</a></button>
-                            <button type="button" class="btn btn-sm btn-outline-devstack ml-3" id="devstack"><a href="{% url 'main' %}">Home</a></button>
+                                <button type="button" class="btn btn-sm btn-outline-dark center ml-3"><a href="{% url 'projects' %}">Projects</a></button>
+                                <button type="button" class="btn btn-sm btn-outline-success center ml-3"><a href="{% url 'deliverables' %}">Deliverables</a></button>
+                                <button type="button" class="btn btn-sm btn-outline-primary center ml-3"><a href="{% url 'practices' %}">Practices</a></button>
+                                <button type="button" class="btn btn-sm btn-outline-warning center ml-3"><a href="{% url 'classes' %}">Classes to Take</a></button>
+                                <button type="button" class="btn btn-sm btn-outline-devstack ml-3" id="devstack"><a href="{% url 'main' %}">Home</a></button>
 
-                             <div class="dropdown">
-                                <button type="button" class="btn btn-outline ml-3" id="dropdownMenuButton" data-toggle="dropdown" 
-                                aria-haspopup="true" aria-expanded="false">Logged In: <b>{{ user }}</b></button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="{% url 'acct' %}">Account Info</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="{% url 'logout_user' %}"><b>Logout</b></a>
-                                </div>
-                           </div>
-                            
-                        <!--     <ul class="nav navbar-nav ml-auto">
-                            <div class="dropdown">
-                                <button type="button" class="btn btn-outline-dark" id="dropdownMenuButton" data-toggle="dropdown" 
-                                aria-haspopup="true" aria-expanded="false">Logged In: <b>{{ user }}</b></button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Account Info</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="{% url 'logout_user' %}"><b>Logout</b></a>
-                                </div>
-                           </div>
-                        </ul> -->
-                            
-                        </ul>
+                                 <div class="dropdown">
+                                    <button type="button" class="btn btn-outline ml-3" id="dropdownMenuButton" data-toggle="dropdown" 
+                                    aria-haspopup="true" aria-expanded="false"><span><b>{{ user }}</b></span></button>
+
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="{% url 'acct' %}"><span>Account Info</span></a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="{% url 'logout_user' %}"><span><b>Logout</b></span></a>
+                                    </div>
+                               </div>
+                                
+                            </ul>
+                        </div>
                     </div>
                 </div>
                     

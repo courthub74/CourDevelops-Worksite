@@ -437,7 +437,7 @@ def practices_edit(request, list_id):
 #CLASSESentry
 def classes(request):
 	if request.method == 'POST':
-		classesform = ClassesForm(request.POST or None)
+		classesform = ClassesForm(request.POST or None) #The Entry
 
 		if classesform.is_valid():
 			classesform.save()
@@ -477,7 +477,7 @@ def classes_delete(request, list_id):
 #CLASSESedit
 def classes_edit(request, list_id):
 	if request.method == 'POST':
-		classesitem = Classes.objects.get(pk=list_id)
+		classitem = Classes.objects.get(pk=list_id) #The Retrieval 
 
 		classesform = ClassesForm(request.POST or None) #Create a variable called 'classesform' call it ClassesForm and populate it with whats posted or if nothing then none
 		
@@ -488,8 +488,8 @@ def classes_edit(request, list_id):
 
 
 	else:
-		classesitem = Classes.objects.get(pk=list_id)
-		return render(request, 'todolists/classes_edit.html', {'classesitem': classesitem})
+		classitem = Classes.objects.get(pk=list_id)
+		return render(request, 'todolists/classes_edit.html', {'classitem': classitem})
 
 
 
