@@ -479,7 +479,7 @@ def classes_edit(request, list_id):
 	if request.method == 'POST':
 		classitem = Classes.objects.get(pk=list_id) #The Retrieval 
 
-		classesform = ClassesForm(request.POST or None, instance=classitem) #Create a variable called 'classesform' call it ClassesForm and populate it with whats posted or if nothing then none
+		classesform = ClassesForm(request.POST or None, instance=classitem) #Create a variable called 'classesform' call it ClassesForm and populate it with whats posted or if nothing then none. And create an instance of 'classitem' so it doesn't create a new submission for every submit
 		
 		if classesform.is_valid():
 			classesform.save()

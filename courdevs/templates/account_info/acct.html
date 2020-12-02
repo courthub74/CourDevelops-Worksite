@@ -106,21 +106,18 @@
 
 {% if user.is_authenticated %}
 
+
 	<ul class="list-group list-group-flush">
 	  <li class="list-group-item">User Name: <b>{{ user.username }}</b></li>
-	  <li class="list-group-item">User Email: <b>{{ user.email }}</b></li>
+
+      {% if user.email %}
+	   <li class="list-group-item">User Email: <b>{{ user.email }}</b></li>
+      {% else %}
+       <li class="list-group-item">User Email: <b>N/A</b></li>
+      {% endif %}
 	</ul>
 
-{% else %}
-
-    {% if user.email is none %} <!--STUDY HOW TO MAKE AN 'IS NONE'-->
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">User Name: <b>{{ user.username }}</b></li>
-      <li class="list-group-item">User Email: <b>N/A</b></li>
-    </ul>
-    {% endif %}
-
-{% endif %}
+{% endif%}
 
 
 
