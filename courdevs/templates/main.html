@@ -40,7 +40,6 @@
                         margin-left: 1000px;
                     }
                     .buttonsrow {
-                        
                         align-content: center;
                     }
                 </style>
@@ -59,7 +58,7 @@
                                 <!-- <button type="button" class="btn btn-sm btn-outline-devstack ml-3" id="devstack"><a href="{% url 'main' %}">Home</a></button> -->
 
                                  <div class="dropdown">
-                                    <button type="button" class="btn btn-outline ml-3" id="dropdownMenuButton" data-toggle="dropdown" 
+                                    <button type="button" class="btn btn-sm btn-outline-dark center ml-3" id="dropdownMenuButton" data-toggle="dropdown" 
                                     aria-haspopup="true" aria-expanded="false"><span><b>{{ user }}</b></span></button>
 
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" aria-labelledby="dropdownMenuButton">
@@ -375,6 +374,17 @@
 
     <hr>
 
+    <style type="text/css">
+        .grey {
+            color: grey;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+
+    <br>
+
     <small class="dropdown-item grey center">CourDevelops L.L.C.</small>
 
     <br><br><br>
@@ -383,4 +393,3 @@
   </body>
 
 {% endblock %}
-
