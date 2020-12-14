@@ -15,6 +15,9 @@ urlpatterns = [
 	#DEVELOPMENT STACK PAGE
 	path('stack/', views.main, name='main'),
 
+	#ANNONYMOUS USER PAGE
+	path('guest/', views.restrictedmain, name='guest'),
+
 	#PYTHON
 	#Try Except
 	path('try_except/', views.try_except, name="try_except"),

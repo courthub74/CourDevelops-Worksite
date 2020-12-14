@@ -31,6 +31,17 @@
             font-size: 10px;
             font-weight: 200px;
         }
+        .annonymous {
+            font-size: 12px;
+            color: black;
+            align-content: center;
+        }
+        .white {
+            color: white;
+        }
+        .smallers {
+            font-size: 10px;
+        }
     </style>
 
     <div class="wrapper">
@@ -66,6 +77,8 @@
                                         <button type="submit" class="btn btn-light btn-lg light btn-block">Login</button>
                                     </li>
 
+
+
                                     <div class="container logerror">
                                       {% if messages %}
                                         {% for message in messages %}
@@ -80,6 +93,13 @@
                                     </div>
 
                                 </form>
+
+                                <br>    
+
+                                <div class="container">
+                                    <h6><span class="white smallers">Annonymous</span><a href="{% url 'guest' %}"><span class="badge bg-warning annonymous">Login</span></a></h6>
+                                    <!-- <a href="{% url 'guest' %}"><span class="badge bg-light text-dark">Annonymous Login</span></a> -->
+                                </div>
                         </ul>
                     </ul>
 
