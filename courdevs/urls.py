@@ -18,6 +18,9 @@ urlpatterns = [
 	#ANNONYMOUS USER PAGE
 	path('guest/', views.restrictedmain, name='guest'),
 
+	#ANNONYMOUS ACCT PAGE
+	path('guestacct/', views.restrict_acct, name='guestacct'),
+
 	#PYTHON
 	#Try Except
 	path('try_except/', views.try_except, name="try_except"),

@@ -39,6 +39,10 @@ def logout_user(request):
 def acct_info(request):
 	return render(request, "account_info/acct.html", {})
 
+#ACCOUNT (ANNONYMOUS USER)
+def restrict_acct(request):
+	return render(request, "account_info/acctrestrict.html", {})
+
 #####################################################
 
 #PYTHON

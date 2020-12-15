@@ -1,0 +1,128 @@
+{% extends 'baserestrict.html' %}
+
+{% block content %}
+
+<div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!--NavBar-->
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark mr-5">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+
+                    <!--NAVBAR BUTTONS-->
+                <style type="text/css">
+                    #devstack {
+                         border: 2px solid black;
+                    }
+                    .topfix {
+                        position: fixed;
+                        top: 0;
+                        width: 100%;
+                        z-index: 5;
+                    }
+                    .right {
+                        margin-left: 1000px;
+                    }
+                    .buttonsrow {
+                        
+                        align-content: center;
+                    }
+                </style>
+
+                <div>
+                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="buttonsrow">
+                            <ul class="nav navbar-nav ml-auto">
+
+                                <small class="ml-auto">To Do Lists:</small>
+
+                                <button type="button" class="btn btn-sm btn-outline-dark center ml-3"><a href="#">ToDo List 1</a></button>
+                                <button type="button" class="btn btn-sm btn-outline-success center ml-3"><a href="#">ToDo List 2</a></button>
+                                <button type="button" class="btn btn-sm btn-outline-primary center ml-3"><a href="#">ToDo List 3</a></button>
+                                <button type="button" class="btn btn-sm btn-outline-warning center ml-3"><a href="#">ToDo List 4</a></button>
+                                <button type="button" class="btn btn-sm btn-outline-devstack ml-3" id="devstack"><a href="{% url 'guest' %}">Home</a></button>
+
+                                 <div class="dropdown">
+                                    <button type="button" class="btn btn-outline ml-3" id="dropdownMenuButton" data-toggle="dropdown" 
+                                    aria-haspopup="true" aria-expanded="false"><span><b>{{ user }}</b></span></button>
+
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#"><span>Account Info</span></a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="{% url 'logout_user' %}"><span><b>Logout</b></span></a>
+                                    </div>
+                               </div>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                </div>
+            </nav>
+
+
+
+            <div class="media-body ml-8" >
+                <h3 class="mt-0">Account Info<img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_108298.png&f=1&nofb=1" height="100"  class="mr-3 ml-3" alt="API"></h3> 
+            </div>
+            <div class="line"></div>
+
+
+            <div class="container-fluid"></div>
+            <div class="media"></div>
+
+            <div class="container">
+
+
+
+
+            <style type="text/css">
+                .black {
+                    color: black;
+                }
+                .navs {
+                    background-color: #DCDCDC;
+                }
+                .tab {
+                	margin-left: 20px;
+                }
+                .tab40 {
+                	margin-left: 40px;
+                }
+            </style>
+
+
+
+
+{% if user.is_authenticated %}
+
+
+	<ul class="list-group list-group-flush">
+	  <li class="list-group-item">User Name: <b>{{ user.username }}</b></li>
+
+      {% if user.email %}
+	   <li class="list-group-item">User Email: <b>{{ user.email }}</b></li>
+      {% else %}
+       <li class="list-group-item">User Email: <b>N/A</b></li>
+      {% endif %}
+	</ul>
+
+{% endif%}
+
+
+
+</div>
+
+
+
+{% endblock %}
