@@ -103,12 +103,21 @@
 
 
 
+<ul class="list-group list-group-flush">
+      <li class="list-group-item">User Name: <b>CourDevelops Welcomes Guest User{{ user.username }}</b></li>
 
-{% if user.is_authenticated %}
+      {% if user.email %}
+       <li class="list-group-item">User Email: <b>{{ user.email }}</b></li>
+      {% else %}
+       <li class="list-group-item">User Email: <b>N/A</b></li>
+      {% endif %}
+    </ul>
+
+<!-- {% if user.is_authenticated %} -->
 
 
 	<ul class="list-group list-group-flush">
-	  <li class="list-group-item">User Name: <b>{{ user.username }}</b></li>
+	  <li class="list-group-item">User Name: <b>CourDevelops Welcomes Guest User{{ user.username }}</b></li>
 
       {% if user.email %}
 	   <li class="list-group-item">User Email: <b>{{ user.email }}</b></li>
@@ -117,7 +126,7 @@
       {% endif %}
 	</ul>
 
-{% endif%}
+<!-- {% endif%} -->
 
 
 
