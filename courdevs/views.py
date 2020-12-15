@@ -27,7 +27,7 @@ def main(request):
 
 #MAIN (ANNONYMOUS USER)
 def restrictedmain(request):
-	return render(request, "main2.html", {})
+	return render(request, "mainrestrict.html", {})
 
 #LOGOUT
 def logout_user(request):
